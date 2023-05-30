@@ -1,1 +1,25 @@
-home
+{% extends 'base.html' %}
+{% block content %}
+<style>
+h2.projects_title {
+    color: black;
+    text-align: center;
+    width: 100vw;
+    padding-top: calc(5vh - 16px);
+    padding-bottom: calc(5vh - 16px);
+    font-size: 45px;
+}
+
+div.projects_title {
+    color: black;
+    text-align: center;
+    width: 100vw;
+    height: 10vh;
+    font-size: 45px;
+}
+</style>
+<div class="projects_title">
+    <h2 class="projects_title">Projects</h2>
+
+</div>
+{% endblock %}
