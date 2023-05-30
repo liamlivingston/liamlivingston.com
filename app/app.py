@@ -4,7 +4,19 @@ app = Flask("liamlivingston")
 
 @app.route('/')
 def home():
-    return render_template("home.html")
+    return render_template("home.html", home="/")
+
+@app.route('/projects')
+def projects():
+    return render_template("projects.html", home="/")
+
+@app.route('/github')
+def github():
+    return redirect("https://github.com/liamlivingston/liamlivingston.com")
+
+@app.route('/instagram')
+def instagram():
+    return redirect("https://www.instagram.com/liamklivingston")
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')

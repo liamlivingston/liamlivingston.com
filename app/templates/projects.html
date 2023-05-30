@@ -1,0 +1,70 @@
+<div style="height:0;width;0" id="top">
+</div>
+{% extends 'base.html' %}
+{% block content %}
+<style>
+h2.projects_title {
+    color: black;
+    text-align: center;
+    width: 100vw;
+    padding-top: calc(5vh - 16px);
+    padding-bottom: calc(5vh - 16px);
+    font-size: 45px;
+}
+
+div.projects_title {
+    color: black;
+    text-align: center;
+    width: 100vw;
+    height: 10vh;
+    font-size: 45px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: calc(100vw - 6px);
+  height: calc(78vh - 4px);
+}
+
+.grid_item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  height: calc(39vh - 2px);
+}
+
+h2.grid_text {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  padding-top: calc(39vh / 2 - 16px)
+}
+</style>
+<div class="projects_title">
+    <h2 class="projects_title">Projects</h2>    
+</div>
+<div class="grid-container">
+    <div class="grid_item">
+        <h2 class="grid_text">
+            Ebike v1
+        </h2>
+    </div>
+    <div class="grid_item">
+        Ebike v2
+    </div>
+    <div class="grid_item">
+        Ebike v3
+    </div>  
+    <div class="grid_item">
+        Batteries
+    </div>
+    <div class="grid_item">
+        Kenya
+    </div>
+    <div class="grid_item">
+        CSP
+    </div>
+  </div>
+{% endblock %}
