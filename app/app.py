@@ -10,6 +10,12 @@ def home():
 def projects():
     return render_template("projects.html", home="/")
 
+@app.route('/projects/ebike_v1')
+def ebike_v1():
+    return render_template("ebike_v1.html", home="/")
+
+
+
 @app.route('/github')
 def github():
     return redirect("https://github.com/liamlivingston/liamlivingston.com")
