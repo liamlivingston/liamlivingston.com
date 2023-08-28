@@ -14,6 +14,9 @@ def projects():
 def ebike_v1():
     return render_template("ebike_v1.html", home="/")
 
+@app.route('/projects/batteries')
+def batteries():
+    return render_template("batteries.html", home="/")
 
 
 @app.route('/github')
