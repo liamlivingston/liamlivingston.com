@@ -2,91 +2,15 @@
 </div>
 {% extends 'base.html' %}
 {% block content %}
-<style>
-#Img01:hover, #Img02:hover {opacity: 0.7;}
-
-.mainText {
-  color: black;
-  font: 400 20px/1.8 "Lato", sans-serif;
-  letter-spacing: 0;
-  bottom: 0;
-}
-
-.mainTextDiv {
-    width: 96vw;
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
-    padding-top: 1.5vh;
-}
-
-.mainTextTitle {
-    margin-top: 0px;
-    font-size: 25px;
-
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1002;
-  padding-top: calc( (100vh - (100vw / 2) ) / 2);
-  padding-bottom: calc( (100vh - (100vw / 2) ) / 2);
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: calc(100vw / 2);
-  overflow: auto;
-  background-color: rgba(0,0,0,1);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  padding-left:10%;
-}
-
-.close01, .close02 {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close01:hover,
-.close01:focus,
-.close02:hover,
-.close02:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-h2 {
-    color:black;
-}
-
-p {
-    color:black;
-}
-
-.text-images {
-    display: block;
-    float: none;
-}
-</style>
 
 <div class="mainTextDiv">
-<p class="mainTextTitle">36v Battery</p>
+<p class="mainTextTitle" id="36v_battery">36v Battery</p>
 
 <p class="mainText">
     I bought 50 4-cell modem battery packs for $37.50 total(¢18.75 per cell). These cells are LGDAS31865 cells which have a capacity of 2200mah.
 </p>
 
-<img id="Img01" src="/static/modem_battery.jpg" alt="Snow" style="width:100%;max-width:300px;display: block;float: none;">
+<img id="Img01" src="/static/modem_battery.jpg" alt="36v battery" style="width:100%;max-width:300px;display: block;float: none;">
 <div id="Modal01" class="modal">
     <span class="close01">&times;</span>
     <img class="modal-content" id="img01">
@@ -97,19 +21,21 @@ p {
 </p>
 
 
-<img id="Img02" src="/static/36v_battery.jpg" alt="Snow" style="width:100%;max-width:300px;display: block;float: none;">
+<img id="Img02" src="/static/36v_battery.jpg" alt="36v battery" style="width:100%;max-width:300px;display: block;float: none;">
 <div id="Modal02" class="modal">
     <span class="close02">&times;</span>
     <img class="modal-content" id="img02">
 </div>
 
-<p class="mainTextTitle">60V Battery v1 and v2</p>
+<br>
+
+<p class="mainTextTitle" id="60v_battery">60V Battery v1 and v2</p>
 
 <p class="mainText">
     I bought 10 20-cell escooter battery packs for $210 total($1.05 per cell). These cells are EVEICR18650-26V cells which have a capacity of 2550mah and a max discharge rate if 7.65a.
 </p>
 
-<img id="Img01" src="/static/eve_batteries.jpg" alt="Snow" style="width:100%;max-width:300px;display: block;float: none;">
+<img id="Img01" src="/static/eve_batteries.jpg" alt="36v battery" style="width:100%;max-width:300px;display: block;float: none;">
 <div id="Modal01" class="modal">
     <span class="close01">&times;</span>
     <img class="modal-content" id="img01">
@@ -120,7 +46,7 @@ p {
 </p>
 
 
-<img id="Img02" src="/static/36v_battery.jpg" alt="Snow" style="width:100%;max-width:300px;display: block;float: none;">
+<img id="Img02" src="/static/36v_battery.jpg" alt="36v battery" style="width:100%;max-width:300px;display: block;float: none;">
 <div id="Modal02" class="modal">
     <span class="close02">&times;</span>
     <img class="modal-content" id="img02">
@@ -131,36 +57,5 @@ p {
 </p>
 
 </div>
-
-<script>
-    var modal01 = document.getElementById("Modal01");
-    var img01 = document.getElementById("Img01");
-    var modalImg01 = document.getElementById("img01");
-
-    var modal02 = document.getElementById("Modal02");
-    var img02 = document.getElementById("Img02");
-    var modalImg02 = document.getElementById("img02");
-
-    img01.onclick = function(){
-      modal01.style.display = "block";
-      modalImg01.src = this.src;
-    }
-    var span01 = document.getElementsByClassName("close01")[0];
-    
-    span01.onclick = function() { 
-      modal01.style.display = "none";
-    }
-
-    img02.onclick = function(){
-      modal02.style.display = "block";
-      modalImg02.src = this.src;
-    }
-    var span02 = document.getElementsByClassName("close02")[0];
-    
-    span02.onclick = function() { 
-      modal02.style.display = "none";
-    }
-
-    </script>
 
 {% endblock %}

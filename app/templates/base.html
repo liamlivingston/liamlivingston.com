@@ -131,12 +131,10 @@ span {
 }
 
 img {
-  display: inline-block; 
-  float: left;
+  display: inline-block;
   } 
 
 h2 {
-  letter-spacing: 3px;
   font: 20px "Lato", sans-serif;
   color: #ffffff;
   display: inline-block;
@@ -152,11 +150,6 @@ h3 {
   letter-spacing: 3px;
   font: 30px "Lato", sans-serif;
   color: #111;
-}
-
-p{
-font-size: 20px;
-color: white;
 }
 
 .navbar {
@@ -346,7 +339,6 @@ color: white;
 .show {display: block;}
 
 a {
-    letter-spacing: 3px;
     font: 20px "Lato", sans-serif;
     color: #ffffff;
     display: inline-block;
@@ -358,7 +350,91 @@ a {
     text-align: center;
     text-decoration: none;
 }
+.mainText {
+  color: black;
+  font: 400 20px/1.8 "Lato", sans-serif;
+  letter-spacing: 0;
+  bottom: 0;
+}
 
+.mainTextDiv {
+    width: 96vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 1.5vh;
+}
+
+.mainTextTitle {
+    margin-top: 0px;
+    font-size: 25px;
+    color: black;
+
+}
+
+.text-images {
+    display: block;
+    float: none;
+}
+
+#Img01:hover, #Img02:hover {opacity: 0.7;}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1002;
+  padding-top: calc( (100vh - (100vw / 2) ) / 2);
+  padding-bottom: calc( (100vh - (100vw / 2) ) / 2);
+  left: 0;
+  top: 0;
+  width: 100vw;
+  max-height: 100vh;
+  overflow: scroll;
+  background-color: rgba(0,0,0,1);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  height: calc(100vw / 2);
+  width: auto;
+  max-width:80vw;
+  max-height: 100vh;
+}
+
+.close01, .close02, .close03, .close04, .close05, .close06, .close07, .close08, .close09, .close10 {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close01:hover,
+.close01:focus,
+.close02:hover,
+.close02:focus,
+.close03:hover,
+.close03:focus,
+.close04:hover,
+.close04:focus,
+.close05:hover,
+.close05:focus,
+.close06:hover,
+.close06:focus,
+.close07:hover,
+.close07:focus,
+.close08:hover,
+.close08:focus,
+.close09:hover,
+.close09:focus,
+.close10:hover,
+.close10:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
 </style>
 
 </head>
@@ -495,6 +571,31 @@ document.addEventListener("DOMContentLoaded", function() {
   defualt();
 });
 
+</script>
 
+<script>
+
+  var modal02 = document.getElementById("Modal02");
+  var img02 = document.getElementById("Img02");
+  var modalImg02 = document.getElementById("img02");
+
+  document.getElementById("Img01").onclick = function(){
+    document.getElementById("Modal01").style.display = "block";
+    document.getElementById("img01").src = this.src;
+  }
+  
+  document.getElementsByClassName("close01")[0].onclick = function() { 
+    document.getElementById("Modal01").style.display = "none";
+  }
+
+  img02.onclick = function(){
+    modal02.style.display = "block";
+    modalImg02.src = this.src;
+  }
+  var span02 = document.getElementsByClassName("close02")[0];
+  
+  span02.onclick = function() { 
+    modal02.style.display = "none";
+  }
 
 </script>
