@@ -404,7 +404,7 @@ a {
   max-height: 100vh;
 }
 
-.close01, .close02, .close03, .close04, .close05, .close06, .close07, .close08, .close09, .close10 {
+.close {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -414,26 +414,8 @@ a {
   transition: 0.3s;
 }
 
-.close01:hover,
-.close01:focus,
-.close02:hover,
-.close02:focus,
-.close03:hover,
-.close03:focus,
-.close04:hover,
-.close04:focus,
-.close05:hover,
-.close05:focus,
-.close06:hover,
-.close06:focus,
-.close07:hover,
-.close07:focus,
-.close08:hover,
-.close08:focus,
-.close09:hover,
-.close09:focus,
-.close10:hover,
-.close10:focus {
+.close:hover,
+.close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -578,27 +560,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <script>
 
-  var modal02 = document.getElementById("Modal02");
-  var img02 = document.getElementById("Img02");
-  var modalImg02 = document.getElementById("img02");
-
-  document.getElementById("Img01").onclick = function(){
-    document.getElementById("Modal01").style.display = "block";
-    document.getElementById("img01").src = this.src;
-  }
-  
-  document.getElementsByClassName("close01")[0].onclick = function() { 
-    document.getElementById("Modal01").style.display = "none";
+  function modalOpen(num){
+    (document.getElementById('Modal'+num)).style.display = "block";
+    (document.getElementById('img'+num)).src = (document.getElementById('Img'+num)).src;
   }
 
-  img02.onclick = function(){
-    modal02.style.display = "block";
-    modalImg02.src = this.src;
+  function modalClose(num){
+    (document.getElementById('Modal'+num)).style.display = "none";
   }
-  var span02 = document.getElementsByClassName("close02")[0];
-  
-  span02.onclick = function() { 
-    modal02.style.display = "none";
-  }
+
+
 
 </script>
