@@ -95,8 +95,7 @@ body, html,#main {
   margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .material-icons {
@@ -153,8 +152,11 @@ h3 {
 }
 
 .nav{
-  width:100vh;
+  height:88vh;
+  width:100vw;
   margin:0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 .navbar {
   overflow: hidden;
@@ -424,6 +426,7 @@ a {
 
 </head>
 <body>
+<header>
 <div class="navbar" style="position:fixed;z-index:10;">
   <a href="{% autoescape false %}{{home}}{% endautoescape %}#top" style="float:left;padding:.5vh;" class="title"><img src="/static/ebike.png" alt="logo" style="height:11vh;width:11vh;margin:0;"><h3 style="float:left;color:#ffffff;padding-left:15px;margin-bottom:3vh;margin-top:3vh;height:5vh;font-size:5vh">Liam Livingston</h3></a>
 
@@ -438,12 +441,14 @@ a {
 </div>
 <div style="margin-top:12vh">
 </div>
+</header>
+
 <div class="nav">
 {% block content %}
 {% endblock %}
-</div>
 
-<div class="footer-basic">
+
+  <div class="footer-basic">
         <footer>
             <div class="social"><a href="/instagram" target="_blank"><i class="fa fa-instagram" style="margin-top: 8px;margin-left: 4px;"></i></a><a href="/youtube" target="_blank"><i class="fa fa-youtube" style="margin-top: 8px;margin-left: 4px;"></i></a><a href="/github" style="margin-top:8px;" target="_blank"><i class="fa fa-github" style="margin-top: 8px;margin-left: 4px;"></i></a><a href="/discord" target="_blank"><i class="fa fa-discord" style="margin-top: 8px;margin-left: 4px;" aria-hidden="true"></i></a></div>
             <ul class="list-inline">
@@ -454,7 +459,7 @@ a {
             </ul>
             <p class="copyright">Liam Livingston © 2023</p>
         </footer>
-    </div>
+  </div>
 
     <div id="myDropdown" class="dropdown-content">
       <a href="{{website_location}}profile"><h2 class="material-icons" style="margin-top:.5vh;font-size: 20px;">person</h2><h2 style="color:inherit;font-size: 17px;letter-spacing: 1px;">Profile</h2></a>
@@ -463,7 +468,7 @@ a {
       <a href="/logout"><h2 class="material" style="margin-top:.5vh;font-size: 20px;">logout</h2><h2 style="color:inherit;font-size: 17px;letter-spacing: 1px;">Sign out</h2></a>
     </div>
     
-
+</div>
 <script>
 
 var x = window.location.hash;
