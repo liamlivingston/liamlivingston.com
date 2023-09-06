@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <style>
-a.projects_title {
+a.section_title {
     color: black;
     width: 100vw;
     padding-top: calc(5vh - 16px);
@@ -9,7 +9,7 @@ a.projects_title {
     font-size: 45px;
 }
 
-div.projects_title {
+div.section_title {
     color: black;
     text-align: center;
     width: 100vw;
@@ -51,8 +51,8 @@ div.projects_title {
 
 }
 </style>
-<div class="projects_title">
-    <a href="/projects" class="projects_title">Projects</a>
+<div class="section_title" id="top">
+    <a href="/projects" class="section_title">Projects</a>
 </div>
 
 <div class="sliderContainer">
@@ -76,5 +76,13 @@ div.projects_title {
 
     </div>
 
+</div>
+
+<div style="height:100vh">
+
+</div>
+
+<div class="section_title" id="about">
+    <a class="section_title">About me</a>
 </div>
 {% endblock %}
