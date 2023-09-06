@@ -1,0 +1,57 @@
+<style>
+body {
+    margin: 0;
+}
+
+@keyframes slideShow {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
+    }
+    70%{
+        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.sliderContainer {
+    width: calc(100vw/ 3 * 5 + 16px);
+    height: 20vh;
+    top: 0px;
+    animation: 20s linear 0s 1 slideShow;
+}
+
+.slideItem {
+    width: calc(100vw/ 3);
+    height: calc(20vh );
+    display: inline-flex;
+    background-color: red;
+}
+</style>
+
+<div class="sliderContainer">
+    <div class="slideItem">
+        
+    </div>
+    
+    <div class="slideItem">
+
+    </div>
+    
+    <div class="slideItem">
+
+    </div>
+    
+    <div class="slideItem">
+
+    </div>
+    
+    <div class="slideItem">
+
+    </div>
+
+</div>
