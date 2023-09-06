@@ -16,8 +16,65 @@ div.projects_title {
     height: 10vh;
     font-size: 45px;
 }
+
+@keyframes slideShow {
+    0% {
+        transform: translateX(0);
+    }
+    15% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
+    }
+    65%{
+        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.sliderContainer {
+    width: calc(100vw/ 3 * 5 + 18px);
+    height: 40vh;
+    top: 0px;
+    animation: 60s linear 0s infinite slideShow;
+}
+
+.slideItem {
+    width: calc(100vw/ 3);
+    height: 40vh;
+    display: inline-flex;
+    background-size: cover;
+    background-position: center center;
+
+}
 </style>
 <div class="projects_title">
     <a href="/projects" class="projects_title">Projects</a>
+</div>
+
+<div class="sliderContainer">
+    <div class="slideItem" style="background-image: url('/static/ebike_v2.jpg');">
+        
+    </div>
+    
+    <div class="slideItem" style="background-image: url('/static/ebike_v3.jpg');">
+
+    </div>
+    
+    <div class="slideItem" style="background-image: url('/static/batteries.jpg');">
+
+    </div>
+    
+    <div class="slideItem" style="background-image: url('/static/kenya.jpg');">
+
+    </div>
+    
+    <div class="slideItem" style="background-image: url('/static/csp.jpg');">
+
+    </div>
+
 </div>
 {% endblock %}

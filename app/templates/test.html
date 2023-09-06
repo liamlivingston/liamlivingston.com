@@ -1,16 +1,17 @@
 <style>
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 @keyframes slideShow {
     0% {
         transform: translateX(0);
     }
-    30% {
+    45% {
         transform: translateX(calc(-100vw/ 3 * 2 - 16px));
     }
-    70%{
+    55%{
         transform: translateX(calc(-100vw/ 3 * 2 - 16px));
     }
     100% {
@@ -22,12 +23,12 @@ body {
     width: calc(100vw/ 3 * 5 + 16px);
     height: 20vh;
     top: 0px;
-    animation: 20s linear 0s 1 slideShow;
+    animation: 60s linear 0s infinite slideShow;
 }
 
 .slideItem {
     width: calc(100vw/ 3);
-    height: calc(20vh );
+    height: 40vh;
     display: inline-flex;
     background-color: red;
 }
