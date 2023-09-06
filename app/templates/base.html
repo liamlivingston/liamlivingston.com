@@ -346,11 +346,9 @@ h3 {
 
 a {
     font: 20px "Lato", sans-serif;
-    color: #ffffff;
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
-    bottom: 3px;
     position: relative;
     line-height: 32px;
     text-align: center;
@@ -435,7 +433,7 @@ a {
 {% endautoescape %}
 
   <a href="{{website_location}}meeting_info{% autoescape false %}{{userid}}{% endautoescape %}" style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hd}};" class="title" id="disc_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">forum</h2><h2 style="color:inherit;text-decoration:inherit;">Meeting Info</h2></a>
-  <a href="{{website_location}}builds{% autoescape false %}{{userid}}{% endautoescape %}" style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hl}}" class="title" id="builds_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">electric_bike</h2><h2 style="color:inherit;text-decoration:inherit;">Builds</h2></a>
+  <a href="{{website_location}}projects{% autoescape false %}{{userid}}{% endautoescape %}" style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hl}}" class="title" id="projects_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">electric_bike</h2><h2 style="color:inherit;text-decoration:inherit;">Projects</h2></a>
   <a href="{% autoescape false %}{{home}}{% endautoescape %}#about"style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{ha}}" class="title" id="about_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">group</h2><h2 style="color:inherit;text-decoration:inherit;">About us</h2></a>
   <a href="{% autoescape false %}{{home}}{% endautoescape %}#top"style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hh}}" class="title" id="home_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">home</h2><h2 style="color:inherit;text-decoration:inherit;">Home</h2></a>
 </div>
@@ -454,7 +452,7 @@ a {
             <ul class="list-inline">
                 <li class="list-inline-item" style="color:white"><a href="{% autoescape false %}{{home}}{% endautoescape %}#top">Home</a></li>
                 <li class="list-inline-item" style="color:white"><a href="{% autoescape false %}{{home}}{% endautoescape %}#about">About us</a></li>
-                <li class="list-inline-item" style="color:white"><a href="{{website_location}}builds{% autoescape false %}{{userid}}{% endautoescape %}">Builds</a></li>
+                <li class="list-inline-item" style="color:white"><a href="{{website_location}}projects{% autoescape false %}{{userid}}{% endautoescape %}">projects</a></li>
                 <li class="list-inline-item" style="color:white"><a href="{{website_location}}discussion{% autoescape false %}{{userid}}{% endautoescape %}">Discussion</a></li>
             </ul>
             <p class="copyright">Liam Livingston © 2023</p>
@@ -492,12 +490,12 @@ window.onclick = function(event) {
 
 document.getElementById("home_color").addEventListener("mouseover", home, false);
 document.getElementById("about_color").addEventListener("mouseover", about, false);
-document.getElementById("builds_color").addEventListener("mouseover", builds, false);
+document.getElementById("projects_color").addEventListener("mouseover", projects, false);
 document.getElementById("disc_color").addEventListener("mouseover", disc, false);
 
 document.getElementById("home_color").addEventListener("mouseout", defualt, false);
 document.getElementById("about_color").addEventListener("mouseout", defualt, false);
-document.getElementById("builds_color").addEventListener("mouseout", defualt, false);
+document.getElementById("projects_color").addEventListener("mouseout", defualt, false);
 document.getElementById("disc_color").addEventListener("mouseout", defualt, false);
 
 
@@ -505,19 +503,19 @@ document.getElementById("disc_color").addEventListener("mouseout", defualt, fals
 function about(){
   document.getElementById("about_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#0091ff";
   document.getElementById("home_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("builds_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
+  document.getElementById("projects_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
   document.getElementById("disc_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
 }
 
 function home(){
   document.getElementById("home_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#0091ff";
   document.getElementById("about_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("builds_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
+  document.getElementById("projects_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
   document.getElementById("disc_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
 }
 
-function builds(){
-  document.getElementById("builds_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#0091ff";
+function projects(){
+  document.getElementById("projects_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#0091ff";
   document.getElementById("about_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
   document.getElementById("home_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
   document.getElementById("disc_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
@@ -526,14 +524,14 @@ function builds(){
 function disc(){
   document.getElementById("disc_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#0091ff";
   document.getElementById("about_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("builds_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
+  document.getElementById("projects_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
   document.getElementById("home_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
 }
 
 function clear(){
   document.getElementById("about_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
   document.getElementById("home_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("builds_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
+  document.getElementById("projects_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
   document.getElementById("disc_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
 }
 
@@ -545,8 +543,8 @@ function defualt(){
   if (x == "#top"){
     home()
 }
-  if (window.location.href.includes("builds")) {
-   builds()
+  if (window.location.href.includes("projects")) {
+   projects()
 }
   if (window.location.href.includes("discussion")){
     disc()
