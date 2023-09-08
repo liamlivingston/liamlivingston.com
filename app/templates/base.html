@@ -571,13 +571,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <script>
 
-  function modalOpen(num){
-    (document.getElementById('Modal'+num)).style.display = "block";
-    (document.getElementById('img'+num)).src = (document.getElementById('Img'+num)).src;
+  function modalOpen(num, useOrig){
+    (document.getElementById("Modal"+num)).style.display = "block";
+    if (useOrig) {
+      origImgScr = ((document.getElementById("Img"+num)).src).split(".");
+      origImgScr.pop();
+      (document.getElementById("img"+num)).src = (origImgScr.join(".") + "_orig.jpg");
+    } else {
+      (document.getElementById('img'+num)).src = (document.getElementById('Img'+num)).src;
+    }
   }
 
   function modalClose(num){
-    (document.getElementById('Modal'+num)).style.display = "none";
+    (document.getElementById("Modal"+num)).style.display = "none";
   }
 
 

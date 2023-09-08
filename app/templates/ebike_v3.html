@@ -2,6 +2,12 @@
 </div>
 {% extends 'base.html' %}
 {% block content %}
+<img id="Img01" src="/static/ebike_v3.jpg" alt="36v battery" style="width:100%;max-width:300px;display: block;float: none;" onclick="modalOpen('01', true)">
+<div id="Modal01" class="modal">
+    <span class="close" onclick="modalClose('01')">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+
 <div class="mainTextDiv">
 <h2 class="mainTextTitle">Batteries</h2>
 
