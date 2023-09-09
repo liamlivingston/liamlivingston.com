@@ -26,6 +26,10 @@ def ebike_v3():
 def batteries():
     return render_template("batteries.html", home="/")
 
+@app.route('/projects/kenya')
+def kenya():
+    return render_template("kenya.html")
+
 
 @app.route('/github')
 def github():
