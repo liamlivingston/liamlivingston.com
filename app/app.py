@@ -28,7 +28,7 @@ def batteries():
 
 @app.route('/projects/kenya')
 def kenya():
-    return render_template("kenya.html")
+    return render_template("kenya.html", home="/")
 
 
 @app.route('/github')
