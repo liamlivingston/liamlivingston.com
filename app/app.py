@@ -30,6 +30,10 @@ def batteries():
 def kenya():
     return render_template("kenya.html", home="/")
 
+@app.route('/projects/csp')
+def csp():
+    return render_template("csp.html", home="/")
+
 
 @app.route('/github')
 def github():
