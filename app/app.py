@@ -34,6 +34,10 @@ def kenya():
 def csp():
     return render_template("csp.html", home="/")
 
+@app.route('/projects/motor_rewinding')
+def motor_rewinding():
+    return render_template("rewinding.html", home="/")
+
 
 @app.route('/github')
 def github():
