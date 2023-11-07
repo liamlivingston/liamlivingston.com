@@ -23,8 +23,8 @@ div.projects_title {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  width: calc(100vw - 6px);
-  height: calc(78vh - 4px);
+  width: calc(100vw);
+  height: calc(117vh);
 }
 
 .grid_item {
@@ -33,6 +33,7 @@ div.projects_title {
   font-size: 30px;
   text-align: center;
   height: calc(39vh - 2px);
+  width: calc(100vw / 3 - 2px);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -92,6 +93,13 @@ h2.grid_text {
         <div class="grid_item" style="background-image: url('/static/csp.jpg');">
             <h2 class="grid_text">
                 CSP
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/motor_rewinding">
+        <div class="grid_item" style="background-image: url('/static/rewinding.jpg');">
+            <h2 class="grid_text">
+                Motor Rewinding
             </h2>
         </div>
     </a>
