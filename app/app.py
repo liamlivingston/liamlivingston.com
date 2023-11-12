@@ -38,6 +38,9 @@ def csp():
 def motor_rewinding():
     return render_template("rewinding.html", home="/")
 
+@app.route('/projects/solar_car_v1')
+def solar_car_v1():
+    return render_template("solar_car_v1.html", home="/")
 
 @app.route('/github')
 def github():
