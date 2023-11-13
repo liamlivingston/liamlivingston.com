@@ -4,18 +4,41 @@
 {% block content %}
 
 <div class="mainTextDiv">
-<h2 class="mainTextTitle">Battery</h2>
+<h2 class="mainTextTitle">Overview</h2>
 
 <p class="mainText">
-    I build a 36v 22ah battery for this ebike
+    I joined PASV (now MSRC) in November 2022 (my sophomore year) as a founding member and was appointed Electrical and Solar Lead.
+    <br>
+    Due to being the only team member with electrical experiance, I ended up doing almost all of the electrical work.
 </p>
+<div style="display: grid;grid-template-columns: auto auto auto;">
+<div style="width: 48vw;">
+<img id="Img01" src="/static/solar_car_v1_aux_soldering.jpg" alt="36v battery" style="height:75.2vw;max-height:600px;float:right;margin-right:1vw;" onclick="modalOpen('01', false)">
+<div id="Modal01" class="modal">
+    <span class="close" onclick="modalClose('01')">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+</div>
 
-<a href="/projects/batteries#36v_battery"><img src="/static/36v_battery.jpg" alt="36v battery" style="width:100%;max-width:300px;display:block;float:none;"></a>
+<div style="width: 47vw; margin-left: 1vw;">
+<p style="display:inline;">
+    <h2 class="mainTextTitle">Aux System</h2>
+    <br>
+    <p class="mainText">
+        The Aux System in this car was relatively limited to the limited amound of time we had.
+        <br><br>
+        It was powered off of a LiTime 12v 50ah LiFePO4 battery.
+        <br><br>
+        It consisted of lights, fans, and a horn that were all required by the SCC.
+    </p>
+</p>
+</div>
+</div>
 
 <br>
 <br>
 
-<h2 class="mainTextTitle">Motor Kit</h2>
+
 
 <p class="mainText">
 
