@@ -20,17 +20,18 @@ div.section_title {
 }
 
 @keyframes slideShow {
-    0% {
+    
+    5% {
         transform: translateX(0);
     }
-    15% {
+    40% {
+        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
+    }
+    55%{
+        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
+    }
+    90% {
         transform: translateX(0);
-    }
-    50% {
-        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
-    }
-    65%{
-        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
     }
     100% {
         transform: translateX(0);

@@ -42,6 +42,10 @@ def motor_rewinding():
 def solar_car_v1():
     return render_template("solar_car_v1.html", home="/")
 
+@app.route('/projects/solar_car_v2')
+def solar_car_v2():
+    return render_template("solar_car_v2.html", home="/")
+
 @app.route('/github')
 def github():
     return redirect("https://github.com/liamlivingston/liamlivingston.com")
