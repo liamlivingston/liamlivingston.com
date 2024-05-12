@@ -46,6 +46,18 @@ def solar_car_v1():
 def solar_car_v2():
     return render_template("solar_car_v2.html", home="/")
 
+@app.route('/projects/seminar')
+def seminar():
+    return render_template("seminar.html", home="/")
+
+@app.route('/projects/battery_business')
+def battery_business():
+    return render_template("battery_business.html", home="/")
+
+@app.route('/projects/battery_business/zero')
+def battery_business_zero():
+    return render_template("zero.html", home="/")
+
 @app.route('/github')
 def github():
     return redirect("https://github.com/liamlivingston/liamlivingston.com")
