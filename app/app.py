@@ -58,6 +58,12 @@ def battery_business():
 def battery_business_zero():
     return render_template("zero.html", home="/")
 
+@app.route('/solar_car', methods = ['POST'])
+def solar_car():
+    data = request.form
+    
+    pass
+
 @app.route('/github')
 def github():
     return redirect("https://github.com/liamlivingston/liamlivingston.com")
