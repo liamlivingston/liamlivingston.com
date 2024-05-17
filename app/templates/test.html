@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <div id="container"></div>
 <canvas id="chart"></canvas>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
@@ -6,32 +6,28 @@
 
 
 <script>
-  d3.csv("/static/out.csv", function(data) {
-    makeChart(data);
-});
-
-
-
-function makeChart(players) {
-  years = [2015, 2020, 2030,2040,2050,2060,2070,2080,2090,2100]
-  d = []
-  for (x in years) {
-    d.push(players[years[x]])
-  }
-
-  var chart = new Chart('chart', {
+years = [2015,2020,2030,2040,2050,2060,2070,2080,2090,2100]
+d = []
+var chart = new Chart('chart', {
     type: 'line',
     data: {
-      labels: years,
-      datasets: [
-        {
-          data: d
-        },
-        {
-          data: d
-        }
-      ]
+      labels: years
     }
-  });
-}
+});
+d3.csv("/static/out.csv", function(data) {
+    y = []
+    for (x in years) {
+      y.push(parseFloat(data[years[x]]))
+    };
+    const newDataset = {
+        label: data['MODEL'].concat("-").concat(data['SCENARIO']), 
+        data: y,
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.5
+    };
+    chart.data.datasets.push(newDataset);
+    chart.update();
+});
+
 </script>
