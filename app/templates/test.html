@@ -1,58 +1,37 @@
-<style>
-body {
-    margin: 0;
-    overflow: hidden;
-}
+<!DOCTYPE html>
+<div id="container"></div>
+<canvas id="chart"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
 
-@keyframes slideShow {
-    0% {
-        transform: translateX(0);
+
+<script>
+  d3.csv("/static/out.csv", function(data) {
+    makeChart(data);
+});
+
+
+
+function makeChart(players) {
+  years = [2015, 2020, 2030,2040,2050,2060,2070,2080,2090,2100]
+  d = []
+  for (x in years) {
+    d.push(players[years[x]])
+  }
+
+  var chart = new Chart('chart', {
+    type: 'line',
+    data: {
+      labels: years,
+      datasets: [
+        {
+          data: d
+        },
+        {
+          data: d
+        }
+      ]
     }
-    45% {
-        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
-    }
-    55%{
-        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
-    }
-    100% {
-        transform: translateX(0);
-    }
+  });
 }
-
-.sliderContainer {
-    width: calc(100vw/ 3 * 5 + 16px);
-    height: 20vh;
-    top: 0px;
-    animation: 60s linear 0s infinite slideShow;
-}
-
-.slideItem {
-    width: calc(100vw/ 3);
-    height: 40vh;
-    display: inline-flex;
-    background-color: red;
-}
-</style>
-
-<div class="sliderContainer">
-    <div class="slideItem">
-        
-    </div>
-    
-    <div class="slideItem">
-
-    </div>
-    
-    <div class="slideItem">
-
-    </div>
-    
-    <div class="slideItem">
-
-    </div>
-    
-    <div class="slideItem">
-
-    </div>
-
-</div>
+</script>
