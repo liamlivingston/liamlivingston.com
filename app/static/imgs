@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in *.jpg
+do
+	echo "$i" "${i%.jpg}.avif"
+	/home/liam/magick convert "$i" "${i%.jpg}.avif"
+done
