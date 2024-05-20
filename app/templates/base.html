@@ -439,8 +439,8 @@ a {
 {{sip}}
 {% endautoescape %}
 
-  <a href="{{website_location}}meeting_info{% autoescape false %}{{userid}}{% endautoescape %}" style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hd}};" class="title" id="disc_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">forum</h2><h2 style="color:inherit;text-decoration:inherit;">Meeting Info</h2></a>
-  <a href="{{website_location}}projects{% autoescape false %}{{userid}}{% endautoescape %}" style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hl}}" class="title" id="projects_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">electric_bike</h2><h2 style="color:inherit;text-decoration:inherit;">Projects</h2></a>
+  <a href="{{home}}meeting_info{% autoescape false %}{{userid}}{% endautoescape %}" style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hd}};" class="title" id="disc_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">forum</h2><h2 style="color:inherit;text-decoration:inherit;">Meeting Info</h2></a>
+  <a href="{{home}}projects{% autoescape false %}{{userid}}{% endautoescape %}" style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hl}}" class="title" id="projects_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">electric_bike</h2><h2 style="color:inherit;text-decoration:inherit;">Projects</h2></a>
   <a href="{% autoescape false %}{{home}}{% endautoescape %}#about"style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{ha}}" class="title" id="about_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">group</h2><h2 style="color:inherit;text-decoration:inherit;">About me</h2></a>
   <a href="{% autoescape false %}{{home}}{% endautoescape %}#top"style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hh}}" class="title" id="home_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">home</h2><h2 style="color:inherit;text-decoration:inherit;">Home</h2></a>
 </div>
@@ -572,13 +572,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function modalOpen(num, useOrig){
     (document.getElementById("Modal"+num)).style.display = "block";
-    if (useOrig) {
-      origImgScr = ((document.getElementById("Img"+num)).src).split(".");
-      origImgScr.pop();
-      (document.getElementById("img"+num)).src = (origImgScr.join(".") + "_orig.jpg");
-    } else {
-      (document.getElementById('img'+num)).src = (document.getElementById('Img'+num)).src;
-    }
+
+    origImgScr = ((document.getElementById("Img"+num)).src).split(".");
+    origImgScr.pop();
+    (document.getElementById("img"+num)).src = (origImgScr.join(".") + ".jpg");
   }
 
   function modalClose(num){
