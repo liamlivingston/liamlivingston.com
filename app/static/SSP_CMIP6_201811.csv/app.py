@@ -8,12 +8,13 @@ with open(filename, 'r') as csvfile:
     csvreader = csv.reader(csvfile)
     fields = next(csvreader)
     for row in csvreader:
-        for x in range(len(row)):
-            try:
-                row[x] = round(float(row[x]), 2)
-            except:
-                pass
-        rows.append(row)
+        if (not row[1] == "SSP3-LowNTCF" and not row[1] == "SSP5-34-OS"):
+            for x in range(len(row)):
+                try:
+                    row[x] = round(float(row[x]), 2)
+                except:
+                    pass
+            rows.append(row)
     print("Total no. of rows: %d" % (csvreader.line_num))
 
 a = [fields]
