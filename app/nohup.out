@@ -1,0 +1,2443 @@
+[2024-05-18 15:47:17 -0700] [788344] [INFO] Starting gunicorn 22.0.0
+[2024-05-18 15:47:17 -0700] [788344] [INFO] Listening at: http://0.0.0.0:80 (788344)
+[2024-05-18 15:47:17 -0700] [788344] [INFO] Using worker: sync
+[2024-05-18 15:47:17 -0700] [788356] [INFO] Booting worker with pid: 788356
+[2024-05-18 15:47:17 -0700] [788357] [INFO] Booting worker with pid: 788357
+[2024-05-18 15:47:17 -0700] [788363] [INFO] Booting worker with pid: 788363
+[2024-05-18 15:47:17 -0700] [788364] [INFO] Booting worker with pid: 788364
+[2024-05-18 15:47:17 -0700] [788365] [INFO] Booting worker with pid: 788365
+[2024-05-18 16:51:23 -0700] [788344] [CRITICAL] WORKER TIMEOUT (pid:788365)
+[2024-05-18 16:51:23 -0700] [788365] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-18 16:51:23 -0700] [788365] [INFO] Worker exiting (pid: 788365)
+[2024-05-18 16:51:23 -0700] [1042572] [INFO] Booting worker with pid: 1042572
+[2024-05-18 16:52:50 -0700] [788344] [CRITICAL] WORKER TIMEOUT (pid:788356)
+[2024-05-18 16:52:50 -0700] [788356] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-18 16:52:50 -0700] [788356] [INFO] Worker exiting (pid: 788356)
+[2024-05-18 16:52:50 -0700] [1043739] [INFO] Booting worker with pid: 1043739
+[2024-05-18 17:37:08 -0700] [1043739] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 281, in parse
+    self.parse_request_line(line)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 445, in parse_request_line
+    raise InvalidHTTPVersion(self.version)
+gunicorn.http.errors.InvalidHTTPVersion: <unprintable InvalidHTTPVersion object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run_for_one(timeout)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 70, in run_for_one
+    self.accept(listener)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 32, in accept
+    self.handle(listener, client, addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 158, in handle
+    self.handle_error(req, client, addr, e)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 225, in handle_error
+    mesg = "Invalid HTTP Version '%s'" % str(exc)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/errors.py", line 56, in __str__
+    return "Invalid HTTP Version: %r" % self.version
+TypeError: not all arguments converted during string formatting
+[2024-05-18 17:37:08 -0700] [1043739] [INFO] Worker exiting (pid: 1043739)
+[2024-05-18 17:37:08 -0700] [788344] [ERROR] Worker (pid:1043739) exited with code 255
+[2024-05-18 17:37:08 -0700] [788344] [ERROR] Worker (pid:1043739) exited with code 255.
+[2024-05-18 17:37:08 -0700] [1080737] [INFO] Booting worker with pid: 1080737
+[2024-05-18 22:32:02 -0700] [788344] [CRITICAL] WORKER TIMEOUT (pid:788357)
+[2024-05-18 22:32:02 -0700] [788357] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 272, in parse
+    line, rbuf = self.read_line(unreader, buf, self.limit_request_line)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 324, in read_line
+    self.get_data(unreader, buf)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-18 22:32:02 -0700] [788357] [INFO] Worker exiting (pid: 788357)
+[2024-05-18 22:32:02 -0700] [1252418] [INFO] Booting worker with pid: 1252418
+[2024-05-18 22:32:33 -0700] [788344] [CRITICAL] WORKER TIMEOUT (pid:1080737)
+[2024-05-18 22:32:33 -0700] [1080737] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 272, in parse
+    line, rbuf = self.read_line(unreader, buf, self.limit_request_line)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 324, in read_line
+    self.get_data(unreader, buf)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-18 22:32:33 -0700] [1080737] [INFO] Worker exiting (pid: 1080737)
+[2024-05-18 22:32:33 -0700] [1252822] [INFO] Booting worker with pid: 1252822
+[2024-05-18 23:53:27 -0700] [788344] [CRITICAL] WORKER TIMEOUT (pid:788364)
+[2024-05-18 23:53:27 -0700] [788344] [CRITICAL] WORKER TIMEOUT (pid:1042572)
+[2024-05-18 23:53:27 -0700] [788364] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-18 23:53:27 -0700] [1042572] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-18 23:53:27 -0700] [788364] [INFO] Worker exiting (pid: 788364)
+[2024-05-18 23:53:27 -0700] [1042572] [INFO] Worker exiting (pid: 1042572)
+[2024-05-18 23:53:27 -0700] [1300556] [INFO] Booting worker with pid: 1300556
+[2024-05-18 23:53:27 -0700] [1300557] [INFO] Booting worker with pid: 1300557
+[2024-05-19 03:36:28 -0700] [788344] [CRITICAL] WORKER TIMEOUT (pid:1252822)
+[2024-05-19 03:36:28 -0700] [1252822] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 03:36:28 -0700] [1252822] [INFO] Worker exiting (pid: 1252822)
+[2024-05-19 03:36:28 -0700] [1432924] [INFO] Booting worker with pid: 1432924
+[2024-05-19 05:43:46 -0700] [788344] [CRITICAL] WORKER TIMEOUT (pid:788363)
+[2024-05-19 05:43:46 -0700] [788363] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 272, in parse
+    line, rbuf = self.read_line(unreader, buf, self.limit_request_line)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 324, in read_line
+    self.get_data(unreader, buf)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 05:43:46 -0700] [788363] [INFO] Worker exiting (pid: 788363)
+[2024-05-19 05:43:46 -0700] [1506680] [INFO] Booting worker with pid: 1506680
+[2024-05-19 05:44:17 -0700] [788344] [CRITICAL] WORKER TIMEOUT (pid:1506680)
+[2024-05-19 05:44:17 -0700] [1506680] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 272, in parse
+    line, rbuf = self.read_line(unreader, buf, self.limit_request_line)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 324, in read_line
+    self.get_data(unreader, buf)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 05:44:17 -0700] [1506680] [INFO] Worker exiting (pid: 1506680)
+[2024-05-19 05:44:17 -0700] [1507056] [INFO] Booting worker with pid: 1507056
+[2024-05-19 10:10:25 -0700] [788344] [INFO] Handling signal: hup
+[2024-05-19 10:10:25 -0700] [788344] [INFO] Hang up: Master
+[2024-05-19 10:10:25 -0700] [788344] [ERROR] Worker (pid:1252418) was sent SIGHUP!
+[2024-05-19 10:10:25 -0700] [788344] [ERROR] Worker (pid:1507056) was sent SIGHUP!
+[2024-05-19 10:10:25 -0700] [788344] [ERROR] Worker (pid:1432924) was sent SIGHUP!
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1093, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1016, in handleError
+    traceback.print_stack(frame, file=sys.stderr)
+  File "/usr/lib/python3.8/traceback.py", line 190, in print_stack
+    print_list(extract_stack(f, limit=limit), file=file)
+  File "/usr/lib/python3.8/traceback.py", line 25, in print_list
+    print(item, file=file, end="")
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/server/test/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2165, in _signature_from_function
+    for name in positional[:non_default_count]:
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1432924) was sent SIGHUP!'
+Arguments: ()
+[2024-05-19 10:10:25 -0700] [1668810] [INFO] Booting worker with pid: 1668810
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1093, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1016, in handleError
+    traceback.print_stack(frame, file=sys.stderr)
+  File "/usr/lib/python3.8/traceback.py", line 190, in print_stack
+    print_list(extract_stack(f, limit=limit), file=file)
+  File "/usr/lib/python3.8/traceback.py", line 25, in print_list
+    print(item, file=file, end="")
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/server/test/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2165, in _signature_from_function
+    for name in positional[:non_default_count]:
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1432924) was sent SIGHUP!'
+Arguments: ()
+[2024-05-19 10:10:25 -0700] [1668811] [INFO] Booting worker with pid: 1668811
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1093, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1016, in handleError
+    traceback.print_stack(frame, file=sys.stderr)
+  File "/usr/lib/python3.8/traceback.py", line 190, in print_stack
+    print_list(extract_stack(f, limit=limit), file=file)
+  File "/usr/lib/python3.8/traceback.py", line 25, in print_list
+    print(item, file=file, end="")
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/server/test/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2165, in _signature_from_function
+    for name in positional[:non_default_count]:
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1432924) was sent SIGHUP!'
+Arguments: ()
+[2024-05-19 10:10:25 -0700] [1668812] [INFO] Booting worker with pid: 1668812
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1093, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1016, in handleError
+    traceback.print_stack(frame, file=sys.stderr)
+  File "/usr/lib/python3.8/traceback.py", line 190, in print_stack
+    print_list(extract_stack(f, limit=limit), file=file)
+  File "/usr/lib/python3.8/traceback.py", line 25, in print_list
+    print(item, file=file, end="")
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/server/test/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2165, in _signature_from_function
+    for name in positional[:non_default_count]:
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1432924) was sent SIGHUP!'
+Arguments: ()
+[2024-05-19 10:10:25 -0700] [1668813] [INFO] Booting worker with pid: 1668813
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1093, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1016, in handleError
+    traceback.print_stack(frame, file=sys.stderr)
+  File "/usr/lib/python3.8/traceback.py", line 190, in print_stack
+    print_list(extract_stack(f, limit=limit), file=file)
+  File "/usr/lib/python3.8/traceback.py", line 25, in print_list
+    print(item, file=file, end="")
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/server/test/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2165, in _signature_from_function
+    for name in positional[:non_default_count]:
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1432924) was sent SIGHUP!'
+Arguments: ()
+[2024-05-19 10:10:25 -0700] [1668814] [INFO] Booting worker with pid: 1668814
+[2024-05-19 10:18:19 -0700] [1668814] [INFO] Worker exiting (pid: 1668814)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1093, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1016, in handleError
+    traceback.print_stack(frame, file=sys.stderr)
+  File "/usr/lib/python3.8/traceback.py", line 190, in print_stack
+    print_list(extract_stack(f, limit=limit), file=file)
+  File "/usr/lib/python3.8/traceback.py", line 25, in print_list
+    print(item, file=file, end="")
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/server/test/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2165, in _signature_from_function
+    for name in positional[:non_default_count]:
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1432924) was sent SIGHUP!'
+Arguments: ()
+[2024-05-19 10:18:19 -0700] [1674622] [INFO] Booting worker with pid: 1674622
+[2024-05-19 10:18:28 -0700] [1668813] [INFO] Worker exiting (pid: 1668813)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1093, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1016, in handleError
+    traceback.print_stack(frame, file=sys.stderr)
+  File "/usr/lib/python3.8/traceback.py", line 190, in print_stack
+    print_list(extract_stack(f, limit=limit), file=file)
+  File "/usr/lib/python3.8/traceback.py", line 25, in print_list
+    print(item, file=file, end="")
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/server/test/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2165, in _signature_from_function
+    for name in positional[:non_default_count]:
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1432924) was sent SIGHUP!'
+Arguments: ()
+[2024-05-19 10:18:28 -0700] [1674890] [INFO] Booting worker with pid: 1674890
+[2024-05-19 10:18:51 -0700] [1674622] [INFO] Worker exiting (pid: 1674622)
+[2024-05-19 10:18:51 -0700] [1674890] [INFO] Worker exiting (pid: 1674890)
+[2024-05-19 10:18:51 -0700] [1668810] [INFO] Worker exiting (pid: 1668810)
+[2024-05-19 10:18:51 -0700] [1668811] [INFO] Worker exiting (pid: 1668811)
+[2024-05-19 10:18:51 -0700] [1668812] [INFO] Worker exiting (pid: 1668812)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1093, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1016, in handleError
+    traceback.print_stack(frame, file=sys.stderr)
+  File "/usr/lib/python3.8/traceback.py", line 190, in print_stack
+    print_list(extract_stack(f, limit=limit), file=file)
+  File "/usr/lib/python3.8/traceback.py", line 25, in print_list
+    print(item, file=file, end="")
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/server/test/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2165, in _signature_from_function
+    for name in positional[:non_default_count]:
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1432924) was sent SIGHUP!'
+Arguments: ()
+[2024-05-19 10:18:51 -0700] [788344] [INFO] Handling signal: term
+[2024-05-19 10:18:51 -0700] [788344] [ERROR] Worker (pid:1674622) was sent SIGTERM!
+[2024-05-19 10:18:51 -0700] [788344] [ERROR] Worker (pid:1674890) was sent SIGTERM!
+[2024-05-19 10:18:51 -0700] [788344] [ERROR] Worker (pid:1668812) was sent SIGTERM!
+[2024-05-19 10:18:51 -0700] [788344] [ERROR] Worker (pid:1668811) was sent SIGTERM!
+[2024-05-19 10:18:51 -0700] [788344] [ERROR] Worker (pid:1668810) was sent SIGTERM!
+[2024-05-19 10:18:51 -0700] [788344] [INFO] Shutting down: Master
+[2024-05-19 10:24:37 -0700] [1679651] [INFO] Starting gunicorn 22.0.0
+[2024-05-19 10:24:37 -0700] [1679651] [INFO] Listening at: http://0.0.0.0:80 (1679651)
+[2024-05-19 10:24:37 -0700] [1679651] [INFO] Using worker: sync
+[2024-05-19 10:24:37 -0700] [1679708] [INFO] Booting worker with pid: 1679708
+[2024-05-19 10:24:37 -0700] [1679775] [INFO] Booting worker with pid: 1679775
+[2024-05-19 10:24:37 -0700] [1679957] [INFO] Booting worker with pid: 1679957
+[2024-05-19 10:24:37 -0700] [1679958] [INFO] Booting worker with pid: 1679958
+[2024-05-19 10:24:37 -0700] [1679959] [INFO] Booting worker with pid: 1679959
+[2024-05-19 10:25:26 -0700] [1679775] [INFO] Worker exiting (pid: 1679775)
+[2024-05-19 10:25:26 -0700] [1679957] [INFO] Worker exiting (pid: 1679957)
+[2024-05-19 10:25:26 -0700] [1679959] [INFO] Worker exiting (pid: 1679959)
+[2024-05-19 10:25:26 -0700] [1679958] [INFO] Worker exiting (pid: 1679958)
+[2024-05-19 10:25:26 -0700] [1679708] [INFO] Worker exiting (pid: 1679708)
+[2024-05-19 10:25:26 -0700] [1679651] [INFO] Handling signal: term
+[2024-05-19 10:25:26 -0700] [1679651] [ERROR] Worker (pid:1679959) was sent SIGTERM!
+[2024-05-19 10:25:26 -0700] [1679651] [ERROR] Worker (pid:1679957) was sent SIGTERM!
+[2024-05-19 10:25:26 -0700] [1679651] [ERROR] Worker (pid:1679775) was sent SIGTERM!
+[2024-05-19 10:25:26 -0700] [1679651] [ERROR] Worker (pid:1679958) was sent SIGTERM!
+[2024-05-19 10:25:27 -0700] [1679651] [INFO] Shutting down: Master
+[2024-05-19 10:25:29 -0700] [1681161] [INFO] Starting gunicorn 22.0.0
+[2024-05-19 10:25:29 -0700] [1681161] [INFO] Listening at: http://0.0.0.0:80 (1681161)
+[2024-05-19 10:25:29 -0700] [1681161] [INFO] Using worker: sync
+[2024-05-19 10:25:29 -0700] [1681164] [INFO] Booting worker with pid: 1681164
+[2024-05-19 10:25:29 -0700] [1681165] [INFO] Booting worker with pid: 1681165
+[2024-05-19 10:25:29 -0700] [1681166] [INFO] Booting worker with pid: 1681166
+[2024-05-19 10:25:29 -0700] [1681167] [INFO] Booting worker with pid: 1681167
+[2024-05-19 10:25:29 -0700] [1681168] [INFO] Booting worker with pid: 1681168
+[2024-05-19 10:26:46 -0700] [1681161] [CRITICAL] WORKER TIMEOUT (pid:1681168)
+[2024-05-19 10:26:46 -0700] [1681168] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 10:26:46 -0700] [1681168] [INFO] Worker exiting (pid: 1681168)
+[2024-05-19 10:26:46 -0700] [1682378] [INFO] Booting worker with pid: 1682378
+[2024-05-19 10:31:46 -0700] [1681164] [INFO] Worker exiting (pid: 1681164)
+[2024-05-19 10:31:46 -0700] [1681165] [INFO] Worker exiting (pid: 1681165)
+[2024-05-19 10:31:46 -0700] [1682378] [INFO] Worker exiting (pid: 1682378)
+[2024-05-19 10:31:46 -0700] [1681166] [INFO] Worker exiting (pid: 1681166)
+[2024-05-19 10:31:46 -0700] [1681161] [INFO] Handling signal: term
+[2024-05-19 10:31:46 -0700] [1681167] [INFO] Worker exiting (pid: 1681167)
+[2024-05-19 10:31:46 -0700] [1681161] [ERROR] Worker (pid:1682378) was sent SIGTERM!
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 257, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1697, in isEnabledFor
+    return self._cache[level]
+KeyError: 40
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/server/test/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 227, in run
+    self.halt()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1474, in error
+    if self.isEnabledFor(ERROR):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1699, in isEnabledFor
+    _acquireLock()
+  File "/usr/lib/python3.8/logging/__init__.py", line 218, in _acquireLock
+    def _acquireLock():
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1681164) was sent SIGTERM!'
+Arguments: ()
+[2024-05-19 10:31:46 -0700] [1681161] [ERROR] Worker (pid:1681165) was sent SIGTERM!
+[2024-05-19 10:31:46 -0700] [1681161] [INFO] Shutting down: Master
+[2024-05-19 10:31:51 -0700] [1686170] [INFO] Starting gunicorn 22.0.0
+[2024-05-19 10:31:51 -0700] [1686170] [INFO] Listening at: http://0.0.0.0:80 (1686170)
+[2024-05-19 10:31:51 -0700] [1686170] [INFO] Using worker: sync
+[2024-05-19 10:31:51 -0700] [1686326] [INFO] Booting worker with pid: 1686326
+[2024-05-19 10:31:51 -0700] [1686327] [INFO] Booting worker with pid: 1686327
+[2024-05-19 10:31:51 -0700] [1686328] [INFO] Booting worker with pid: 1686328
+[2024-05-19 10:31:51 -0700] [1686329] [INFO] Booting worker with pid: 1686329
+[2024-05-19 10:31:51 -0700] [1686330] [INFO] Booting worker with pid: 1686330
+[2024-05-19 10:33:05 -0700] [1686170] [CRITICAL] WORKER TIMEOUT (pid:1686326)
+[2024-05-19 10:33:05 -0700] [1686326] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 10:33:05 -0700] [1686326] [INFO] Worker exiting (pid: 1686326)
+[2024-05-19 10:33:05 -0700] [1687367] [INFO] Booting worker with pid: 1687367
+[2024-05-19 12:21:01 -0700] [1686329] [INFO] Worker exiting (pid: 1686329)
+[2024-05-19 12:21:01 -0700] [1686330] [INFO] Worker exiting (pid: 1686330)
+[2024-05-19 12:21:01 -0700] [1687367] [INFO] Worker exiting (pid: 1687367)
+[2024-05-19 12:21:01 -0700] [1686328] [INFO] Worker exiting (pid: 1686328)
+[2024-05-19 12:21:01 -0700] [1686170] [INFO] Handling signal: term
+[2024-05-19 12:21:01 -0700] [1686327] [INFO] Worker exiting (pid: 1686327)
+[2024-05-19 12:21:01 -0700] [1686170] [ERROR] Worker (pid:1686329) was sent SIGTERM!
+[2024-05-19 12:21:01 -0700] [1686170] [ERROR] Worker (pid:1686330) was sent SIGTERM!
+[2024-05-19 12:21:01 -0700] [1686170] [ERROR] Worker (pid:1686328) was sent SIGTERM!
+[2024-05-19 12:21:01 -0700] [1686170] [ERROR] Worker (pid:1687367) was sent SIGTERM!
+[2024-05-19 12:21:01 -0700] [1686170] [INFO] Shutting down: Master
+[2024-05-19 12:21:04 -0700] [1753152] [INFO] Starting gunicorn 22.0.0
+[2024-05-19 12:21:04 -0700] [1753152] [INFO] Listening at: http://0.0.0.0:80 (1753152)
+[2024-05-19 12:21:04 -0700] [1753152] [INFO] Using worker: sync
+[2024-05-19 12:21:04 -0700] [1753155] [INFO] Booting worker with pid: 1753155
+[2024-05-19 12:21:04 -0700] [1753156] [INFO] Booting worker with pid: 1753156
+[2024-05-19 12:21:04 -0700] [1753157] [INFO] Booting worker with pid: 1753157
+[2024-05-19 12:21:04 -0700] [1753158] [INFO] Booting worker with pid: 1753158
+[2024-05-19 12:21:04 -0700] [1753167] [INFO] Booting worker with pid: 1753167
+[2024-05-19 12:21:59 -0700] [1753152] [CRITICAL] WORKER TIMEOUT (pid:1753158)
+[2024-05-19 12:21:59 -0700] [1753158] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 12:21:59 -0700] [1753158] [INFO] Worker exiting (pid: 1753158)
+[2024-05-19 12:21:59 -0700] [1754904] [INFO] Booting worker with pid: 1754904
+[2024-05-19 12:22:02 -0700] [1753152] [CRITICAL] WORKER TIMEOUT (pid:1753156)
+[2024-05-19 12:22:02 -0700] [1753156] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 12:22:02 -0700] [1753156] [INFO] Worker exiting (pid: 1753156)
+[2024-05-19 12:22:02 -0700] [1754911] [INFO] Booting worker with pid: 1754911
+[2024-05-19 12:24:36 -0700] [1753167] [INFO] Worker exiting (pid: 1753167)
+[2024-05-19 12:24:36 -0700] [1754911] [INFO] Worker exiting (pid: 1754911)
+[2024-05-19 12:24:36 -0700] [1753155] [INFO] Worker exiting (pid: 1753155)
+[2024-05-19 12:24:36 -0700] [1753157] [INFO] Worker exiting (pid: 1753157)
+[2024-05-19 12:24:36 -0700] [1753152] [INFO] Handling signal: term
+[2024-05-19 12:24:36 -0700] [1754904] [INFO] Worker exiting (pid: 1754904)
+[2024-05-19 12:24:36 -0700] [1753152] [ERROR] Worker (pid:1753155) was sent SIGTERM!
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 257, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/server/test/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 227, in run
+    self.halt()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1754911) was sent SIGTERM!'
+Arguments: ()
+[2024-05-19 12:24:36 -0700] [1753152] [INFO] Shutting down: Master
+[2024-05-19 12:24:39 -0700] [1757392] [INFO] Starting gunicorn 22.0.0
+[2024-05-19 12:24:39 -0700] [1757392] [INFO] Listening at: http://0.0.0.0:80 (1757392)
+[2024-05-19 12:24:39 -0700] [1757392] [INFO] Using worker: sync
+[2024-05-19 12:24:39 -0700] [1757395] [INFO] Booting worker with pid: 1757395
+[2024-05-19 12:24:39 -0700] [1757396] [INFO] Booting worker with pid: 1757396
+[2024-05-19 12:24:39 -0700] [1757397] [INFO] Booting worker with pid: 1757397
+[2024-05-19 12:24:39 -0700] [1757398] [INFO] Booting worker with pid: 1757398
+[2024-05-19 12:24:39 -0700] [1757399] [INFO] Booting worker with pid: 1757399
+[2024-05-19 12:44:16 -0700] [1757392] [CRITICAL] WORKER TIMEOUT (pid:1757396)
+[2024-05-19 12:44:16 -0700] [1757396] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 12:44:16 -0700] [1757396] [INFO] Worker exiting (pid: 1757396)
+[2024-05-19 12:44:16 -0700] [1769508] [INFO] Booting worker with pid: 1769508
+[2024-05-19 13:10:51 -0700] [1757392] [CRITICAL] WORKER TIMEOUT (pid:1757399)
+[2024-05-19 13:10:51 -0700] [1757392] [CRITICAL] WORKER TIMEOUT (pid:1769508)
+[2024-05-19 13:10:51 -0700] [1757399] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 13:10:51 -0700] [1769508] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 13:10:51 -0700] [1757399] [INFO] Worker exiting (pid: 1757399)
+[2024-05-19 13:10:51 -0700] [1769508] [INFO] Worker exiting (pid: 1769508)
+[2024-05-19 13:10:51 -0700] [1784892] [INFO] Booting worker with pid: 1784892
+[2024-05-19 13:10:51 -0700] [1784895] [INFO] Booting worker with pid: 1784895
+[2024-05-19 16:17:52 -0700] [1757392] [CRITICAL] WORKER TIMEOUT (pid:1757397)
+[2024-05-19 16:17:52 -0700] [1757392] [CRITICAL] WORKER TIMEOUT (pid:1757398)
+[2024-05-19 16:17:52 -0700] [1757397] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 272, in parse
+    line, rbuf = self.read_line(unreader, buf, self.limit_request_line)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 324, in read_line
+    self.get_data(unreader, buf)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 16:17:52 -0700] [1757398] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 272, in parse
+    line, rbuf = self.read_line(unreader, buf, self.limit_request_line)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 324, in read_line
+    self.get_data(unreader, buf)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/server/test/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-19 16:17:52 -0700] [1757397] [INFO] Worker exiting (pid: 1757397)
+[2024-05-19 16:17:52 -0700] [1757398] [INFO] Worker exiting (pid: 1757398)
+[2024-05-19 16:17:52 -0700] [1892640] [INFO] Booting worker with pid: 1892640
+[2024-05-19 16:17:52 -0700] [1892643] [INFO] Booting worker with pid: 1892643
+[2024-05-19 18:43:02 -0700] [1757392] [INFO] Handling signal: hup
+[2024-05-19 18:43:02 -0700] [1757392] [INFO] Hang up: Master
+[2024-05-19 18:43:02 -0700] [1757392] [ERROR] Worker (pid:1892640) was sent SIGHUP!
+[2024-05-19 18:43:02 -0700] [1757392] [ERROR] Worker (pid:1784892) was sent SIGHUP!
+[2024-05-19 18:43:02 -0700] [1757392] [ERROR] Worker (pid:1784895) was sent SIGHUP!
+[2024-05-19 18:43:02 -0700] [1757392] [ERROR] Worker (pid:1892643) was sent SIGHUP!
+[2024-05-19 18:43:02 -0700] [1757392] [ERROR] Worker (pid:1757395) was sent SIGHUP!
+[2024-05-19 18:43:02 -0700] [1982891] [INFO] Booting worker with pid: 1982891
+[2024-05-19 18:43:02 -0700] [1982893] [INFO] Booting worker with pid: 1982893
+[2024-05-19 18:43:02 -0700] [1982894] [INFO] Booting worker with pid: 1982894
+[2024-05-19 18:43:02 -0700] [1982895] [INFO] Booting worker with pid: 1982895
+[2024-05-19 18:43:02 -0700] [1982896] [INFO] Booting worker with pid: 1982896
+2010_zero_s_battery_1.jpg 2010_zero_s_battery_1.avif
+2010_zero_s_battery.jpg 2010_zero_s_battery.avif
+36v_battery.jpg 36v_battery.avif
+72v_battery_1.jpg 72v_battery_1.avif
+batteries.jpg batteries.avif
+csp.jpg csp.avif
+ebike_club.jpg ebike_club.avif
+ebike_v1.jpg ebike_v1.avif
+ebike_v2.jpg ebike_v2.avif
+ebike_v3.jpg ebike_v3.avif
+ebike_v3_orig.jpg ebike_v3_orig.avif
+eve_batteries.jpg eve_batteries.avif
+kenya.jpg kenya.avif
+modem_battery.jpg modem_battery.avif
+rewinding.jpg rewinding.avif
+solar_car_v1_aux_soldering.jpg solar_car_v1_aux_soldering.avif
+solar_car_v1.jpg solar_car_v1.avif
+solar_car_v1_main_system.jpg solar_car_v1_main_system.avif
+[2024-05-19 19:31:37 -0700] [32630] [INFO] Starting gunicorn 22.0.0
+[2024-05-19 19:31:37 -0700] [32630] [INFO] Listening at: http://0.0.0.0:80 (32630)
+[2024-05-19 19:31:37 -0700] [32630] [INFO] Using worker: sync
+[2024-05-19 19:31:37 -0700] [32634] [INFO] Booting worker with pid: 32634
+[2024-05-19 19:31:37 -0700] [32635] [INFO] Booting worker with pid: 32635
+[2024-05-19 19:31:37 -0700] [32636] [INFO] Booting worker with pid: 32636
+[2024-05-19 19:31:37 -0700] [32637] [INFO] Booting worker with pid: 32637
+[2024-05-19 19:31:37 -0700] [32638] [INFO] Booting worker with pid: 32638
+[2024-05-19 19:31:40 -0700] [32630] [INFO] Handling signal: hup
+[2024-05-19 19:31:40 -0700] [32630] [INFO] Hang up: Master
+[2024-05-19 19:31:40 -0700] [32630] [ERROR] Worker (pid:32636) was sent SIGHUP!
+[2024-05-19 19:31:40 -0700] [32630] [ERROR] Worker (pid:32634) was sent SIGHUP!
+[2024-05-19 19:31:40 -0700] [32630] [ERROR] Worker (pid:32638) was sent SIGHUP!
+[2024-05-19 19:31:40 -0700] [32630] [ERROR] Worker (pid:32635) was sent SIGHUP!
+[2024-05-19 19:31:40 -0700] [32630] [ERROR] Worker (pid:32637) was sent SIGHUP!
+[2024-05-19 19:31:40 -0700] [32723] [INFO] Booting worker with pid: 32723
+[2024-05-19 19:31:40 -0700] [32724] [INFO] Booting worker with pid: 32724
+[2024-05-19 19:31:40 -0700] [32725] [INFO] Booting worker with pid: 32725
+[2024-05-19 19:31:40 -0700] [32726] [INFO] Booting worker with pid: 32726
+[2024-05-19 19:31:40 -0700] [32727] [INFO] Booting worker with pid: 32727
+[2024-05-19 19:53:27 -0700] [32723] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP Version: 'RTSP/1.0'
+[2024-05-19 19:53:32 -0700] [32726] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP request line: ''
+[2024-05-19 19:53:47 -0700] [32723] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP request line: 'EHLO'
+[2024-05-19 19:53:47 -0700] [32723] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP request line: 'HELP'
+[2024-05-19 19:53:53 -0700] [32723] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP request line: '\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie: mstshash=nmap'
+[2024-05-19 19:54:29 -0700] [32724] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP Version: 'SIP/2.0'
+[2024-05-19 19:55:36 -0700] [32724] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP request line: 'WWWOFFLE STATUS'
+[2024-05-19 19:55:52 -0700] [32725] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP method: '\x05\x04\x00\x01\x02\x80\x05\x01\x00\x03\ngoogle.com\x00PGET'
+[2024-05-19 19:56:08 -0700] [32724] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP request line: 'stats'
+[2024-05-19 19:56:44 -0700] [32723] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP method: '\x1b%-12345X@PJL'
+[2024-05-19 19:56:49 -0700] [32726] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP request line: 'serverstatus'
+[2024-05-19 19:57:35 -0700] [32725] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP request line: '*1'
+[2024-05-19 19:57:40 -0700] [32725] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP request line: 'show info'
+[2024-05-19 19:58:11 -0700] [32725] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP request line: 'ver'
+[2024-05-19 19:59:33 -0700] [32724] [WARNING] Invalid request from ip=159.89.114.8: Invalid HTTP Version: 'INFO'
+[2024-05-19 20:50:52 -0700] [32725] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 281, in parse
+    self.parse_request_line(line)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 445, in parse_request_line
+    raise InvalidHTTPVersion(self.version)
+gunicorn.http.errors.InvalidHTTPVersion: <unprintable InvalidHTTPVersion object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run_for_one(timeout)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 70, in run_for_one
+    self.accept(listener)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 32, in accept
+    self.handle(listener, client, addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 158, in handle
+    self.handle_error(req, client, addr, e)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 225, in handle_error
+    mesg = "Invalid HTTP Version '%s'" % str(exc)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/errors.py", line 56, in __str__
+    return "Invalid HTTP Version: %r" % self.version
+TypeError: not all arguments converted during string formatting
+[2024-05-19 20:50:52 -0700] [32725] [INFO] Worker exiting (pid: 32725)
+[2024-05-19 20:50:52 -0700] [32630] [ERROR] Worker (pid:32725) exited with code 255
+[2024-05-19 20:50:52 -0700] [32630] [ERROR] Worker (pid:32725) exited with code 255.
+[2024-05-19 20:50:52 -0700] [172472] [INFO] Booting worker with pid: 172472
+[2024-05-20 01:07:36 -0700] [32723] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 281, in parse
+    self.parse_request_line(line)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 445, in parse_request_line
+    raise InvalidHTTPVersion(self.version)
+gunicorn.http.errors.InvalidHTTPVersion: <unprintable InvalidHTTPVersion object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run_for_one(timeout)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 70, in run_for_one
+    self.accept(listener)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 32, in accept
+    self.handle(listener, client, addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 158, in handle
+    self.handle_error(req, client, addr, e)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 225, in handle_error
+    mesg = "Invalid HTTP Version '%s'" % str(exc)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/errors.py", line 56, in __str__
+    return "Invalid HTTP Version: %r" % self.version
+TypeError: not all arguments converted during string formatting
+[2024-05-20 01:07:36 -0700] [32723] [INFO] Worker exiting (pid: 32723)
+[2024-05-20 01:07:36 -0700] [32630] [ERROR] Worker (pid:32723) exited with code 255
+[2024-05-20 01:07:36 -0700] [32630] [ERROR] Worker (pid:32723) exited with code 255.
+[2024-05-20 01:07:36 -0700] [417399] [INFO] Booting worker with pid: 417399
+[2024-05-20 02:52:44 -0700] [417399] [WARNING] Invalid request from ip=35.245.98.114: Invalid HTTP method: '\x16\x03\x01\x00M\x01\x00\x00I\x03\x03\x0e\x8d\x9c½À\x08\x98ÅÙ\xa0wä.3}\x97\x9f\x86bK'
+[2024-05-20 09:31:08 -0700] [32727] [INFO] Worker exiting (pid: 32727)
+[2024-05-20 09:31:08 -0700] [32726] [INFO] Worker exiting (pid: 32726)
+[2024-05-20 09:31:08 -0700] [172472] [INFO] Worker exiting (pid: 172472)
+[2024-05-20 09:31:08 -0700] [417399] [INFO] Worker exiting (pid: 417399)
+[2024-05-20 09:31:08 -0700] [32724] [INFO] Worker exiting (pid: 32724)
+[2024-05-20 09:31:08 -0700] [32630] [INFO] Handling signal: term
+[2024-05-20 09:31:08 -0700] [32630] [ERROR] Worker (pid:32727) was sent SIGTERM!
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 257, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 227, in run
+    self.halt()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:417399) was sent SIGTERM!'
+Arguments: ()
+[2024-05-20 09:31:38 -0700] [32630] [INFO] Shutting down: Master
+2010_zero_s_battery_1.jpg 2010_zero_s_battery_1.avif
+2010_zero_s_battery.jpg 2010_zero_s_battery.avif
+36v_battery.jpg 36v_battery.avif
+72v_battery_1.jpg 72v_battery_1.avif
+batteries.jpg batteries.avif
+csp.jpg csp.avif
+ebike_club.jpg ebike_club.avif
+ebike_v1.jpg ebike_v1.avif
+ebike_v2.jpg ebike_v2.avif
+ebike_v3.jpg ebike_v3.avif
+ebike_v3_orig.jpg ebike_v3_orig.avif
+eve_batteries.jpg eve_batteries.avif
+kenya.jpg kenya.avif
+modem_battery.jpg modem_battery.avif
+rewinding.jpg rewinding.avif
+solar_car_v1_aux_soldering.jpg solar_car_v1_aux_soldering.avif
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-20 09:35:00 -0700] [874486] [INFO] Starting gunicorn 22.0.0
+[2024-05-20 09:35:00 -0700] [874486] [INFO] Listening at: http://0.0.0.0:80 (874486)
+[2024-05-20 09:35:00 -0700] [874486] [INFO] Using worker: sync
+[2024-05-20 09:35:00 -0700] [874489] [INFO] Booting worker with pid: 874489
+[2024-05-20 09:35:00 -0700] [874490] [INFO] Booting worker with pid: 874490
+[2024-05-20 09:35:00 -0700] [874491] [INFO] Booting worker with pid: 874491
+[2024-05-20 09:35:00 -0700] [874492] [INFO] Booting worker with pid: 874492
+[2024-05-20 09:35:00 -0700] [874493] [INFO] Booting worker with pid: 874493
+[2024-05-20 09:41:45 -0700] [874486] [CRITICAL] WORKER TIMEOUT (pid:874491)
+[2024-05-20 09:41:45 -0700] [874491] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-20 09:41:45 -0700] [874491] [INFO] Worker exiting (pid: 874491)
+[2024-05-20 09:41:45 -0700] [880687] [INFO] Booting worker with pid: 880687
+[2024-05-20 09:45:07 -0700] [874486] [INFO] Handling signal: hup
+[2024-05-20 09:45:07 -0700] [874486] [INFO] Hang up: Master
+[2024-05-20 09:45:07 -0700] [874486] [ERROR] Worker (pid:874493) was sent SIGHUP!
+[2024-05-20 09:45:07 -0700] [874486] [ERROR] Worker (pid:880687) was sent SIGHUP!
+[2024-05-20 09:45:07 -0700] [874486] [ERROR] Worker (pid:874489) was sent SIGHUP!
+[2024-05-20 09:45:07 -0700] [874486] [ERROR] Worker (pid:874490) was sent SIGHUP!
+[2024-05-20 09:45:07 -0700] [874486] [ERROR] Worker (pid:874492) was sent SIGHUP!
+[2024-05-20 09:45:07 -0700] [884049] [INFO] Booting worker with pid: 884049
+[2024-05-20 09:45:07 -0700] [884050] [INFO] Booting worker with pid: 884050
+[2024-05-20 09:45:07 -0700] [884051] [INFO] Booting worker with pid: 884051
+[2024-05-20 09:45:07 -0700] [884052] [INFO] Booting worker with pid: 884052
+[2024-05-20 09:45:07 -0700] [884053] [INFO] Booting worker with pid: 884053
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-20 11:00:46 -0700] [952703] [INFO] Starting gunicorn 22.0.0
+[2024-05-20 11:00:46 -0700] [952703] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-20 11:00:46 -0700] [952703] [ERROR] Retrying in 1 second.
+[2024-05-20 11:00:47 -0700] [952703] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-20 11:00:47 -0700] [952703] [ERROR] Retrying in 1 second.
+[2024-05-20 11:00:48 -0700] [952703] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-20 11:00:48 -0700] [952703] [ERROR] Retrying in 1 second.
+[2024-05-20 11:00:49 -0700] [952703] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-20 11:00:49 -0700] [952703] [ERROR] Retrying in 1 second.
+[2024-05-20 11:00:50 -0700] [952703] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-20 11:00:50 -0700] [952703] [ERROR] Retrying in 1 second.
+[2024-05-20 11:00:51 -0700] [952703] [ERROR] Can't connect to ('0.0.0.0', 80)
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-20 11:00:53 -0700] [953033] [INFO] Starting gunicorn 22.0.0
+[2024-05-20 11:00:53 -0700] [953033] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-20 11:00:53 -0700] [953033] [ERROR] Retrying in 1 second.
+[2024-05-20 11:00:54 -0700] [953033] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-20 11:00:54 -0700] [953033] [ERROR] Retrying in 1 second.
+[2024-05-20 11:00:55 -0700] [953033] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-20 11:00:55 -0700] [953033] [ERROR] Retrying in 1 second.
+[2024-05-20 11:00:56 -0700] [953033] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-20 11:00:56 -0700] [953033] [ERROR] Retrying in 1 second.
+[2024-05-20 11:00:57 -0700] [953033] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-20 11:00:57 -0700] [953033] [ERROR] Retrying in 1 second.
+[2024-05-20 11:00:58 -0700] [953033] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2024-05-20 11:01:01 -0700] [884050] [INFO] Worker exiting (pid: 884050)
+[2024-05-20 11:01:01 -0700] [884049] [INFO] Worker exiting (pid: 884049)
+[2024-05-20 11:01:01 -0700] [884052] [INFO] Worker exiting (pid: 884052)
+[2024-05-20 11:01:01 -0700] [884053] [INFO] Worker exiting (pid: 884053)
+[2024-05-20 11:01:01 -0700] [874486] [INFO] Handling signal: term
+[2024-05-20 11:01:01 -0700] [884051] [INFO] Worker exiting (pid: 884051)
+[2024-05-20 11:01:01 -0700] [874486] [ERROR] Worker (pid:884052) was sent SIGTERM!
+[2024-05-20 11:01:01 -0700] [874486] [ERROR] Worker (pid:884049) was sent SIGTERM!
+[2024-05-20 11:01:01 -0700] [874486] [ERROR] Worker (pid:884050) was sent SIGTERM!
+[2024-05-20 11:01:01 -0700] [874486] [INFO] Shutting down: Master
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-20 11:01:04 -0700] [953196] [INFO] Starting gunicorn 22.0.0
+[2024-05-20 11:01:04 -0700] [953196] [INFO] Listening at: http://0.0.0.0:80 (953196)
+[2024-05-20 11:01:04 -0700] [953196] [INFO] Using worker: sync
+[2024-05-20 11:01:04 -0700] [953199] [INFO] Booting worker with pid: 953199
+[2024-05-20 11:01:04 -0700] [953200] [INFO] Booting worker with pid: 953200
+[2024-05-20 11:01:04 -0700] [953201] [INFO] Booting worker with pid: 953201
+[2024-05-20 11:01:04 -0700] [953202] [INFO] Booting worker with pid: 953202
+[2024-05-20 11:01:04 -0700] [953203] [INFO] Booting worker with pid: 953203
+[2024-05-20 11:37:44 -0700] [953196] [CRITICAL] WORKER TIMEOUT (pid:953199)
+[2024-05-20 11:37:44 -0700] [953199] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-20 11:37:44 -0700] [953199] [INFO] Worker exiting (pid: 953199)
+[2024-05-20 11:37:44 -0700] [988199] [INFO] Booting worker with pid: 988199
+[2024-05-20 14:43:35 -0700] [953196] [INFO] Handling signal: hup
+[2024-05-20 14:43:35 -0700] [953196] [INFO] Hang up: Master
+[2024-05-20 14:43:35 -0700] [953196] [ERROR] Worker (pid:953201) was sent SIGHUP!
+[2024-05-20 14:43:35 -0700] [953196] [ERROR] Worker (pid:988199) was sent SIGHUP!
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2168, in _signature_from_function
+    parameters.append(Parameter(name, annotation=annotation,
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 559, in reap_workers
+    worker.tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/workertmp.py", line 54, in close
+    return self._tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:953203) was sent SIGHUP!'
+Arguments: ()
+[2024-05-20 14:43:35 -0700] [1239703] [INFO] Booting worker with pid: 1239703
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2168, in _signature_from_function
+    parameters.append(Parameter(name, annotation=annotation,
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 559, in reap_workers
+    worker.tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/workertmp.py", line 54, in close
+    return self._tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:953203) was sent SIGHUP!'
+Arguments: ()
+[2024-05-20 14:43:35 -0700] [1239704] [INFO] Booting worker with pid: 1239704
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2168, in _signature_from_function
+    parameters.append(Parameter(name, annotation=annotation,
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 559, in reap_workers
+    worker.tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/workertmp.py", line 54, in close
+    return self._tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:953203) was sent SIGHUP!'
+Arguments: ()
+[2024-05-20 14:43:35 -0700] [1239705] [INFO] Booting worker with pid: 1239705
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2168, in _signature_from_function
+    parameters.append(Parameter(name, annotation=annotation,
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 559, in reap_workers
+    worker.tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/workertmp.py", line 54, in close
+    return self._tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:953203) was sent SIGHUP!'
+Arguments: ()
+[2024-05-20 14:43:35 -0700] [1239706] [INFO] Booting worker with pid: 1239706
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2168, in _signature_from_function
+    parameters.append(Parameter(name, annotation=annotation,
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 559, in reap_workers
+    worker.tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/workertmp.py", line 54, in close
+    return self._tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:953203) was sent SIGHUP!'
+Arguments: ()
+[2024-05-20 14:43:35 -0700] [1239707] [INFO] Booting worker with pid: 1239707
+[2024-05-20 15:50:55 -0700] [1239704] [INFO] Worker exiting (pid: 1239704)
+[2024-05-20 15:50:55 -0700] [1239703] [INFO] Worker exiting (pid: 1239703)
+[2024-05-20 15:50:55 -0700] [1239706] [INFO] Worker exiting (pid: 1239706)
+[2024-05-20 15:50:55 -0700] [1239707] [INFO] Worker exiting (pid: 1239707)
+[2024-05-20 15:50:55 -0700] [1239705] [INFO] Worker exiting (pid: 1239705)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.8/inspect.py", line 3105, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.8/inspect.py", line 2854, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.8/inspect.py", line 2304, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.8/inspect.py", line 2168, in _signature_from_function
+    parameters.append(Parameter(name, annotation=annotation,
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 559, in reap_workers
+    worker.tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/workertmp.py", line 54, in close
+    return self._tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:953203) was sent SIGHUP!'
+Arguments: ()
+[2024-05-20 15:50:55 -0700] [953196] [INFO] Handling signal: term
+[2024-05-20 15:50:55 -0700] [953196] [ERROR] Worker (pid:1239704) was sent SIGTERM!
+[2024-05-20 15:50:55 -0700] [953196] [ERROR] Worker (pid:1239706) was sent SIGTERM!
+[2024-05-20 15:50:55 -0700] [953196] [ERROR] Worker (pid:1239707) was sent SIGTERM!
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 257, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 227, in run
+    self.halt()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 559, in reap_workers
+    worker.tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/workers/workertmp.py", line 54, in close
+    return self._tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1085, in emit
+    msg = self.format(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 929, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 670, in format
+    record.asctime = self.formatTime(record, self.datefmt)
+  File "/usr/lib/python3.8/logging/__init__.py", line 606, in formatTime
+    ct = self.converter(record.created)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.8/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:1239705) was sent SIGTERM!'
+Arguments: ()
+[2024-05-20 15:50:55 -0700] [953196] [ERROR] Worker (pid:1239703) was sent SIGTERM!
+[2024-05-20 15:50:55 -0700] [953196] [INFO] Shutting down: Master
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-20 15:51:05 -0700] [1305034] [INFO] Starting gunicorn 22.0.0
+[2024-05-20 15:51:05 -0700] [1305034] [INFO] Listening at: http://0.0.0.0:80 (1305034)
+[2024-05-20 15:51:05 -0700] [1305034] [INFO] Using worker: sync
+[2024-05-20 15:51:05 -0700] [1305043] [INFO] Booting worker with pid: 1305043
+[2024-05-20 15:51:05 -0700] [1305044] [INFO] Booting worker with pid: 1305044
+[2024-05-20 15:51:05 -0700] [1305045] [INFO] Booting worker with pid: 1305045
+[2024-05-20 15:51:05 -0700] [1305046] [INFO] Booting worker with pid: 1305046
+[2024-05-20 15:51:05 -0700] [1305047] [INFO] Booting worker with pid: 1305047
+[2024-05-20 16:14:21 -0700] [1305034] [INFO] Handling signal: term
+[2024-05-20 16:14:21 -0700] [1305034] [ERROR] Worker (pid:1305043) was sent SIGHUP!
+[2024-05-20 16:14:21 -0700] [1305034] [ERROR] Worker (pid:1305044) was sent SIGHUP!
+[2024-05-20 16:14:21 -0700] [1305034] [ERROR] Worker (pid:1305045) was sent SIGHUP!
+[2024-05-20 16:14:21 -0700] [1305034] [ERROR] Worker (pid:1305046) was sent SIGHUP!
+[2024-05-20 16:14:21 -0700] [1305034] [ERROR] Worker (pid:1305047) was sent SIGHUP!
+[2024-05-20 16:14:21 -0700] [1305034] [INFO] Shutting down: Master
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-21 09:56:34 -0700] [942211] [INFO] Starting gunicorn 22.0.0
+[2024-05-21 09:56:34 -0700] [942211] [INFO] Listening at: http://0.0.0.0:80 (942211)
+[2024-05-21 09:56:34 -0700] [942211] [INFO] Using worker: sync
+[2024-05-21 09:56:34 -0700] [942222] [INFO] Booting worker with pid: 942222
+[2024-05-21 09:56:34 -0700] [942223] [INFO] Booting worker with pid: 942223
+[2024-05-21 09:56:34 -0700] [942224] [INFO] Booting worker with pid: 942224
+[2024-05-21 09:56:34 -0700] [942225] [INFO] Booting worker with pid: 942225
+[2024-05-21 09:56:34 -0700] [942226] [INFO] Booting worker with pid: 942226
+[2024-05-21 10:03:26 -0700] [942226] [INFO] Worker exiting (pid: 942226)
+[2024-05-21 10:03:26 -0700] [942222] [INFO] Worker exiting (pid: 942222)
+[2024-05-21 10:03:26 -0700] [942224] [INFO] Worker exiting (pid: 942224)
+[2024-05-21 10:03:26 -0700] [942225] [INFO] Worker exiting (pid: 942225)
+[2024-05-21 10:03:26 -0700] [942223] [INFO] Worker exiting (pid: 942223)
+[2024-05-21 10:03:26 -0700] [942211] [INFO] Handling signal: term
+[2024-05-21 10:03:26 -0700] [942211] [ERROR] Worker (pid:942226) was sent SIGTERM!
+[2024-05-21 10:03:26 -0700] [942211] [ERROR] Worker (pid:942225) was sent SIGTERM!
+[2024-05-21 10:03:26 -0700] [942211] [ERROR] Worker (pid:942223) was sent SIGTERM!
+[2024-05-21 10:03:26 -0700] [942211] [ERROR] Worker (pid:942222) was sent SIGTERM!
+[2024-05-21 10:03:26 -0700] [942211] [ERROR] Worker (pid:942224) was sent SIGTERM!
+[2024-05-21 10:03:26 -0700] [942211] [INFO] Shutting down: Master
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-21 10:03:52 -0700] [950030] [INFO] Starting gunicorn 22.0.0
+[2024-05-21 10:03:52 -0700] [950030] [INFO] Listening at: http://0.0.0.0:80 (950030)
+[2024-05-21 10:03:52 -0700] [950030] [INFO] Using worker: sync
+[2024-05-21 10:03:52 -0700] [950033] [INFO] Booting worker with pid: 950033
+[2024-05-21 10:03:52 -0700] [950034] [INFO] Booting worker with pid: 950034
+[2024-05-21 10:03:52 -0700] [950035] [INFO] Booting worker with pid: 950035
+[2024-05-21 10:03:52 -0700] [950036] [INFO] Booting worker with pid: 950036
+[2024-05-21 10:03:52 -0700] [950037] [INFO] Booting worker with pid: 950037

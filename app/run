@@ -1,0 +1,10 @@
+#!/bin/bash
+echo $1
+if [$1="--imgs"]
+then
+	cd /home/liam/github/liamlivingston.com/app/static/
+	/home/liam/github/liamlivingston.com/app/static/imgs
+	cd /home/liam/github/liamlivingston.com/app/
+fi
+source "/home/liam/github/liamlivingston.com/app/env/bin/activate"
+authbind gunicorn --workers=5 --bind 0.0.0.0:80 wsgi:app
