@@ -12,9 +12,55 @@ var chart = new Chart('chart', {
     type: 'line',
     data: {
       labels: years
+    },
+    options: {
+    plugins: {
+      backgrounds: {
+        hbars: [{
+          from: 0,
+          to: 'MIN',
+          color: "rgb(230, 195, 195)"
+        }]
+      }
     }
+  },
+  plugins: [{
+    id: 'backgrounds',
+    beforeDraw: (chart, args, options) => {
+      const {
+        canvas,
+        ctx,
+        chartArea,
+        scales: {
+          y
+        }
+      } = chart;
+      let from = 0;
+      let to = 0;
+
+      options.hbars.forEach((hBar) => {
+        from = hBar.from;
+        to = hBar.to;
+
+        from = from === 'MIN' ? y.min : from;
+        from = from === 'MAX' ? y.max : from;
+
+        to = to === 'MIN' ? y.min : to;
+        to = to === 'MAX' ? y.max : to;
+
+        ctx.save(canvas.width, canvas.height);
+        ctx.fillStyle = hBar.color;
+        ctx.fillRect(chartArea.left, y.getPixelForValue(from), chartArea.right - chartArea.left, y.getPixelForValue(to) - y.getPixelForValue(hBar.from));
+        ctx.restore();
+      })
+    }
+  }]
+
 });
-d3.csv("/static/out.csv", function(data) {
+
+
+function first(data) {
+  d3.csv("/static/out.csv", function(data) {
     y = []
     for (x in years) {
       y.push(parseFloat(data[years[x]]))
@@ -22,12 +68,23 @@ d3.csv("/static/out.csv", function(data) {
     const newDataset = {
         label: data['SCENARIO'], 
         data: y,
-        fill: false,
+        fill: {
+                target: 'origin',
+                above: 'rgb(255, 0, 0)',   // Area will be red above the origin
+                below: 'rgb(0, 0, 255)'    // And blue below the origin
+        },
         borderColor: 'rgb(75, 192, 192)',
         tension: 0.5
     };
     chart.data.datasets.push(newDataset);
     chart.update();
-});
+})
+};
+
+
+
+first();
+
+
 
 </script>
