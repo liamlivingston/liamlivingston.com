@@ -20,7 +20,7 @@ d3.csv("/static/out.csv", function(data) {
       y.push(parseFloat(data[years[x]]))
     };
     const newDataset = {
-        label: data['MODEL'], 
+        label: data['SCENARIO'], 
         data: y,
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
