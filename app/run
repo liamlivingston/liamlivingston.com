@@ -7,4 +7,4 @@ then
 	cd /home/liam/github/liamlivingston.com/app/
 fi
 source "/home/liam/github/liamlivingston.com/app/env/bin/activate"
-authbind gunicorn --workers=5 --bind 0.0.0.0:80 wsgi:app
+authbind gunicorn --workers=5 --reload --bind 0.0.0.0:80 wsgi:app
