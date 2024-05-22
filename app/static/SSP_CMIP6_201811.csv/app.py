@@ -9,9 +9,11 @@ with open(filename, 'r') as csvfile:
     fields = next(csvreader)
     for row in csvreader:
         if (not row[1] == "SSP3-LowNTCF" and not row[1] == "SSP5-34-OS"):
+            if " (Baseline)" in row[1]:
+                row[1] = row[1].replace(" (Baseline)", "")
             for x in range(len(row)):
                 try:
-                    row[x] = round(float(row[x]), 2)
+                    row[x] = round(float(row[x])/1000, 2)
                 except:
                     pass
             rows.append(row)

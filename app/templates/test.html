@@ -1,63 +1,41 @@
 
 <div id="container"></div>
-<canvas id="chart"></canvas>
+<canvas id="chart" style="max-width: 50vw; max-height: 50vh;"></canvas>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
 
 
 <script>
 years = [2015,2020,2030,2040,2050,2060,2070,2080,2090,2100]
+colors = ['rgb(20,143,124)', 'rgb(24,47,84)', 'rgb(234,221,61)', 'rgb(222, 54, 42)', 'rgb(88,182,223)', 'rgb(231,128,28)', 'rgb(129,129,129)']
+i = 0;
 d = []
 var chart = new Chart('chart', {
     type: 'line',
     data: {
-      labels: years
+      labels: years,
     },
-    options: {
-    plugins: {
-      backgrounds: {
-        hbars: [{
-          from: 0,
-          to: 'MIN',
-          color: "rgb(230, 195, 195)"
+    options : {
+      scales: {
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'CO2'
+          }
+        }],
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'probability',
+            ticks: {
+                    maxRotation: 90,
+                    minRotation: 90
+                }
+          }
         }]
       }
     }
-  },
-  plugins: [{
-    id: 'backgrounds',
-    beforeDraw: (chart, args, options) => {
-      const {
-        canvas,
-        ctx,
-        chartArea,
-        scales: {
-          y
-        }
-      } = chart;
-      let from = 0;
-      let to = 0;
-
-      options.hbars.forEach((hBar) => {
-        from = hBar.from;
-        to = hBar.to;
-
-        from = from === 'MIN' ? y.min : from;
-        from = from === 'MAX' ? y.max : from;
-
-        to = to === 'MIN' ? y.min : to;
-        to = to === 'MAX' ? y.max : to;
-
-        ctx.save(canvas.width, canvas.height);
-        ctx.fillStyle = hBar.color;
-        ctx.fillRect(chartArea.left, y.getPixelForValue(from), chartArea.right - chartArea.left, y.getPixelForValue(to) - y.getPixelForValue(hBar.from));
-        ctx.restore();
-      })
-    }
-  }]
-
 });
-
 
 function first(data) {
   d3.csv("/static/out.csv", function(data) {
@@ -68,16 +46,14 @@ function first(data) {
     const newDataset = {
         label: data['SCENARIO'], 
         data: y,
-        fill: {
-                target: 'origin',
-                above: 'rgb(255, 0, 0)',   // Area will be red above the origin
-                below: 'rgb(0, 0, 255)'    // And blue below the origin
-        },
-        borderColor: 'rgb(75, 192, 192)',
+        fill: false,
+        borderColor: colors[i],
+        backgroundColor :colors[i],
         tension: 0.5
     };
     chart.data.datasets.push(newDataset);
     chart.update();
+    i++;
 })
 };
 
