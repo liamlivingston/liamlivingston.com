@@ -1,3 +1,4 @@
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "300px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -101,4 +102,16 @@ function openNav() {
   };
   
   first();
+<<<<<<< HEAD
   
+=======
+
+  
+
+  let img = new Image();
+  img.onload = function(){
+    document.getElementById('bgimg-0').style.backgroundImage = "url('" + img.src + "')";
+  };
+  
+  img.src = "/static/background1.jpg";
+>>>>>>> 466ea86846c344ba629880c1932bd99cd30a12ee
