@@ -102,11 +102,6 @@ function openNav() {
   };
   
   first();
-<<<<<<< HEAD
-  
-=======
-
-  
 
   let img = new Image();
   img.onload = function(){
@@ -114,4 +109,3 @@ function openNav() {
   };
   
   img.src = "/static/background1.jpg";
->>>>>>> 466ea86846c344ba629880c1932bd99cd30a12ee
