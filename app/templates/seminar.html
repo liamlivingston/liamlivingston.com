@@ -216,14 +216,14 @@ a {
 
 <p style="margin-top:20px;padding-right:5%;text-align:right">Picture of the area observed 1 <a href="#liam1">(Livingston, 2022).</a></p>
 
-<div id="intro" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;height:190%">
+<div id="intro" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;overflow: overlay;">
   <div style="height:35%; width:35%; padding-left:7.5%; float:left; text-align:center">
     <h3 style="margin-top:0">Current Problem</h3>
     <p>July 2023 was the hottest month recorded in the past 120,000 years (Moustafa et al. 2023). The escalation of global warming will rapidly increase risks, such as Extreme Weather Events (EWEs), to settlements in high-vulnerability areas, where approximately 3.3 to 3.6 billion people live, with coastal-specific climate hazards projected to put roughly a billion people at risk, according to the Intergovernmental Panel on Climate Change (IPPC), a division of the United Nations (IPCC 2018)(IPPC 2022). Worsening global warming causes more frequent and severe EWEs, which affect low- and middle-income countries, coastal and low-lying areas, and the urban poor disproportionately (Hallegatte et al. 2017). This paper will focus on the urban poor of Metro Manila in the Philippines, who meet these criteria very closely. Survivors of typhoons, floods, and other EWEs have shown a wide range of psychological symptoms, including anxiety, depression, and PTSD, with displaced victims reporting the symptoms to a greater extent compared to non-displaced victims. Similarly, in animals, threats on their life, i.e., predators, and the fear of them, have been shown to cause PTSD-like changes in the brains of wild animals (Zanette et al. 2019). By reducing scenarios where victims of EWEs feel that their life is threatened, PTSD and other psychological effects associated with such encounters will drop. This leads to my research question: Should places at an elevated risk to EWEs, that are increasing in count and severity due to anthropogenic climate change, such as Metro Manila in the Philippines, adopt priorities of action of the Sendai Framework, an international framework on Disaster Risk Reduction, in order to lower the injury, mortality, and displacement rate of EWEs, to address the growing mental health crisis? We will first discuss the psychological effects of increasing EWEs as a result of climate change, including PTSD, then current studies on PTSD intervention, and finally, the Sendai Framework and its potential implementation.</p>
   </div>
   <div style="height:40%; width:50%;float:right">
     <canvas id="chart" style="width:50vw; height: 50vw; max-height: 80%;"></canvas>
-    <p style="margin-top:0;padding-left:15%;width:75%">level of current emission and predicted levels of global warming based on future CO2 emissions</p>
+    <p style="margin-top:0;padding-left:15%;width:75%">Level of current emission and predicted levels of global warming based on future CO2 emissions</p>
   </div>
   <div style="height:35%;float:left">
     <div style="height:40%; width:50%;float:left">
@@ -317,109 +317,4 @@ a {
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "300px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-
-
-years = [2015,2020,2030,2040,2050,2060,2070,2080,2090,2100]
-colors = ['rgb(20,143,124)', 'rgb(24,47,84)', 'rgb(234,221,61)', 'rgb(222, 54, 42)', 'rgb(88,182,223)', 'rgb(231,128,28)', 'rgb(129,129,129)']
-i = 0;
-d = []
-
-const customTitle = {
-  id: 'customTitle',
-  beforeLayout: (chart, args, opts) => {
-    const {
-      display,
-      font
-    } = opts;
-    if (!display) {
-      return;
-    }
-
-    const {
-      ctx
-    } = chart;
-    ctx.font = font || '12px "Helvetica Neue", Helvetica, Arial, sans-serif'
-
-    const {
-      width
-    } = ctx.measureText(opts.text);
-    chart.options.layout.padding.left = width * 1.1;
-  },
-  afterDraw: (chart, args, opts) => {
-    const {
-      font,
-      text,
-      color
-    } = opts;
-    const {
-      ctx,
-      chartArea: {
-        top,
-        bottom,
-        left,
-        right
-      }
-    } = chart;
-
-    if (opts.display) {
-      ctx.fillStyle = color || Chart.defaults.color
-      ctx.font = font || '12px "Helvetica Neue", Helvetica, Arial, sans-serif'
-      ctx.fillText(text, 3, (top + bottom) / 2)
-    }
-  }
-};
-
-
-var chart = new Chart('chart', {
-    type: 'line',
-    data: {
-      labels: years,
-    },
-    options: {
-      plugins: {
-        customTitle: {
-          display: true,
-          text: 'Gt CO2',
-        },
-        title: {
-                display: true,
-                text: 'Global CO2 Emissions'
-        }
-      }
-    },
-    plugins: [customTitle],
-});
-
-function first(data) {
-  d3.csv("/static/out.csv", function(data) {
-    y = []
-    for (x in years) {
-      y.push(parseFloat(data[years[x]]))
-    };
-    const newDataset = {
-        label: data['SCENARIO'], 
-        data: y,
-        fill: false,
-        borderColor: colors[i],
-        backgroundColor :colors[i],
-        tension: 0.5
-    };
-    chart.data.datasets.push(newDataset);
-    chart.update();
-    i++;
-})
-};
-
-first();
-
-</script>
+<script src="/static/seminar.js"></script>
