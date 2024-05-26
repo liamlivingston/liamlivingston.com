@@ -3207,3 +3207,995 @@ Traceback (most recent call last):
   File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 5, in <module>
     from gunicorn.app.wsgiapp import run
 ModuleNotFoundError: No module named 'gunicorn'
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-22 10:35:55 -0700] [95998] [INFO] Starting gunicorn 22.0.0
+[2024-05-22 10:35:55 -0700] [95998] [INFO] Listening at: http://0.0.0.0:80 (95998)
+[2024-05-22 10:35:55 -0700] [95998] [INFO] Using worker: sync
+[2024-05-22 10:35:55 -0700] [96000] [INFO] Booting worker with pid: 96000
+[2024-05-22 10:35:55 -0700] [96001] [INFO] Booting worker with pid: 96001
+[2024-05-22 10:35:55 -0700] [96002] [INFO] Booting worker with pid: 96002
+[2024-05-22 10:35:55 -0700] [96004] [INFO] Booting worker with pid: 96004
+[2024-05-22 10:35:55 -0700] [96006] [INFO] Booting worker with pid: 96006
+[2024-05-22 10:36:03 -0700] [96000] [INFO] Worker reloading: /home/liam/github/liamlivingston.com/app/app.py modified
+[2024-05-22 10:36:03 -0700] [96001] [INFO] Worker reloading: /home/liam/github/liamlivingston.com/app/app.py modified
+[2024-05-22 10:36:03 -0700] [96000] [INFO] Worker exiting (pid: 96000)
+[2024-05-22 10:36:03 -0700] [96001] [INFO] Worker exiting (pid: 96001)
+[2024-05-22 10:36:03 -0700] [96002] [INFO] Worker reloading: /home/liam/github/liamlivingston.com/app/app.py modified
+[2024-05-22 10:36:03 -0700] [96002] [INFO] Worker exiting (pid: 96002)
+[2024-05-22 10:36:03 -0700] [96026] [INFO] Booting worker with pid: 96026
+[2024-05-22 10:36:03 -0700] [96027] [INFO] Booting worker with pid: 96027
+[2024-05-22 10:36:03 -0700] [96004] [INFO] Worker reloading: /home/liam/github/liamlivingston.com/app/app.py modified
+[2024-05-22 10:36:03 -0700] [96004] [INFO] Worker exiting (pid: 96004)
+[2024-05-22 10:36:03 -0700] [96006] [INFO] Worker reloading: /home/liam/github/liamlivingston.com/app/app.py modified
+[2024-05-22 10:36:03 -0700] [96006] [INFO] Worker exiting (pid: 96006)
+[2024-05-22 10:36:03 -0700] [96028] [INFO] Booting worker with pid: 96028
+[2024-05-22 10:36:03 -0700] [96029] [INFO] Booting worker with pid: 96029
+[2024-05-22 10:36:03 -0700] [96030] [INFO] Booting worker with pid: 96030
+[2024-05-22 11:23:23 -0700] [96026] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 281, in parse
+    self.parse_request_line(line)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 445, in parse_request_line
+    raise InvalidHTTPVersion(self.version)
+gunicorn.http.errors.InvalidHTTPVersion: <unprintable InvalidHTTPVersion object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run_for_one(timeout)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 70, in run_for_one
+    self.accept(listener)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 32, in accept
+    self.handle(listener, client, addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 158, in handle
+    self.handle_error(req, client, addr, e)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 225, in handle_error
+    mesg = "Invalid HTTP Version '%s'" % str(exc)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/errors.py", line 56, in __str__
+    return "Invalid HTTP Version: %r" % self.version
+TypeError: not all arguments converted during string formatting
+[2024-05-22 11:23:23 -0700] [96026] [INFO] Worker exiting (pid: 96026)
+[2024-05-22 11:23:23 -0700] [95998] [ERROR] Worker (pid:96026) exited with code 255
+[2024-05-22 11:23:23 -0700] [95998] [ERROR] Worker (pid:96026) exited with code 255.
+[2024-05-22 11:23:23 -0700] [98730] [INFO] Booting worker with pid: 98730
+[2024-05-22 12:47:49 -0700] [95998] [INFO] Handling signal: hup
+[2024-05-22 12:47:49 -0700] [95998] [INFO] Hang up: Master
+[2024-05-22 12:47:49 -0700] [95998] [ERROR] Worker (pid:96029) was sent SIGHUP!
+[2024-05-22 12:47:49 -0700] [95998] [ERROR] Worker (pid:96027) was sent SIGHUP!
+[2024-05-22 12:47:49 -0700] [95998] [ERROR] Worker (pid:96028) was sent SIGHUP!
+[2024-05-22 12:47:49 -0700] [95998] [ERROR] Worker (pid:98730) was sent SIGHUP!
+[2024-05-22 12:47:49 -0700] [95998] [ERROR] Worker (pid:96030) was sent SIGHUP!
+[2024-05-22 12:47:49 -0700] [103516] [INFO] Booting worker with pid: 103516
+[2024-05-22 12:47:49 -0700] [103517] [INFO] Booting worker with pid: 103517
+[2024-05-22 12:47:49 -0700] [103518] [INFO] Booting worker with pid: 103518
+[2024-05-22 12:47:49 -0700] [103519] [INFO] Booting worker with pid: 103519
+[2024-05-22 12:47:49 -0700] [103520] [INFO] Booting worker with pid: 103520
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-22 13:37:37 -0700] [106184] [INFO] Starting gunicorn 22.0.0
+[2024-05-22 13:37:37 -0700] [106184] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-22 13:37:37 -0700] [106184] [ERROR] Retrying in 1 second.
+[2024-05-22 13:37:38 -0700] [106184] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-22 13:37:38 -0700] [106184] [ERROR] Retrying in 1 second.
+[2024-05-22 13:37:39 -0700] [106184] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-22 13:37:39 -0700] [106184] [ERROR] Retrying in 1 second.
+[2024-05-22 13:37:40 -0700] [106184] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-22 13:37:40 -0700] [106184] [ERROR] Retrying in 1 second.
+[2024-05-22 13:37:41 -0700] [106184] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-22 13:37:41 -0700] [106184] [ERROR] Retrying in 1 second.
+[2024-05-22 13:37:42 -0700] [106184] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2024-05-22 15:50:06 -0700] [103519] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 281, in parse
+    self.parse_request_line(line)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 445, in parse_request_line
+    raise InvalidHTTPVersion(self.version)
+gunicorn.http.errors.InvalidHTTPVersion: <unprintable InvalidHTTPVersion object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run_for_one(timeout)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 70, in run_for_one
+    self.accept(listener)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 32, in accept
+    self.handle(listener, client, addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 158, in handle
+    self.handle_error(req, client, addr, e)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 225, in handle_error
+    mesg = "Invalid HTTP Version '%s'" % str(exc)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/errors.py", line 56, in __str__
+    return "Invalid HTTP Version: %r" % self.version
+TypeError: not all arguments converted during string formatting
+[2024-05-22 15:50:06 -0700] [103519] [INFO] Worker exiting (pid: 103519)
+[2024-05-22 15:50:06 -0700] [95998] [ERROR] Worker (pid:103519) exited with code 255
+[2024-05-22 15:50:06 -0700] [95998] [ERROR] Worker (pid:103519) exited with code 255.
+[2024-05-22 15:50:06 -0700] [119865] [INFO] Booting worker with pid: 119865
+[2024-05-22 16:23:21 -0700] [95998] [CRITICAL] WORKER TIMEOUT (pid:103517)
+[2024-05-22 16:23:21 -0700] [95998] [CRITICAL] WORKER TIMEOUT (pid:103520)
+[2024-05-22 16:23:21 -0700] [103517] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-22 16:23:21 -0700] [103520] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-22 16:23:21 -0700] [103517] [INFO] Worker exiting (pid: 103517)
+[2024-05-22 16:23:21 -0700] [103520] [INFO] Worker exiting (pid: 103520)
+[2024-05-22 16:23:21 -0700] [121928] [INFO] Booting worker with pid: 121928
+[2024-05-22 16:23:21 -0700] [121929] [INFO] Booting worker with pid: 121929
+[2024-05-22 16:23:25 -0700] [103518] [INFO] Worker exiting (pid: 103518)
+[2024-05-22 16:23:25 -0700] [103516] [INFO] Worker exiting (pid: 103516)
+[2024-05-22 16:23:25 -0700] [121928] [INFO] Worker exiting (pid: 121928)
+[2024-05-22 16:23:25 -0700] [121929] [INFO] Worker exiting (pid: 121929)
+[2024-05-22 16:23:25 -0700] [119865] [INFO] Worker exiting (pid: 119865)
+[2024-05-22 16:23:25 -0700] [95998] [INFO] Handling signal: term
+[2024-05-22 16:23:25 -0700] [95998] [ERROR] Worker (pid:103516) was sent SIGTERM!
+[2024-05-22 16:23:25 -0700] [95998] [ERROR] Worker (pid:121928) was sent SIGTERM!
+[2024-05-22 16:23:25 -0700] [95998] [ERROR] Worker (pid:121929) was sent SIGTERM!
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 257, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+RuntimeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1506, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1108, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1021, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 227, in run
+    self.halt()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:121929) was sent SIGTERM!'
+Arguments: ()
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-22 16:23:39 -0700] [121948] [INFO] Starting gunicorn 22.0.0
+[2024-05-22 16:23:39 -0700] [121948] [INFO] Listening at: http://0.0.0.0:80 (121948)
+[2024-05-22 16:23:39 -0700] [121948] [INFO] Using worker: sync
+[2024-05-22 16:23:39 -0700] [121951] [INFO] Booting worker with pid: 121951
+[2024-05-22 16:23:39 -0700] [121956] [INFO] Booting worker with pid: 121956
+[2024-05-22 16:23:39 -0700] [121957] [INFO] Booting worker with pid: 121957
+[2024-05-22 16:23:39 -0700] [121958] [INFO] Booting worker with pid: 121958
+[2024-05-22 16:23:39 -0700] [121959] [INFO] Booting worker with pid: 121959
+[2024-05-22 16:23:55 -0700] [95998] [INFO] Shutting down: Master
+[2024-05-22 17:06:59 -0700] [121958] [WARNING] Invalid request from ip=41.232.113.67: Invalid HTTP Version: '192.52.167.197/jaws;sh+/tmp/jaws HTTP/1.1'
+[2024-05-22 18:41:16 -0700] [121948] [CRITICAL] WORKER TIMEOUT (pid:121951)
+[2024-05-22 18:41:16 -0700] [121951] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 272, in parse
+    line, rbuf = self.read_line(unreader, buf, self.limit_request_line)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 324, in read_line
+    self.get_data(unreader, buf)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-22 18:41:16 -0700] [121951] [INFO] Worker exiting (pid: 121951)
+[2024-05-22 18:41:16 -0700] [129439] [INFO] Booting worker with pid: 129439
+[2024-05-22 20:17:51 -0700] [121948] [CRITICAL] WORKER TIMEOUT (pid:121956)
+[2024-05-22 20:17:51 -0700] [121956] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-22 20:17:51 -0700] [121956] [INFO] Worker exiting (pid: 121956)
+[2024-05-22 20:17:51 -0700] [138206] [INFO] Booting worker with pid: 138206
+[2024-05-22 21:12:32 -0700] [121948] [CRITICAL] WORKER TIMEOUT (pid:138206)
+[2024-05-22 21:12:32 -0700] [138206] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-22 21:12:32 -0700] [138206] [INFO] Worker exiting (pid: 138206)
+[2024-05-22 21:12:33 -0700] [142894] [INFO] Booting worker with pid: 142894
+[2024-05-22 23:24:02 -0700] [121958] [WARNING] Invalid request from ip=41.46.163.204: Invalid HTTP Version: '192.52.167.197/jaws;sh+/tmp/jaws HTTP/1.1'
+[2024-05-23 11:53:15 -0700] [121958] [WARNING] Invalid request from ip=59.110.239.11: Invalid HTTP request line: ''
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-23 13:03:06 -0700] [199878] [INFO] Starting gunicorn 22.0.0
+[2024-05-23 13:03:06 -0700] [199878] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-23 13:03:06 -0700] [199878] [ERROR] Retrying in 1 second.
+[2024-05-23 13:03:07 -0700] [199878] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-23 13:03:07 -0700] [199878] [ERROR] Retrying in 1 second.
+[2024-05-23 13:03:08 -0700] [199878] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-23 13:03:08 -0700] [199878] [ERROR] Retrying in 1 second.
+[2024-05-23 13:03:09 -0700] [199878] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-23 13:03:09 -0700] [199878] [ERROR] Retrying in 1 second.
+[2024-05-23 13:03:10 -0700] [199878] [ERROR] Connection in use: ('0.0.0.0', 80)
+[2024-05-23 13:03:10 -0700] [199878] [ERROR] Retrying in 1 second.
+[2024-05-23 13:03:11 -0700] [199878] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2024-05-23 13:52:34 -0700] [121957] [INFO] Worker exiting (pid: 121957)
+[2024-05-23 13:52:34 -0700] [142894] [INFO] Worker exiting (pid: 142894)
+[2024-05-23 13:52:34 -0700] [129439] [INFO] Worker exiting (pid: 129439)
+[2024-05-23 13:52:34 -0700] [121958] [INFO] Worker exiting (pid: 121958)
+[2024-05-23 13:52:34 -0700] [121959] [INFO] Worker exiting (pid: 121959)
+[2024-05-23 13:52:34 -0700] [121948] [INFO] Handling signal: term
+[2024-05-23 13:52:34 -0700] [121948] [ERROR] Worker (pid:129439) was sent SIGTERM!
+[2024-05-23 13:52:34 -0700] [121948] [ERROR] Worker (pid:121957) was sent SIGTERM!
+[2024-05-23 13:52:34 -0700] [121948] [ERROR] Worker (pid:142894) was sent SIGTERM!
+[2024-05-23 13:52:34 -0700] [121948] [ERROR] Worker (pid:121958) was sent SIGTERM!
+[2024-05-23 13:52:34 -0700] [121948] [ERROR] Worker (pid:121959) was sent SIGTERM!
+[2024-05-23 13:52:34 -0700] [121948] [INFO] Shutting down: Master
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-23 13:52:42 -0700] [202586] [INFO] Starting gunicorn 22.0.0
+[2024-05-23 13:52:42 -0700] [202586] [INFO] Listening at: http://0.0.0.0:80 (202586)
+[2024-05-23 13:52:42 -0700] [202586] [INFO] Using worker: sync
+[2024-05-23 13:52:42 -0700] [202588] [INFO] Booting worker with pid: 202588
+[2024-05-23 13:52:42 -0700] [202590] [INFO] Booting worker with pid: 202590
+[2024-05-23 13:52:42 -0700] [202592] [INFO] Booting worker with pid: 202592
+[2024-05-23 13:52:42 -0700] [202594] [INFO] Booting worker with pid: 202594
+[2024-05-23 13:52:42 -0700] [202595] [INFO] Booting worker with pid: 202595
+[2024-05-23 16:06:13 -0700] [202586] [INFO] Handling signal: hup
+[2024-05-23 16:06:13 -0700] [202586] [INFO] Hang up: Master
+[2024-05-23 16:06:13 -0700] [202586] [ERROR] Worker (pid:202595) was sent SIGHUP!
+[2024-05-23 16:06:13 -0700] [202586] [ERROR] Worker (pid:202592) was sent SIGHUP!
+--- Logging error ---
+[2024-05-23 16:06:13 -0700] [202586] [ERROR] Worker (pid:202588) was sent SIGHUP!
+[2024-05-23 16:06:13 -0700] [202586] [ERROR] Worker (pid:202594) was sent SIGHUP!
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1506, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1108, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1021, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/config.py", line 271, in __init__
+    def __init__(self):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 559, in reap_workers
+    worker.tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/workertmp.py", line 54, in close
+    return self._tmp.close()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:202592) was sent SIGHUP!'
+Arguments: ()
+[2024-05-23 16:06:13 -0700] [209745] [INFO] Booting worker with pid: 209745
+[2024-05-23 16:06:13 -0700] [209746] [INFO] Booting worker with pid: 209746
+[2024-05-23 16:06:13 -0700] [209747] [INFO] Booting worker with pid: 209747
+[2024-05-23 16:06:13 -0700] [209748] [INFO] Booting worker with pid: 209748
+[2024-05-23 16:06:13 -0700] [209749] [INFO] Booting worker with pid: 209749
+[2024-05-23 18:46:28 -0700] [202586] [CRITICAL] WORKER TIMEOUT (pid:209749)
+[2024-05-23 18:46:28 -0700] [209749] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 272, in parse
+    line, rbuf = self.read_line(unreader, buf, self.limit_request_line)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 324, in read_line
+    self.get_data(unreader, buf)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-23 18:46:28 -0700] [209749] [INFO] Worker exiting (pid: 209749)
+[2024-05-23 18:46:28 -0700] [218515] [INFO] Booting worker with pid: 218515
+[2024-05-23 23:25:05 -0700] [202586] [CRITICAL] WORKER TIMEOUT (pid:218515)
+[2024-05-23 23:25:05 -0700] [218515] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-23 23:25:05 -0700] [218515] [INFO] Worker exiting (pid: 218515)
+[2024-05-23 23:25:05 -0700] [234479] [INFO] Booting worker with pid: 234479
+[2024-05-23 23:30:37 -0700] [202586] [CRITICAL] WORKER TIMEOUT (pid:209745)
+[2024-05-23 23:30:37 -0700] [202586] [CRITICAL] WORKER TIMEOUT (pid:209747)
+[2024-05-23 23:30:37 -0700] [209745] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-23 23:30:37 -0700] [209745] [INFO] Worker exiting (pid: 209745)
+[2024-05-23 23:30:37 -0700] [209747] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-23 23:30:37 -0700] [209747] [INFO] Worker exiting (pid: 209747)
+[2024-05-23 23:30:37 -0700] [234921] [INFO] Booting worker with pid: 234921
+[2024-05-23 23:30:37 -0700] [234922] [INFO] Booting worker with pid: 234922
+[2024-05-23 23:57:13 -0700] [209746] [INFO] Worker exiting (pid: 209746)
+[2024-05-23 23:57:13 -0700] [209748] [INFO] Worker exiting (pid: 209748)
+[2024-05-23 23:57:13 -0700] [234922] [INFO] Worker exiting (pid: 234922)
+[2024-05-23 23:57:13 -0700] [234479] [INFO] Worker exiting (pid: 234479)
+[2024-05-23 23:57:13 -0700] [234921] [INFO] Worker exiting (pid: 234921)
+[2024-05-23 23:57:13 -0700] [202586] [INFO] Handling signal: term
+[2024-05-23 23:57:13 -0700] [202586] [ERROR] Worker (pid:234922) was sent SIGTERM!
+[2024-05-23 23:57:13 -0700] [202586] [ERROR] Worker (pid:209746) was sent SIGTERM!
+[2024-05-23 23:57:13 -0700] [202586] [ERROR] Worker (pid:234921) was sent SIGTERM!
+[2024-05-23 23:57:13 -0700] [202586] [ERROR] Worker (pid:209748) was sent SIGTERM!
+[2024-05-23 23:57:13 -0700] [202586] [ERROR] Worker (pid:234479) was sent SIGTERM!
+[2024-05-23 23:57:13 -0700] [202586] [INFO] Shutting down: Master
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-23 23:57:25 -0700] [236264] [INFO] Starting gunicorn 22.0.0
+[2024-05-23 23:57:25 -0700] [236264] [INFO] Listening at: http://0.0.0.0:80 (236264)
+[2024-05-23 23:57:25 -0700] [236264] [INFO] Using worker: sync
+[2024-05-23 23:57:25 -0700] [236266] [INFO] Booting worker with pid: 236266
+[2024-05-23 23:57:25 -0700] [236269] [INFO] Booting worker with pid: 236269
+[2024-05-23 23:57:25 -0700] [236271] [INFO] Booting worker with pid: 236271
+[2024-05-23 23:57:25 -0700] [236273] [INFO] Booting worker with pid: 236273
+[2024-05-23 23:57:25 -0700] [236274] [INFO] Booting worker with pid: 236274
+[2024-05-24 00:05:25 -0700] [236264] [CRITICAL] WORKER TIMEOUT (pid:236266)
+[2024-05-24 00:05:25 -0700] [236264] [CRITICAL] WORKER TIMEOUT (pid:236269)
+[2024-05-24 00:05:25 -0700] [236266] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-24 00:05:25 -0700] [236269] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-05-24 00:05:25 -0700] [236266] [INFO] Worker exiting (pid: 236266)
+[2024-05-24 00:05:25 -0700] [236269] [INFO] Worker exiting (pid: 236269)
+[2024-05-24 00:05:25 -0700] [236685] [INFO] Booting worker with pid: 236685
+[2024-05-24 00:05:25 -0700] [236686] [INFO] Booting worker with pid: 236686
+[2024-05-24 02:27:31 -0700] [236685] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 281, in parse
+    self.parse_request_line(line)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 445, in parse_request_line
+    raise InvalidHTTPVersion(self.version)
+gunicorn.http.errors.InvalidHTTPVersion: <unprintable InvalidHTTPVersion object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run_for_one(timeout)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 70, in run_for_one
+    self.accept(listener)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 32, in accept
+    self.handle(listener, client, addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 158, in handle
+    self.handle_error(req, client, addr, e)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 225, in handle_error
+    mesg = "Invalid HTTP Version '%s'" % str(exc)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/errors.py", line 56, in __str__
+    return "Invalid HTTP Version: %r" % self.version
+TypeError: not all arguments converted during string formatting
+[2024-05-24 02:27:31 -0700] [236685] [INFO] Worker exiting (pid: 236685)
+[2024-05-24 02:27:31 -0700] [236264] [ERROR] Worker (pid:236685) exited with code 255
+[2024-05-24 02:27:31 -0700] [236264] [ERROR] Worker (pid:236685) exited with code 255.
+[2024-05-24 02:27:31 -0700] [244291] [INFO] Booting worker with pid: 244291
+[2024-05-24 03:57:35 -0700] [244291] [WARNING] Invalid request from ip=107.172.31.138: Invalid HTTP Version: '188.130.251.44/jaws;sh+/tmp/jaws HTTP/1.1'
+[2024-05-24 16:19:50 -0700] [236686] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 281, in parse
+    self.parse_request_line(line)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 445, in parse_request_line
+    raise InvalidHTTPVersion(self.version)
+gunicorn.http.errors.InvalidHTTPVersion: <unprintable InvalidHTTPVersion object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run_for_one(timeout)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 70, in run_for_one
+    self.accept(listener)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 32, in accept
+    self.handle(listener, client, addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 158, in handle
+    self.handle_error(req, client, addr, e)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 225, in handle_error
+    mesg = "Invalid HTTP Version '%s'" % str(exc)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/errors.py", line 56, in __str__
+    return "Invalid HTTP Version: %r" % self.version
+TypeError: not all arguments converted during string formatting
+[2024-05-24 16:19:50 -0700] [236686] [INFO] Worker exiting (pid: 236686)
+[2024-05-24 16:19:50 -0700] [236264] [ERROR] Worker (pid:236686) exited with code 255
+[2024-05-24 16:19:50 -0700] [236264] [ERROR] Worker (pid:236686) exited with code 255.
+[2024-05-24 16:19:50 -0700] [289304] [INFO] Booting worker with pid: 289304
+[2024-05-24 18:38:38 -0700] [236271] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 281, in parse
+    self.parse_request_line(line)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 445, in parse_request_line
+    raise InvalidHTTPVersion(self.version)
+gunicorn.http.errors.InvalidHTTPVersion: <unprintable InvalidHTTPVersion object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run_for_one(timeout)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 70, in run_for_one
+    self.accept(listener)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 32, in accept
+    self.handle(listener, client, addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 158, in handle
+    self.handle_error(req, client, addr, e)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 225, in handle_error
+    mesg = "Invalid HTTP Version '%s'" % str(exc)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/errors.py", line 56, in __str__
+    return "Invalid HTTP Version: %r" % self.version
+TypeError: not all arguments converted during string formatting
+[2024-05-24 18:38:38 -0700] [236271] [INFO] Worker exiting (pid: 236271)
+[2024-05-24 18:38:38 -0700] [236264] [ERROR] Worker (pid:236271) exited with code 255
+[2024-05-24 18:38:38 -0700] [236264] [ERROR] Worker (pid:236271) exited with code 255.
+[2024-05-24 18:38:38 -0700] [296563] [INFO] Booting worker with pid: 296563
+[2024-05-24 22:02:42 -0700] [236274] [WARNING] Invalid request from ip=194.169.175.53: Invalid HTTP request line: '\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr'
+[2024-05-25 06:06:35 -0700] [289304] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 281, in parse
+    self.parse_request_line(line)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/message.py", line 445, in parse_request_line
+    raise InvalidHTTPVersion(self.version)
+gunicorn.http.errors.InvalidHTTPVersion: <unprintable InvalidHTTPVersion object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 126, in run
+    self.run_for_one(timeout)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 70, in run_for_one
+    self.accept(listener)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 32, in accept
+    self.handle(listener, client, addr)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 158, in handle
+    self.handle_error(req, client, addr, e)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/workers/base.py", line 225, in handle_error
+    mesg = "Invalid HTTP Version '%s'" % str(exc)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/http/errors.py", line 56, in __str__
+    return "Invalid HTTP Version: %r" % self.version
+TypeError: not all arguments converted during string formatting
+[2024-05-25 06:06:35 -0700] [289304] [INFO] Worker exiting (pid: 289304)
+[2024-05-25 06:06:35 -0700] [236264] [ERROR] Worker (pid:289304) exited with code 255
+[2024-05-25 06:06:35 -0700] [236264] [ERROR] Worker (pid:289304) exited with code 255.
+[2024-05-25 06:06:35 -0700] [333153] [INFO] Booting worker with pid: 333153
+[2024-05-25 06:08:41 -0700] [333153] [WARNING] Invalid request from ip=194.169.175.53: Invalid HTTP request line: '\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr'
+[2024-05-25 10:24:16 -0700] [236264] [INFO] Handling signal: hup
+[2024-05-25 10:24:16 -0700] [236264] [INFO] Hang up: Master
+[2024-05-25 10:24:16 -0700] [236264] [ERROR] Worker (pid:333153) was sent SIGHUP!
+[2024-05-25 10:24:16 -0700] [236264] [ERROR] Worker (pid:236273) was sent SIGHUP!
+[2024-05-25 10:24:16 -0700] [236264] [ERROR] Worker (pid:244291) was sent SIGHUP!
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1108, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1021, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1506, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1506, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1108, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1021, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 253, in handle_hup
+    self.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 451, in reload
+    self.app.reload()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 61, in reload
+    self.do_load_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 35, in do_load_config
+    self.load_default_config()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 44, in load_default_config
+    self.cfg = Config(self.usage, prog=self.prog)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/config.py", line 49, in __init__
+    self.settings = make_settings()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/config.py", line 32, in make_settings
+    setting = s()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/config.py", line 273, in __init__
+    self.set(self.default)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/config.py", line 314, in set
+    self.value = self.validator(val)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/config.py", line 438, in _validate_callable
+    if arity != -1 and arity != util.get_arity(val):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/util.py", line 126, in get_arity
+    sig = inspect.signature(f)
+  File "/usr/lib/python3.10/inspect.py", line 3254, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped,
+  File "/usr/lib/python3.10/inspect.py", line 3002, in from_callable
+    return _signature_from_callable(obj, sigcls=cls,
+  File "/usr/lib/python3.10/inspect.py", line 2463, in _signature_from_callable
+    return _signature_from_function(sigcls, obj,
+  File "/usr/lib/python3.10/inspect.py", line 2331, in _signature_from_function
+    for offset, name in enumerate(positional[non_default_count:]):
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:244291) was sent SIGHUP!'
+Arguments: ()
+[2024-05-25 10:24:16 -0700] [346987] [INFO] Booting worker with pid: 346987
+[2024-05-25 10:24:16 -0700] [346988] [INFO] Booting worker with pid: 346988
+[2024-05-25 10:24:16 -0700] [346989] [INFO] Booting worker with pid: 346989
+[2024-05-25 10:24:16 -0700] [346990] [INFO] Booting worker with pid: 346990
+[2024-05-25 10:24:16 -0700] [346991] [INFO] Booting worker with pid: 346991
+[2024-05-25 11:05:18 -0700] [236264] [INFO] Handling signal: term
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1506, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1108, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1021, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/liam/github/liamlivingston.com/app/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/arbiter.py", line 223, in run
+    self.log.info("Handling signal: %s", signame)
+  File "/home/liam/github/liamlivingston.com/app/env/lib/python3.10/site-packages/gunicorn/glogging.py", line 278, in info
+    self.error_log.info(msg, *args, **kwargs)
+Message: 'Handling signal: %s'
+Arguments: ('term',)
+[2024-05-25 11:05:18 -0700] [236264] [ERROR] Worker (pid:346987) was sent SIGHUP!
+[2024-05-25 11:05:18 -0700] [236264] [ERROR] Worker (pid:346989) was sent SIGHUP!
+[2024-05-25 11:05:18 -0700] [236264] [ERROR] Worker (pid:346990) was sent SIGHUP!
+[2024-05-25 11:05:19 -0700] [236264] [ERROR] Worker (pid:346991) was sent SIGHUP!
+[2024-05-25 11:05:19 -0700] [236264] [INFO] Shutting down: Master
+
+./run: line 3: [=--imgs]: command not found
+[2024-05-25 14:54:36 -0700] [27731] [INFO] Starting gunicorn 22.0.0
+[2024-05-25 14:54:36 -0700] [27731] [INFO] Listening at: http://0.0.0.0:80 (27731)
+[2024-05-25 14:54:36 -0700] [27731] [INFO] Using worker: sync
+[2024-05-25 14:54:36 -0700] [27736] [INFO] Booting worker with pid: 27736
+[2024-05-25 14:54:36 -0700] [27738] [INFO] Booting worker with pid: 27738
+[2024-05-25 14:54:36 -0700] [27739] [INFO] Booting worker with pid: 27739
+[2024-05-25 14:54:36 -0700] [27742] [INFO] Booting worker with pid: 27742
+[2024-05-25 14:54:36 -0700] [27744] [INFO] Booting worker with pid: 27744
+[2024-05-25 17:40:16 -0700] [27731] [INFO] Handling signal: hup
+[2024-05-25 17:40:16 -0700] [27731] [INFO] Hang up: Master
+[2024-05-25 17:40:16 -0700] [27731] [ERROR] Worker (pid:27744) was sent SIGHUP!
+[2024-05-25 17:40:16 -0700] [27731] [ERROR] Worker (pid:27742) was sent SIGHUP!
+[2024-05-25 17:40:16 -0700] [27731] [ERROR] Worker (pid:27736) was sent SIGHUP!
+[2024-05-25 17:40:16 -0700] [27731] [ERROR] Worker (pid:27738) was sent SIGHUP!
+[2024-05-25 17:40:16 -0700] [27731] [ERROR] Worker (pid:27739) was sent SIGHUP!
+[2024-05-25 17:40:16 -0700] [36353] [INFO] Booting worker with pid: 36353
+[2024-05-25 17:40:16 -0700] [36354] [INFO] Booting worker with pid: 36354
+[2024-05-25 17:40:16 -0700] [36355] [INFO] Booting worker with pid: 36355
+[2024-05-25 17:40:16 -0700] [36356] [INFO] Booting worker with pid: 36356
+[2024-05-25 17:40:16 -0700] [36357] [INFO] Booting worker with pid: 36357
+[2024-05-26 13:57:17 -0700] [36355] [WARNING] Invalid request from ip=185.170.144.3: Invalid HTTP request line: '\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr'
