@@ -1,102 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="/static/seminar.css" rel="stylesheet" />
 
-<div id="container"></div>
-<canvas id="chart" style="max-width: 75vw; max-height: 50vh;"></canvas>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
-
-
-<script>
-years = [2015,2020,2030,2040,2050,2060,2070,2080,2090,2100]
-colors = ['rgb(20,143,124)', 'rgb(24,47,84)', 'rgb(234,221,61)', 'rgb(222, 54, 42)', 'rgb(88,182,223)', 'rgb(231,128,28)', 'rgb(129,129,129)']
-i = 0;
-d = []
-
-const customTitle = {
-  id: 'customTitle',
-  beforeLayout: (chart, args, opts) => {
-    const {
-      display,
-      font
-    } = opts;
-    if (!display) {
-      return;
-    }
-
-    const {
-      ctx
-    } = chart;
-    ctx.font = font || '12px "Helvetica Neue", Helvetica, Arial, sans-serif'
-
-    const {
-      width
-    } = ctx.measureText(opts.text);
-    chart.options.layout.padding.left = width * 1.1;
-  },
-  afterDraw: (chart, args, opts) => {
-    const {
-      font,
-      text,
-      color
-    } = opts;
-    const {
-      ctx,
-      chartArea: {
-        top,
-        bottom,
-        left,
-        right
-      }
-    } = chart;
-
-    if (opts.display) {
-      ctx.fillStyle = color || Chart.defaults.color
-      ctx.font = font || '12px "Helvetica Neue", Helvetica, Arial, sans-serif'
-      ctx.fillText(text, 3, (top + bottom) / 2)
-    }
-  }
-};
-
-
-var chart = new Chart('chart', {
-    type: 'line',
-    data: {
-      labels: years,
-    },
-    options: {
-      plugins: {
-        customTitle: {
-          display: true,
-          text: 'Gt CO2',
-        },
-        title: {
-                display: true,
-                text: 'Global CO2 Emissions'
-        }
-      }
-    },
-    plugins: [customTitle],
-});
-
-function first(data) {
-  d3.csv("/static/out.csv", function(data) {
-    y = []
-    for (x in years) {
-      y.push(parseFloat(data[years[x]]))
-    };
-    const newDataset = {
-        label: data['SCENARIO'], 
-        data: y,
-        fill: false,
-        borderColor: colors[i],
-        backgroundColor :colors[i],
-        tension: 0.5
-    };
-    chart.data.datasets.push(newDataset);
-    chart.update();
-    i++;
-})
-};
-
-first();
-
-</script>
+</head>
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/#top" onclick="closeNav()" style="padding-top:18px">Home</a>
+    <a href="/#about" onclick="closeNav()" style="white-space: nowrap">About Me</a>
+    <a href="/projects" onclick="closeNav()">Projects</a>
+  </div>
+  
+  <span style="font-size:25px;cursor:pointer;position:fixed;z-index:100;padding-top:10px;width:150px;background:#2e2d2d;color:#fff;border-radius: 0 0 25px 0;font: 400 25px/1.8 "Lato", sans-serif;" onclick="openNav()">&nbsp;&#9776 Contents</span>
+  
+  
+  
+  <div id="main" >
+  <div class="bgimg", id="bgimg-0">
+    <div class="caption">
+    <span class="border">Implementing the Sendai Framework</span>
+    </div>
+    <div class="caption1">
+    <span class="border">Liam Livingston - Period 7</span>
+    </div>
+  </div>
+  
+  
+  <p class="intext">Picture of the area observed 1 <a href="#liam1">(Livingston, 2022).</a></p>
+  
+  <div id="intro">
+    <div>
+      <h3 >Current Problem</h3>
+      <p>
+        July 2023 was the hottest month recorded in the past 120,000 years (Moustafa et al., 2023). The escalation of global warming will rapidly increase risks, such as Extreme Weather Events (EWEs), to settlements in high-vulnerability areas, with coastal-specific climate hazards projected to put roughly a billion people at risk (IPPC 2022). Worsening global warming causes more frequent and severe EWEs, which affect low- and middle-income countries, coastal and low-lying areas, and the urban poor disproportionately (Hallegatte et al. 2017). Survivors of typhoons, floods, and other EWEs have shown a wide range of psychological symptoms, including anxiety, depression, and PTSD, with displaced victims reporting the symptoms to a greater extent compared to non-displaced victims.
+      </p>
+    </div>
+    <div>
+      <canvas id="chart"></canvas>
+      <p>
+        This is the level of current emissions and predicted levels of global warming based on future CO2 emissions by Shared Socioeconomic Pathways (SSP). If we stay on the current path of increasing emissions, we could be somewhere in the range of 3°C of global warming. We need to be in the range of the green line to meet 1.5°C goals. The lead study author of the Global Carbon Budget, Pierre Friedlingstein of the Global Systems Institute at the University of Exeter, said that “it now looks inevitable we will overshoot the 1.5°C target of the Paris Agreement”. 1.5°C of global warming above pre-industrial levels is an international benchmark that was agreed upon with the Paris Agreement of 2015 at the COP21, which was the 21st Conference of the Parties to the United Nations Framework Convention on Climate Change (UNFCCC), in order to limit the effects of global warming (IPCC 2018). Exceeding the 1.5°C target will further exacerbate EWEs, which will lead to even more significant risks for places such as Metro Manila in the Philippines.      </p>
+    </div>
+    <div>
+      <iframe src="https://ourworldindata.org/explorers/natural-disasters?facet=none&hideControls=true&Disaster+Type=All+disasters&Impact=Total+affected&Timespan=Annual&Per+capita=false&country=JPN~PHL&tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+    </div>
+    <div>
+      <p>
+        Wealthier countries in East Asia, such as Japan, are better equipped to face EWEs than Metro Manila in the Philippines. On average, in the 2010s in the Philippines, 9,831 people were affected by disasters per 100,000 people, which is an astronomical number compared to Japan’s 272 per 100,000 people, according to the Emergency Events Database (EM-DAT), a joint initiative between the Centre for Research on the Epidemiology of Disasters (CRED) and the World Health Organization. The spike in 2013 was caused by Super Typhoon Haiyan, which affected 25 million people, over a quarter of the population of the Philippines at the time.
+      </p>
+    </div>
+    
+  </div>
+  
+  <div class="bgimg", id="bgimg-1">
+    <div class="caption">
+    <span class="border">Research</span>
+    </div>
+  </div>
+  
+  
+  <p>Picture of the area observed <a href="#rohan1">(Bhatia, 2022)</a></p>
+  
+  <div id="research">
+    <h3>Research</h3>
+    <br>
+    <br>
+    <div>
+      <h3 style="margin-top:0;font-size:25px">Background</h3>
+      <p>In the brackish tidal marshes of Chesapeake Bay, an ecosystem similar to the Palo Alto Baylands, sea level rise, a disturbance to the ecosystem, caused an impact on the organic matter decay rates there <a href="#bgs1">(Kirwan et al., 2013)</a>.</p>
+    </div>
+    <div style="height:500px; width:50%;float:right">
+      <img src="background4.avif" style="width:80%;padding-left:15%">
+      <p>Picture of the area that was observed 4 <a href="#liam6">(Livingston, 2022).</a></p>
+    </div>
+  </div>
+  
+  
+      <div style="width:60%; margin-left:20%">
+          <p><br><br><a href="https://docs.google.com/document/d/1Mbm9Ljv_on2r6p-tQXuGV9kErwhSyzo548T06cIR1yc/preview" target="_blank"><h3 style="text-align:center"><br>IWA</h3></a></p>
+      </div>
+  
+  
+  
+    <div style="width:60%;margin-left:20%">
+      <p><br><br>
+        
+      <h3><br>References</h3></p>
+      <p>NASA. (2021, July 8). <i>Anticipating Future Sea Levels.</i> [Photograph]. NASA. <a href="https://earthobservatory.nasa.gov/images/148494/anticipating-future-sea-levels" target="_blank">https://earthobservatory.nasa.gov/images/148494/anticipating-future-sea-levels</a></p>
+  
+    </div>
+    <div>
+      <br><br>
+    </div>
+  </div>
+  </div>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+  <script type="text/javascript" src="/static/seminar.js"></script>
+</body>
+</html>
