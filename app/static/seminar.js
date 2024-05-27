@@ -116,3 +116,10 @@ function openNav() {
   };
   
   img1.src = "/static/background2.jpg";
+
+  let img2 = new Image();
+  img2.onload = function(){
+    document.getElementById('bgimg-2').style.backgroundImage = "url('" + img2.src + "')";
+  };
+  
+  img2.src = "/static/background3.jpg";
