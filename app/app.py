@@ -58,6 +58,10 @@ def battery_business():
 def battery_business_zero():
     return render_template("zero.html", home="/")
 
+@app.route('/projects/website')
+def website():
+    return render_template("website.html", home="/")
+
 @app.route('/solar_car', methods = ['POST'])
 def solar_car():
     data = request.form
@@ -66,7 +70,7 @@ def solar_car():
 
 @app.route('/github')
 def github():
-    return redirect("https://github.com/liamlivingston/liamlivingston.com")
+    return redirect("https://github.com/liamlivingston")
 
 @app.route('/instagram')
 def instagram():

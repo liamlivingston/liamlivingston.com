@@ -1,60 +1,70 @@
 {% extends 'base.html' %}
 {% block content %}
 <style>
-a.section_title {
-    color: black;
-    height: 32px;
-    width: 100vw;
-    padding-top: calc(5vh - 16px);
-    padding-bottom: calc(5vh - 16px);
-    font-size: 45px;
-    overflow: hidden;
-}
-
-div.section_title {
-    color: black;
-    text-align: center;
-    width: 100vw;
-    height: 10vh;
-    position: relative;
-    z-index: 2;
-    font-size: 45px;
-}
-
-@keyframes slideShow {
-    
-    5% {
-        transform: translateX(0);
+    a.section_title {
+        color: #000000;
+        height: 32px;
+        width: 100vw;
+        padding-top: calc(5vh - 16px);
+        padding-bottom: calc(5vh - 16px);
+        font-size: 45px;
+        overflow: hidden;
+        text-decoration: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        bottom: 3px;
+        position: relative;
+        line-height: 32px;
     }
-    40% {
-        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
-    }
-    55%{
-        transform: translateX(calc(-100vw/ 3 * 2 - 16px));
-    }
-    90% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
 
-.sliderContainer {
-    width: calc(100vw/ 3 * 5 + 18px);
-    height: 40vh;
-    top: 0px;
-    animation: 60s linear 0s infinite slideShow;
-}
+    div.section_title {
+        color: #000000;
+        text-align: center;
+        width: 100vw;
+        height: 10vh;
+        position: relative;
+        z-index: 2;
+        font-size: 45px;
+    }
 
-.slideItem {
-    width: calc(100vw/ 3);
-    height: 40vh;
-    display: inline-flex;
-    background-size: cover;
-    background-position: center center;
+    @keyframes slideShow {
 
-}
+        5% {
+            transform: translateX(0);
+        }
+
+        40% {
+            transform: translateX(calc(-100vw/ 3 * 2 - 16px));
+        }
+
+        55% {
+            transform: translateX(calc(-100vw/ 3 * 2 - 16px));
+        }
+
+        90% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .sliderContainer {
+        width: calc(100vw/ 3 * 5 + 18px);
+        height: 40vh;
+        top: 0px;
+        animation: 60s linear 0s infinite slideShow;
+    }
+
+    .slideItem {
+        width: calc(100vw/ 3);
+        height: 40vh;
+        display: inline-flex;
+        background-size: cover;
+        background-position: center center;
+
+    }
 </style>
 <div class="section_title" id="top">
     <a href="/projects" class="section_title">Projects</a>
@@ -63,31 +73,31 @@ div.section_title {
 <div class="sliderContainer">
     <a href="/projects/ebike_v2">
         <div class="slideItem" style="background-image: url('/static/ebike_v2.avif');">
-        
+
         </div>
     </a>
-    
+
     <a href="/projects/ebike_v3">
         <div class="slideItem" style="background-image: url('/static/ebike_v3.avif');">
-    
+
         </div>
     </a>
-    
+
     <a href="/projects/batteries">
         <div class="slideItem" style="background-image: url('/static/batteries.avif');">
-    
+
         </div>
     </a>
-    
+
     <a href="/projects/kenya">
         <div class="slideItem" style="background-image: url('/static/kenya.avif');">
-    
+
         </div>
     </a>
-    
+
     <a href="/projects/csp">
         <div class="slideItem" style="background-image: url('/static/csp.avif');">
-    
+
         </div>
     </a>
 
@@ -100,4 +110,18 @@ div.section_title {
 <div class="section_title" id="about">
     <a class="section_title">About me</a>
 </div>
+<p class="mainText" style="text-align: center; padding: 0 25%;">
+    I am Liam Livingston, a high schooler in the Bay Area interested in technology, engineering, and sustainability.
+    Outside of school, I helped found and lead a solar car team, build and help others build e-bikes, protest for
+    pro-e-bike legislation in my city, run a custom battery manufacturing service, and enjoy programming (including
+    this website). Currently, I am planning on building an electric dune registered as a NEV, upgrading my v3
+    e-bike, building a solar-powered shed, and creating a home energy storage battery. All of my projects are listed <a
+        href="/projects" style="text-decoration: solid;">here</a>
+    <br><br>
+    After high school, I plan to study Electrical Engineering in college and explore how I can help combat climate
+    change. I am interested in internships or other opportunities that can combine my passion for Electrical Enginnering
+    with creating a sustainable and electrified future. I hope to eventually start a startup related to sustainable
+    technology and Electrical Enginnering.
+</p>
+
 {% endblock %}

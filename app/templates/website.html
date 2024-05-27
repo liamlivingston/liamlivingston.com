@@ -1,0 +1,59 @@
+<div style="height:0;width:0" id="top">
+</div>
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="mainTextDiv">
+<h2 class="mainTextTitle">Overview</h2>
+
+<p class="mainText">
+    This is the 2024 car for the solar car team that I'm on. More info <a href="solar_car_v1">here</a>.
+    <br>
+    The car is still a Work in Progress and is expected to be finished before racing in July 2024.
+</p>
+
+
+<h2 class="mainTextTitle">Design</h2>
+
+<p class="mainText">
+    As I am a Co-Captain now, I also participated in the design process of the car.
+    <br>
+    I worked on the overall design, aerodynamic shell, steering system, front and rear suspention, and the placement of components, as well as determining the feasibility of the design. 
+</p>
+
+
+<div style="display: grid;grid-template-columns: auto auto auto;">
+    <div style="width: 48vw;">
+    <img id="Img02" src="/static/solar_car_v2.png" alt="36v battery" style="width:47.5vw;max-width:1600px;float:left;" onclick="modalOpen('02', false)">
+    <div id="Modal02" class="modal">
+        <span class="close" onclick="modalClose('02')">&times;</span>
+        <img class="modal-content" id="img02">
+    </div>
+    </div>
+    
+    <div style="width: 48vw;">
+        <img id="Img03" src="/static/solar_car_v2_internal_frame.png" alt="36v battery" style="width:47.5vw;max-width:1600px;float:right;" onclick="modalOpen('03', false)">
+        <div id="Modal03" class="modal">
+            <span class="close" onclick="modalClose('03')">&times;</span>
+            <img class="modal-content" id="img03">
+        </div>
+        </div>
+</div>
+
+<h2 class="mainTextTitle">Propulsion System</h2>
+
+<p class="mainText">
+    I mainly worked on the Electrical Systems of the car including the solar system, main battery, motor systems, and integration of all of these systems.
+    <br>
+</p>
+
+<h2 class="mainTextTitle">Auxiliary/Telemetry System</h2>
+
+<p class="mainText">
+    I also worked on the Auxiliary and Telemetry Systems of the car including all lights and signals, rear view cameras, cockpit dashboard, and remote dashboard.
+    <br>
+    
+</p>
+
+</div>
+{% endblock %}
