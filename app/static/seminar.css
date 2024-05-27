@@ -24,7 +24,7 @@ body, html, #main {
   }
   
   #bgimg-1 {
-    background-image: url("/static/background1.avif");
+    background-image: url("/static/background2.avif");
   }
   
   
@@ -145,7 +145,19 @@ body, html, #main {
     display: table;
   }
 
- #intro {
+ .text {
     padding: 50px 80px;
     text-align: center;
+ }
+
+#chart {
+  height: 100%;
+  width: 100%;
+}
+
+ #chart-container {
+  aspect-ratio: 2 / 1;
+  max-height: 50vh;
+  margin: auto;
+  padding: 5vh 0;
  }

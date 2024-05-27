@@ -1,12 +1,12 @@
 
 function openNav() {
+    document.getElementById("menu").setAttribute('onclick', "closeNav()");
     document.getElementById("mySidenav").style.width = "300px";
-    document.getElementById("main").style.marginLeft = "250px";
   }
   
   function closeNav() {
+    document.getElementById("menu").setAttribute('onclick', "openNav()");
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
   }
   
   
@@ -109,3 +109,10 @@ function openNav() {
   };
   
   img.src = "/static/background1.jpg";
+
+  let img1 = new Image();
+  img1.onload = function(){
+    document.getElementById('bgimg-1').style.backgroundImage = "url('" + img1.src + "')";
+  };
+  
+  img1.src = "/static/background2.jpg";

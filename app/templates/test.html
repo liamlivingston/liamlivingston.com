@@ -12,7 +12,7 @@
     <a href="/projects" onclick="closeNav()">Projects</a>
   </div>
   
-  <span style="font-size:25px;cursor:pointer;position:fixed;z-index:100;padding-top:10px;width:150px;background:#2e2d2d;color:#fff;border-radius: 0 0 25px 0;font: 400 25px/1.8 "Lato", sans-serif;" onclick="openNav()">&nbsp;&#9776 Contents</span>
+  <span style="font-size:25px;cursor:pointer;position:fixed;z-index:100;padding-top:10px;width:150px;background:#2e2d2d;color:#fff;border-radius: 0 0 25px 0;font: 400 25px/1.8 Lato, sans-serif;" onclick="openNav()" id="menu">&nbsp;&#9776 Contents</span>
   
   
   
@@ -29,7 +29,7 @@
   
   <p class="intext">Picture of the area observed 1 <a href="#liam1">(Livingston, 2022).</a></p>
   
-  <div id="intro">
+  <div id="intro" class="text">
     <div>
       <h3 >Current Problem</h3>
       <p>
@@ -37,42 +37,39 @@
       </p>
     </div>
     <div>
+      <div id="chart-container">
       <canvas id="chart"></canvas>
+      </div>
       <p>
         This is the level of current emissions and predicted levels of global warming based on future CO2 emissions by Shared Socioeconomic Pathways (SSP). If we stay on the current path of increasing emissions, we could be somewhere in the range of 3°C of global warming. We need to be in the range of the green line to meet 1.5°C goals. The lead study author of the Global Carbon Budget, Pierre Friedlingstein of the Global Systems Institute at the University of Exeter, said that “it now looks inevitable we will overshoot the 1.5°C target of the Paris Agreement”. 1.5°C of global warming above pre-industrial levels is an international benchmark that was agreed upon with the Paris Agreement of 2015 at the COP21, which was the 21st Conference of the Parties to the United Nations Framework Convention on Climate Change (UNFCCC), in order to limit the effects of global warming (IPCC 2018). Exceeding the 1.5°C target will further exacerbate EWEs, which will lead to even more significant risks for places such as Metro Manila in the Philippines.      </p>
     </div>
-    <div>
-      <iframe src="https://ourworldindata.org/explorers/natural-disasters?facet=none&hideControls=true&Disaster+Type=All+disasters&Impact=Total+affected&Timespan=Annual&Per+capita=false&country=JPN~PHL&tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
-    </div>
-    <div>
-      <p>
-        Wealthier countries in East Asia, such as Japan, are better equipped to face EWEs than Metro Manila in the Philippines. On average, in the 2010s in the Philippines, 9,831 people were affected by disasters per 100,000 people, which is an astronomical number compared to Japan’s 272 per 100,000 people, according to the Emergency Events Database (EM-DAT), a joint initiative between the Centre for Research on the Epidemiology of Disasters (CRED) and the World Health Organization. The spike in 2013 was caused by Super Typhoon Haiyan, which affected 25 million people, over a quarter of the population of the Philippines at the time.
-      </p>
-    </div>
+    
     
   </div>
   
   <div class="bgimg", id="bgimg-1">
     <div class="caption">
-    <span class="border">Research</span>
+    <span class="border">Other Countries</span>
     </div>
   </div>
+
+
   
   
   <p>Picture of the area observed <a href="#rohan1">(Bhatia, 2022)</a></p>
   
-  <div id="research">
+  <div id="research" class="text">
     <h3>Research</h3>
     <br>
     <br>
-    <div>
-      <h3 style="margin-top:0;font-size:25px">Background</h3>
-      <p>In the brackish tidal marshes of Chesapeake Bay, an ecosystem similar to the Palo Alto Baylands, sea level rise, a disturbance to the ecosystem, caused an impact on the organic matter decay rates there <a href="#bgs1">(Kirwan et al., 2013)</a>.</p>
-    </div>
-    <div style="height:500px; width:50%;float:right">
-      <img src="background4.avif" style="width:80%;padding-left:15%">
-      <p>Picture of the area that was observed 4 <a href="#liam6">(Livingston, 2022).</a></p>
-    </div>
+      <div>
+    <iframe src="https://ourworldindata.org/explorers/natural-disasters?facet=none&hideControls=true&Disaster+Type=All+disasters&Impact=Total+affected&Timespan=Annual&Per+capita=false&country=JPN~PHL&tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+  </div>
+  <div>
+    <p>
+      Wealthier countries in East Asia, such as Japan, are better equipped to face EWEs than Metro Manila in the Philippines. On average, in the 2010s in the Philippines, 9,831 people were affected by disasters per 100,000 people, which is an astronomical number compared to Japan’s 272 per 100,000 people, according to the Emergency Events Database (EM-DAT), a joint initiative between the Centre for Research on the Epidemiology of Disasters (CRED) and the World Health Organization. The spike in 2013 was caused by Super Typhoon Haiyan, which affected 25 million people, over a quarter of the population of the Philippines at the time.
+    </p>
+  </div>
   </div>
   
   
