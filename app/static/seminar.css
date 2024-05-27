@@ -4,7 +4,7 @@ body, html, #main {
     padding: 0; 
     margin: 0;
     font: 400 15px/1.8 "Lato", sans-serif;
-    color: #777;
+    color: #777777;
     scroll-behavior: smooth;
   }
   
@@ -34,7 +34,7 @@ body, html, #main {
     top: 50%;
     width: 100%;
     text-align: center;
-    color: #000;
+    color: #000000;
   }
   
   .caption1 {
@@ -56,16 +56,16 @@ body, html, #main {
   
   
   .caption span.border {
-    background-color: #111;
-    color: #fff;
+    background-color: #111111;
+    color: #ffffff;
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
   }
 
   .caption1 span.border {
-    background-color: #111;
-    color: #fff;
+    background-color: #111111;
+    color: #ffffff;
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
