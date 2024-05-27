@@ -1,301 +1,184 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html,#main {
-  height: 100%;
-  padding: 0; 
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
-  scroll-behavior: smooth;
-}
-
-
-.bgimg-0, .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
-  position: relative;
-  opacity: 0.8;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-.bgimg-0 {
-  background-image: url("/static/background1.avif");
-  min-height: 100%;
-}
-
-.bgimg-1 {
-  background-image: url("/static/background1.avif");
-  min-height: 100%;
-}
-
-.bgimg-2 {
-  background-image: url("DSC-0476.avif");
-  min-height: 100%;
-}
-
-.bgimg-3 {
-  background-image: url("DSC-0482.avif");
-  min-height: 100%;
-}
-
-.bgimg-4 {
-  background-image: url("https://i.ibb.co/m4McDhd/DSC-0486.avif");
-  min-height: 100%;
-}
-
-.bgimg-5 {
-  background-image: url("https://i.ibb.co/N9CgX7v/DSC-0492.avif");
-  min-height: 100%;
-}
-
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption1 {
-  position: absolute;
-  left: 0;
-  top: 58%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption2 {
-  position: absolute;
-  right: 0;
-  top: 95%;
-  width: 400px;
-  text-align: center;
-}
-
-
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
-
-
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 30px "Lato", sans-serif;
-  color: #111;
-}
-
-p{
-font-size: 18px;
-color: #111;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #2e2d2d;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #fff;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-
-@media only screen and (max-device-width: 1024px) {
-  .bgimg-0, .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
-    background-attachment: scroll;
-  }
-}
-.column {
-  float: left;
-  width: 50%;
-  padding: 0px;
-}
-
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-mark {
-background-color: transparent;
-}
-
-#intro {
-}
-
-#research {
-}
-
-#refs {
-}
-
-
-#gull:target, #bgs1:target, #bgs2:target, #liam1:target, #liam2:target, #liam3:target, #liam4:target, #liam5:target, #liam6:target, #rohan1:target, #nasa:target, #ipcc:target {
-  background: #ffff00;
-}
-
-a {
-}
-
-</style>
+  <link href="/static/seminar.css" rel="stylesheet" />
+  <link href="/static/modal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
 </head>
+
 <body>
-
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="/#top" onclick="closeNav()" style="padding-top:18px">Home</a>
-  <a href="/#about" onclick="closeNav()" style="white-space: nowrap">About Me</a>
-  <a href="/projects" onclick="closeNav()">Projects</a>
-</div>
-
-<span style="font-size:25px;cursor:pointer;position:fixed;z-index:100;padding-top:10px;width:150px;background:#2e2d2d;color:#fff;border-radius: 0 0 25px 0;font: 400 25px/1.8 "Lato", sans-serif;" onclick="openNav()">&nbsp;&#9776 Contents</span>
-
-
-
-<div id="main" style="padding: 0;margin: 0;">
-<div class="bgimg-0", id="bgimg-0">
-  <div class="caption">
-  <span class="border">Implementing the Sendai Framework</span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/#top" onclick="closeNav()" style="padding-top:18px">Home</a>
+    <a href="/#about" onclick="closeNav()" style="white-space: nowrap">About Me</a>
+    <a href="/projects" onclick="closeNav()">Projects</a>
   </div>
-  <div class="caption1">
-  <span class="border" style="background-color: #111;color: #fff;padding: 10px;font-size: 18px;letter-spacing: 7px;">Liam Livingston - Period 7</span>
-  </div>
-</div>
+
+  <span
+    style="font-size:25px;cursor:pointer;position:fixed;z-index:100;padding-top:10px;width:150px;background:#2e2d2d;color:#fff;border-radius: 0 0 25px 0;font: 400 25px/1.8 Lato, sans-serif;"
+    onclick="openNav()" id="menu">&nbsp;&#9776 Contents</span>
 
 
-<p style="margin-top:20px;padding-right:5%;text-align:right">Picture of the area observed 1 <a href="#liam1">(Livingston, 2022).</a></p>
 
-<div id="intro" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;overflow: overlay;">
-  <div style="width:85%; padding-left:7.5%; text-align:center">
-    <h3 style="margin-top:0">Current Problem</h3>
-    <p>July 2023 was the hottest month recorded in the past 120,000 years (Moustafa et al. 2023). The escalation of global warming will rapidly increase risks, such as Extreme Weather Events (EWEs), to settlements in high-vulnerability areas, with coastal-specific climate hazards projected to put roughly a billion people at risk (IPPC 2022). Worsening global warming causes more frequent and severe EWEs, which affect low- and middle-income countries, coastal and low-lying areas, and the urban poor disproportionately (Hallegatte et al. 2017). Survivors of typhoons, floods, and other EWEs have shown a wide range of psychological symptoms, including anxiety, depression, and PTSD, with displaced victims reporting the symptoms to a greater extent compared to non-displaced victims.
-    </p>
-  </div>
-  <div style="width:85vw; height: 40vw;">
-    <canvas id="chart" style="width:85vw; height: 90%;"></canvas>
-    <p style="margin-top:0;padding-left:15%;width:75%; height:10%">Level of current emission and predicted levels of global warming based on future CO2 emissions</p>
-  </div>
-  
-</div>
+  <div id="main">
+    <div class="bgimg" , id="bgimg-0">
+      <div class="caption">
+        <span class="border">Implementing the Sendai Framework</span>
+      </div>
+      <div class="caption1">
+        <span class="border">Liam Livingston - Period 7</span>
+      </div>
+    </div>
 
-<div class="bgimg-1">
-  <div class="caption">
-  <span class="border">Research</span>
-  </div>
-</div>
+    <div id="intro" class="text">
+      <div class="split-container">
+        <div class="box-center">
+          <p>
+            July 2023 was the hottest month recorded in the past 120,000 years (Moustafa et al., 2023). The escalation
+            of global warming will rapidly increase risks, such as Extreme Weather Events (EWEs), to settlements in
+            high-vulnerability areas, with coastal-specific climate hazards projected to put roughly a billion people at
+            risk (IPPC 2022). Worsening global warming causes more frequent and severe EWEs, which affect low- and
+            middle-income countries, coastal and low-lying areas, and the urban poor disproportionately (Hallegatte et
+            al. 2017). Survivors of typhoons, floods, and other EWEs have shown a wide range of psychological symptoms,
+            including anxiety, depression, and PTSD, with displaced victims reporting the symptoms to a greater extent
+            compared to non-displaced victims.
+          </p>
+        </div>
+        <div>
+          <img id="Img01" src="/static/july_2023_png.avif" alt="36v battery"
+            style="width:80%;padding: 0 10%;position: relative;top: 50%;left: 50%;transform: translate(-50%, -50%);"
+            onclick="modalOpen('01', false)">
+          <div id="Modal01" class="modal">
+            <span class="close" onclick="modalClose('01')">&times;</span>
+            <img class="modal-content" id="img01">
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="bgimg" , id="bgimg-1">
+      <div class="caption">
+        <span class="border">Extreme Weather Events</span>
+      </div>
+    </div>
 
-<p style="margin-top:20px;padding-right:5%;text-align:right">Picture of the area observed <a href="#rohan1">(Bhatia, 2022)</a></p>
+    <div class="text">
+      <div class="split-container">
+        <div class="box-center">
+          <p>
+            This is the level of current emissions and predicted levels of global warming based on future CO2 emissions
+            by Shared Socioeconomic Pathways (SSP). If we stay on the current path of increasing emissions, we could be
+            somewhere in the range of 3°C of global warming. We need to be in the range of the green line to meet 1.5°C
+            goals. The lead study author of the Global Carbon Budget, Pierre Friedlingstein of the Global Systems
+            Institute at the University of Exeter, said that “it now looks inevitable we will overshoot the 1.5°C target
+            of the Paris Agreement”. 1.5°C of global warming above pre-industrial levels is an international benchmark
+            that was agreed upon with the Paris Agreement of 2015 at the COP21, which was the 21st Conference of the
+            Parties to the United Nations Framework Convention on Climate Change (UNFCCC), in order to limit the effects
+            of global warming (IPCC 2018). Exceeding the 1.5°C target will further exacerbate EWEs, which will lead to
+            even more significant risks for places such as Metro Manila in the Philippines.
+          </p>
+        </div>
+        <div>
+          <div id="chart-container">
+            <canvas id="chart"></canvas>
+          </div>
+        </div>
+      </div>
 
-<div id="research" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: center; height:500px;">
-  <h3 style="margin-top:0;margin-bottom:20px">Research</h3>
-  <br>
-  <br>
-  <div style="height:500px; width:40%; padding-left:7.5%; float:left; text-align:center">
-    <h3 style="margin-top:0;font-size:25px">Background</h3>
-    <p>In the brackish tidal marshes of Chesapeake Bay, an ecosystem similar to the Palo Alto Baylands, sea level rise, a disturbance to the ecosystem, caused an impact on the organic matter decay rates there <a href="#bgs1">(Kirwan et al., 2013)</a>.</p>
-  </div>
-  <div style="height:500px; width:50%;float:right">
-    <img src="background4.avif" style="width:80%;padding-left:15%">
-    <p style="margin-top:0;padding-left:17.5%;text-align:left">Picture of the area that was observed 4 <a href="#liam6">(Livingston, 2022).</a></p>
-  </div>
-  <div style="height:1000px; width:40%; padding-left:7.5%; float:right; text-align:center">
-    <h3 style="margin-top:30px;font-size:25px;padding-left:0">Claim</h3>
-    <p>Sea level rise is a disturbance that would likely impact the observed ecosystem in the Palo Alto Baylands, causing a reduced population of species.</p>
-    <h3 style="margin-top:30px;font-size:25px;padding-left:0">Evidence</h3>
-    <p>Research shows that salt marshes are threatened by sea level rise as shown in a previous statement. In addition, by the end of the century, ~30%-~75% of marshes could drown, with the figures being higher for other continents <a href="#bgs2">(Crosby et al., 2016).</a>. Finally, research shows that sea levels will likely be from 0.61m-1.10m following a RCP8.5 model  <a href="#ipcc">(I.P.C.C., 2022)</a>.</p>
-    <h3 style="margin-top:30px;font-size:25px;padding-left:0">Reasoning</h3>
-    <p>Sea level rise is a disturbance that will likely impact the Palo Alto Baylands ecosystem because of rising sea levels, sea level rise’s effect on organic matter decay, and salt water marshes that could drown as a result of this. Evidence shows that salt water marshes are threatened by sea level rise. Additionally, evidence shown above shows how sea level rise is likely to reach 0.61m-1.10m by 2100. In addition, marshes are expected to drown from ~30%-~75% by the end of the century due to sea level rise as stated previously. This is all important because salt water marshes drowning could result in a reduction of producers such as african daisies, yellow forsythia, algae, and golden thyme that primary consumers rely on. This would cause a chain reaction up the energy pyramid resulting in an ecosystem falling apart. I believe that this ecosystem is bottom-up control because of how the consumers are reliant on the producers.</p>
-  </div>
-  <div style="height:1000px; width:50%;float:left">
-    <img src="graph.png" style="width:80%;padding-left:15%">
-    <p style="margin-top:20px;padding-left:17.5%;text-align:left">Percentage of marshes drowning under predicted rates of sea level rise at the end of the century <a href="#bgs2">(Crosby et al., 2016).</a></p>
-    <img src="graph1.png" style="width:80%;padding-left:15%;padding-top:20px">
-    <p style="margin-top:20px;padding-left:17.5%;text-align:left">Global sea level predictions for 1900-2300 <a href="#nasa">(N.A.S.A., 2021).</a></p>
-  </div>
-</div>
+    </div>
 
+    <div class="bgimg" , id="bgimg-2">
+      <div class="caption">
+        <span class="border">Other Countries</span>
+      </div>
+    </div>
 
-    <div style="width:60%; margin-left:20%">
-        <p><br><br><a href="https://docs.google.com/document/d/1Mbm9Ljv_on2r6p-tQXuGV9kErwhSyzo548T06cIR1yc/preview" target="_blank"><h3 style="text-align:center"><br>References</h3></a></p>
+    <div id="research" style="height: auto;" class="text">
+      <h3>Research</h3>
+      <br>
+      <br>
+      <div>
+        <iframe
+          src="https://ourworldindata.org/explorers/natural-disasters?facet=none&hideControls=true&Disaster+Type=All+disasters&Impact=Total+affected&Timespan=Annual&Per+capita=false&country=JPN~PHL&tab=chart"
+          loading="lazy" style="width: 100%; height: 600px; border: 0px none;"
+          allow="web-share; clipboard-write"></iframe>
+      </div>
+      <div>
+        <p>
+          Wealthier countries in East Asia, such as Japan, are better equipped to face EWEs than Metro Manila in the
+          Philippines. On average, in the 2010s in the Philippines, 9,831 people were affected by disasters per 100,000
+          people, which is an astronomical number compared to Japan’s 272 per 100,000 people, according to the Emergency
+          Events Database (EM-DAT), a joint initiative between the Centre for Research on the Epidemiology of Disasters
+          (CRED) and the World Health Organization. The spike in 2013 was caused by Super Typhoon Haiyan, which affected
+          25 million people, over a quarter of the population of the Philippines at the time.
+        </p>
+      </div>
+      <div>
+        <iframe width="560" height="315" style="padding:0 calc(50vw - 280px - 80px)"
+          src="https://www.youtube.com/embed/MK7ezCJCIrI?si=eYwts9b3hniBSUea" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p>
+        This video explains how the Sendai Framework would solve this issue.
+      </p>
+
+      <iframe src="https://docs.google.com/document/d/1Mbm9Ljv_on2r6p-tQXuGV9kErwhSyzo548T06cIR1yc/preview"
+        style="width:600px; height:750px;" frameborder="0"></iframe>
+      <p>
+        My <a href="https://docs.google.com/document/d/1Mbm9Ljv_on2r6p-tQXuGV9kErwhSyzo548T06cIR1yc/preview"
+          target="_blank">
+          IWA</a> on the Implimentation of the Sendai Framework
+      </p>
+
+      <div>
+        <h3>
+          Reflection
+        </h3>
+        <p>
+          In AP Seminar, I extensively researched topics I had a passion for. I focused on sustainable technology and
+          climate change for all of my papers. Some other issues that I wrote about other than the Sendai Framework were
+          electric two-wheelers in South East Asia as a way to both reduce local air pollution and global climate change
+          and new Lithium-ion battery chemistries that don’t use cobalt in order to combat the overreliance on it, the
+          exploitation of people in cobalt-rich countries, and increase battery energy densities to combat climate
+          change.
+          <br><br>
+          In the future, I would like to manufacture my own Lithium-ion batteries and test different types of cathodes
+          to determine what applications suit each type. I would also like to design and install a rooftop solar and
+          energy storage project to cut costs and increase adoption rates, further electrifying our world and combating
+          the overreliance on fossil fuels and climate change.
+        </p>
+      </div>
+    </div>
+    <div class="footer-basic">
+      <footer>
+        <div class="social"><a href="/instagram" target="_blank"><i class="fa fa-instagram"
+              style="margin-top: 8px;"></i></a><a href="/youtube" target="_blank"><i class="fa fa-youtube"
+              style="margin-top: 8px;"></i></a><a href="/github" style="margin-top:8px;" target="_blank"><i
+              class="fa fa-github" style="margin-top: 8px;"></i></a></div>
+        <ul class="list-inline">
+          <li class="list-inline-item" style="color:white"><a
+              href="{% autoescape false %}{{home}}{% endautoescape %}#top">Home</a></li>
+          <li class="list-inline-item" style="color:white"><a
+              href="{% autoescape false %}{{home}}{% endautoescape %}#about">About me</a></li>
+          <li class="list-inline-item" style="color:white"><a
+              href="{{website_location}}projects{% autoescape false %}{{userid}}{% endautoescape %}">Projects</a></li>
+        </ul>
+        <p class="copyright">Liam Livingston © 2023</p>
+      </footer>
     </div>
 
 
-
-  <div style="width:60%;margin-left:20%">
-    <p><br><br><h3 style="text-align:center"><br>References</h3></p>
-    <p  id="refs" style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="gull">Baron, D. (2009). <i>Gull</i> [Photo.]. Flickr.  <a href="https://www.flickr.com/photos/dbaron/3432894503" target="_blank">https://www.flickr.com/photos/dbaron/3432894503</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="rohan1">Bhatia, R. (2022). <i>Picture of the area observed</i> [Photograph]. Flickr. <a href="https://www.flickr.com/photos/195319688@N03/albums/72177720297771278" target="_blank">https://www.flickr.com/photos/195319688@N03/albums/72177720297771278</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="bgs2">Crosby, S. C., Sax, D. F., Palmer, M. E., Booth, H. S., Deegan, L. A., Bertness, M. D., & Leslie, H. M. (2016). Salt Marsh Persistence is threatened by predicted sea-level rise. <i>Estuarine, Coastal and Shelf Science, 181</i>(0272-7714), 93–99. <a href="https://doi.org/10.1016/j.ecss.2016.08.018" target="_blank">https://doi.org/10.1016/j.ecss.2016.08.018</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="ipcc">Intergovernmental Panel on Climate Change (IPCC). (2022). Sea Level Rise and Implications for Low-Lying Islands, Coasts and Communities. <i>The Ocean and Cryosphere in a Changing Climate: Special Report of the Intergovernmental Panel on Climate Change</i> (pp. 321-446). <a href="https://doi.org/10.1017/9781009157964.006" target="_blank">https://doi.org/10.1017/9781009157964.006</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="bgs1">Kirwan, M. L., Langley, J. A., Guntenspergen, G. R., & Megonigal, J. P. (2013). The impact of sea-level rise on organic matter decay rates in Chesapeake Bay Brackish Tidal Marshes. <i>Biogeosciences, 10</i>(3), 1869–1876. <a href="https://doi.org/10.5194/bg-10-1869-2013" target="_blank">https://doi.org/10.5194/bg-10-1869-2013</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="liam1">Livingston, L. (2022). <i>Picture of the area observed 1</i> [Photograph]. Flickr. <a href="https://www.flickr.com/photos/195319688@N03/albums/72177720297771198" target="_blank">https://www.flickr.com/photos/195319688@N03/albums/72177720297771198</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="liam2">Livingston, L. (2022). <i>Picture of the area that was observed 2</i> [Photograph]. Flickr. <a href="https://www.flickr.com/photos/195319688@N03/albums/72177720297771198" target="_blank">https://www.flickr.com/photos/195319688@N03/albums/72177720297771198</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="liam3">Livingston, L. (2022). <i>Two ducks standing on a rock with the water in the background</i> [Photograph]. Flickr. <a href="https://www.flickr.com/photos/195319688@N03/albums/72177720297771198" target="_blank">https://www.flickr.com/photos/195319688@N03/albums/72177720297771198</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="liam4">Livingston, L. (2022). <i>A barnacle on a rock near the water</i> [Photograph]. Flickr. <a href="https://www.flickr.com/photos/195319688@N03/albums/72177720297771198" target="_blank">https://www.flickr.com/photos/195319688@N03/albums/72177720297771198</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="liam5">Livingston, L. (2022). <i>Two yellow forsythia plants with the water in the background</i> [Photograph]. Flickr. <a href="https://www.flickr.com/photos/195319688@N03/albums/72177720297771198" target="_blank">https://www.flickr.com/photos/195319688@N03/albums/72177720297771198</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="liam6">Livingston, L. (2022). <i>Picture of the area that was observed 4</i> [Photograph]. Flickr. <a href="https://www.flickr.com/photos/195319688@N03/albums/72177720297771198" target="_blank">https://www.flickr.com/photos/195319688@N03/albums/72177720297771198</a></mark></p>
-    <p style="text-align:left; width:80%; text-indent: -72px; padding-left: 72px; margin-left:10%; font-size: 18px;"><mark id="nasa">NASA. (2021, July 8). <i>Anticipating Future Sea Levels.</i> [Photograph]. NASA. <a href="https://earthobservatory.nasa.gov/images/148494/anticipating-future-sea-levels" target="_blank">https://earthobservatory.nasa.gov/images/148494/anticipating-future-sea-levels</a></mark></p>
-
   </div>
-  <div>
-    <br><br>
-  </div>
-</div>
-</div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
-<script type="text/javascript" src="/static/seminar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+  <script type="text/javascript" src="/static/seminar.js"></script>
+  <script type="text/javascript" src="/static/modal.js"></script>
+
+</body>
+
+</html>

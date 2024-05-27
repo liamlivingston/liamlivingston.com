@@ -4,7 +4,7 @@
 <head>
   <link href="/static/seminar.css" rel="stylesheet" />
   <link href="/static/modal.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
 </head>
 
 <body>
@@ -68,8 +68,7 @@
         <div class="box-center">
           <p>
             This is the level of current emissions and predicted levels of global warming based on future CO2 emissions
-            by
-            Shared Socioeconomic Pathways (SSP). If we stay on the current path of increasing emissions, we could be
+            by Shared Socioeconomic Pathways (SSP). If we stay on the current path of increasing emissions, we could be
             somewhere in the range of 3°C of global warming. We need to be in the range of the green line to meet 1.5°C
             goals. The lead study author of the Global Carbon Budget, Pierre Friedlingstein of the Global Systems
             Institute at the University of Exeter, said that “it now looks inevitable we will overshoot the 1.5°C target
@@ -95,7 +94,7 @@
       </div>
     </div>
 
-    <div id="research" class="text">
+    <div id="research" style="height: auto;" class="text">
       <h3>Research</h3>
       <br>
       <br>
@@ -115,32 +114,63 @@
           25 million people, over a quarter of the population of the Philippines at the time.
         </p>
       </div>
-    </div>
-
-
-    <div style="width:60%; margin-left:20%">
-      <p><br><br><a href="https://docs.google.com/document/d/1Mbm9Ljv_on2r6p-tQXuGV9kErwhSyzo548T06cIR1yc/preview"
-          target="_blank">
-          <h3 style="text-align:center"><br>IWA</h3>
-        </a></p>
-    </div>
-
-
-
-    <div style="width:60%;margin-left:20%">
-      <p><br><br>
-
-      <h3><br>References</h3>
+      <div>
+        <iframe width="560" height="315" style="padding:0 calc(50vw - 280px - 80px)"
+          src="https://www.youtube.com/embed/MK7ezCJCIrI?si=eYwts9b3hniBSUea" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p>
+        This video explains how the Sendai Framework would solve this issue.
       </p>
-      <p>NASA. (2021, July 8). <i>Anticipating Future Sea Levels.</i> [Photograph]. NASA. <a
-          href="https://earthobservatory.nasa.gov/images/148494/anticipating-future-sea-levels"
-          target="_blank">https://earthobservatory.nasa.gov/images/148494/anticipating-future-sea-levels</a></p>
 
+      <iframe src="https://docs.google.com/document/d/1Mbm9Ljv_on2r6p-tQXuGV9kErwhSyzo548T06cIR1yc/preview"
+        style="width:600px; height:750px;" frameborder="0"></iframe>
+      <p>
+        My <a href="https://docs.google.com/document/d/1Mbm9Ljv_on2r6p-tQXuGV9kErwhSyzo548T06cIR1yc/preview"
+          target="_blank">
+          IWA</a> on the Implimentation of the Sendai Framework
+      </p>
+
+      <div>
+        <h3>
+          Reflection
+        </h3>
+        <p>
+          In AP Seminar, I extensively researched topics I had a passion for. I focused on sustainable technology and
+          climate change for all of my papers. Some other issues that I wrote about other than the Sendai Framework were
+          electric two-wheelers in South East Asia as a way to both reduce local air pollution and global climate change
+          and new Lithium-ion battery chemistries that don’t use cobalt in order to combat the overreliance on it, the
+          exploitation of people in cobalt-rich countries, and increase battery energy densities to combat climate
+          change.
+          <br><br>
+          In the future, I would like to manufacture my own Lithium-ion batteries and test different types of cathodes
+          to determine what applications suit each type. I would also like to design and install a rooftop solar and
+          energy storage project to cut costs and increase adoption rates, further electrifying our world and combating
+          the overreliance on fossil fuels and climate change.
+        </p>
+      </div>
     </div>
-    <div>
-      <br><br>
+    <div class="footer-basic">
+      <footer>
+        <div class="social"><a href="/instagram" target="_blank"><i class="fa fa-instagram"
+              style="margin-top: 8px;"></i></a><a href="/youtube" target="_blank"><i class="fa fa-youtube"
+              style="margin-top: 8px;"></i></a><a href="/github" style="margin-top:8px;" target="_blank"><i
+              class="fa fa-github" style="margin-top: 8px;"></i></a></div>
+        <ul class="list-inline">
+          <li class="list-inline-item" style="color:white"><a
+              href="{% autoescape false %}{{home}}{% endautoescape %}#top">Home</a></li>
+          <li class="list-inline-item" style="color:white"><a
+              href="{% autoescape false %}{{home}}{% endautoescape %}#about">About me</a></li>
+          <li class="list-inline-item" style="color:white"><a
+              href="{{website_location}}projects{% autoescape false %}{{userid}}{% endautoescape %}">Projects</a></li>
+        </ul>
+        <p class="copyright">Liam Livingston © 2023</p>
+      </footer>
     </div>
-  </div>
+
+
   </div>
 
 
@@ -148,6 +178,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
   <script type="text/javascript" src="/static/seminar.js"></script>
   <script type="text/javascript" src="/static/modal.js"></script>
+
 </body>
 
 </html>

@@ -6,6 +6,7 @@ body, html, #main {
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777777;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   
@@ -180,3 +181,66 @@ body, html, #main {
   display: grid;
   grid-template-columns: 50% 50%;
  }
+
+ 
+.footer-basic {
+  padding:40px 0;
+  background-color:#333;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+  transition: 0.3s;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  margin:0 8px;
+  opacity:0.75;
+  color:#ffffff;
+}
+
+.footer-basic .social > a:hover {
+  color:#3f4040;
+  background-color:#ffffff;
+  transition: 0.3s;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}

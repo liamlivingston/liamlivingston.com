@@ -180,7 +180,6 @@ h3 {
 
 .navbar a:hover {
   background: #545454;
-  border-radius: 5px;
 }
 
 .footer-basic {
@@ -210,7 +209,6 @@ h3 {
 
 .footer-basic ul a:hover {
   opacity:1;
-  text-decoration: underline;
   transition: 0.3s;
 }
 
@@ -313,7 +311,6 @@ h3 {
 
 .title:hover {
   color:#ffffff;
-  text-decoration:underline;
   transition: 0.3s;
 }
 
@@ -341,7 +338,6 @@ h3 {
 
 .dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
 
 .show {display: block;}
 
@@ -439,7 +435,6 @@ a {
 {{sip}}
 {% endautoescape %}
 
-  <a href="{{home}}meeting_info{% autoescape false %}{{userid}}{% endautoescape %}" style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hd}};" class="title" id="disc_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">forum</h2><h2 style="color:inherit;text-decoration:inherit;">Meeting Info</h2></a>
   <a href="{{home}}projects{% autoescape false %}{{userid}}{% endautoescape %}" style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hl}}" class="title" id="projects_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">electric_bike</h2><h2 style="color:inherit;text-decoration:inherit;">Projects</h2></a>
   <a href="{% autoescape false %}{{home}}{% endautoescape %}#about"style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{ha}}" class="title" id="about_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">group</h2><h2 style="color:inherit;text-decoration:inherit;">About me</h2></a>
   <a href="{% autoescape false %}{{home}}{% endautoescape %}#top"style="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;{{hh}}" class="title" id="home_color"><h2 class="material-icons" style="margin-top:.5vh;width:4vh">home</h2><h2 style="color:inherit;text-decoration:inherit;">Home</h2></a>
@@ -455,12 +450,11 @@ a {
 
   <div class="footer-basic">
         <footer>
-            <div class="social"><a href="/instagram" target="_blank"><i class="fa fa-instagram" style="margin-top: 8px;"></i></a><a href="/youtube" target="_blank"><i class="fa fa-youtube" style="margin-top: 8px;"></i></a><a href="/github" style="margin-top:8px;" target="_blank"><i class="fa fa-github" style="margin-top: 8px;"></i></a><a href="/discord" target="_blank"><i class="fa fa-discord" style="margin-top: 8px;" aria-hidden="true"></i></a></div>
+            <div class="social"><a href="/instagram" target="_blank"><i class="fa fa-instagram" style="margin-top: 8px;"></i></a><a href="/youtube" target="_blank"><i class="fa fa-youtube" style="margin-top: 8px;"></i></a><a href="/github" style="margin-top:8px;" target="_blank"><i class="fa fa-github" style="margin-top: 8px;"></i></a></div>
             <ul class="list-inline">
                 <li class="list-inline-item" style="color:white"><a href="{% autoescape false %}{{home}}{% endautoescape %}#top">Home</a></li>
                 <li class="list-inline-item" style="color:white"><a href="{% autoescape false %}{{home}}{% endautoescape %}#about">About me</a></li>
                 <li class="list-inline-item" style="color:white"><a href="{{website_location}}projects{% autoescape false %}{{userid}}{% endautoescape %}">Projects</a></li>
-                <li class="list-inline-item" style="color:white"><a href="{{website_location}}discussion{% autoescape false %}{{userid}}{% endautoescape %}">Discussion</a></li>
             </ul>
             <p class="copyright">Liam Livingston © 2023</p>
         </footer>
@@ -495,72 +489,6 @@ window.onclick = function(event) {
   }
 }
 
-document.getElementById("home_color").addEventListener("mouseover", home, false);
-document.getElementById("about_color").addEventListener("mouseover", about, false);
-document.getElementById("projects_color").addEventListener("mouseover", projects, false);
-document.getElementById("disc_color").addEventListener("mouseover", disc, false);
-
-document.getElementById("home_color").addEventListener("mouseout", defualt, false);
-document.getElementById("about_color").addEventListener("mouseout", defualt, false);
-document.getElementById("projects_color").addEventListener("mouseout", defualt, false);
-document.getElementById("disc_color").addEventListener("mouseout", defualt, false);
-
-
-
-function about(){
-  document.getElementById("about_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#0091ff";
-  document.getElementById("home_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("projects_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("disc_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-}
-
-function home(){
-  document.getElementById("home_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#0091ff";
-  document.getElementById("about_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("projects_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("disc_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-}
-
-function projects(){
-  document.getElementById("projects_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#0091ff";
-  document.getElementById("about_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("home_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("disc_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-}
-
-function disc(){
-  document.getElementById("disc_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#0091ff";
-  document.getElementById("about_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("projects_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("home_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-}
-
-function clear(){
-  document.getElementById("about_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("home_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("projects_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-  document.getElementById("disc_color").style.cssText="margin-top:4vh;margin-bottom:4vh;height:4vh;border-radius: 5px;text-decoration: underline;text-decoration-color:#333";
-}
-
-function defualt(){
-  var x = window.location.hash;
-  if (x == "#about"){
-    about()
-}
-  if (x == "#top"){
-    home()
-}
-  if (window.location.href.includes("projects")) {
-   projects()
-}
-  if (window.location.href.includes("discussion")){
-    disc()
-  }
-  else {
-    clear()
-  }
-
-}
 
 document.addEventListener("DOMContentLoaded", function() {
   defualt();
