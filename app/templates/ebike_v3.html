@@ -2,66 +2,77 @@
 </div>
 {% extends 'base.html' %}
 {% block content %}
-<img id="Img01" src="/static/ebike_v3.avif" alt="36v battery" style="width:100%;max-width:300px;display: block;float: none;" onclick="modalOpen('01', true)">
+<img id="Img01" src="/static/ebike_v3.avif" alt="36v battery"
+    style="width:100%;max-width:300px;display: block;float: none;" onclick="modalOpen('01', true)">
 <div id="Modal01" class="modal">
     <span class="close" onclick="modalClose('01')">&times;</span>
     <img class="modal-content" id="img01">
 </div>
 
 <div class="mainTextDiv">
-<h2 class="mainTextTitle">Batteries</h2>
+    <h2 class="mainTextTitle">Batteries</h2>
 
-<p class="mainText">I build a 72v 9ah(691.2wh) battery using LiFePO4 cells for this ebike</p>
-<a href="/projects/batteries#72v_battery_0"><img src="/static/36v_battery.avif" alt="72v lfp battery" style="width:100%;max-width:300px;display:block;float:none;"></a>
+    <p class="mainText">I build a 72v 9ah(691.2wh) battery using LiFePO4 cells for this ebike</p>
+    <a href="/projects/batteries#72v_battery_0"><img src="/static/36v_battery.avif" alt="72v lfp battery"
+            style="width:100%;max-width:300px;display:block;float:none;"></a>
 
-<br>
-<p class="mainText">I also used the 60v battery from my v2 ebike for extra range on longer rides.</p>
-<a href="/projects/batteries#60v_battery"><img src="/static/36v_battery.avif" alt="60v battery" style="width:100%;max-width:300px;display:block;float:none;"></a>
+    <br>
+    <p class="mainText">I also used the 60v battery from my v2 ebike for extra range on longer rides.</p>
+    <a href="/projects/batteries#60v_battery"><img src="/static/36v_battery.avif" alt="60v battery"
+            style="width:100%;max-width:300px;display:block;float:none;"></a>
 
-<br>
-<br>
-
-<h2 class="mainTextTitle">Frame</h2>
-
-<p class="mainText">
-    For the frame, I bought a stealth bomber clone from <a href="https://www.aliexpress.us/item/3256801953525444.html" target="_blank">AliExpress</a> for a bit over $300 after taxes and shipping.
     <br>
     <br>
-    Front suspension fork - SR Suntour XCM 30 29in(Out of stock where i got them for around $80 total)
+
+    <h2 class="mainTextTitle">Frame</h2>
+
+    <p class="mainText">
+        For the frame, I bought a stealth bomber clone from <a
+            href="https://www.aliexpress.us/item/3256801953525444.html" target="_blank">AliExpress</a> for a bit over
+        $300 after taxes and shipping.
+        <br>
+        <br>
+        Front suspension fork - SR Suntour XCM 30 29in(Out of stock where i got them for around $80 total)
+        <br>
+        Rear shock - 210mm Cheap amazon coil one for like $50
+        <br>
+        Brakes - <a href="https://www.amazon.com/dp/B09NC8BW11/" target="_blank">Zoom HB-876</a>
+        <br>
+        Front wheel - <a href="https://www.ebay.com/itm/195583981817" target="_blank">29in MTB Front Wheel Disc
+            Brakes</a>
+        <br>
+        Headset -
+        <br>
+        Handlebars -
+    </p>
+
     <br>
-    Rear shock - 210mm Cheap amazon coil one for like $50
+
+    <h2 class="mainTextTitle">Motor Kit</h2>
+
+    <p class="mainText">
+        For ebike v3.1 I used the same motor kit as my v2 ebike because the new motor I ordered took about 2 months to
+        ship. I hit a top speed of around 40mph with the <a href="/projects/batteries#72v_battery_0">72v LFP battery</a>
+        and around 35mph with my <a href="/projects/batteries#60v_battery">60v battery</a>.
+    </p>
+
     <br>
-    Brakes - <a href="https://www.amazon.com/dp/B09NC8BW11/" target="_blank">Zoom HB-876</a>
-    <br>
-    Front wheel - <a href="https://www.ebay.com/itm/195583981817" target="_blank">29in MTB Front Wheel Disc Brakes</a>
-    <br>
-    Headset -
-    <br>
-    Handlebars -
-</p>
 
-<br>
-
-<h2 class="mainTextTitle">Motor Kit</h2>
-
-<p class="mainText">
-    For ebike v3.1 I used the same motor kit as my v2 ebike because the new motor I ordered took about 2 months to ship. I hit a top speed of around 40mph with the <a href="/projects/batteries#72v_battery_0">72v LFP battery</a> and around 35mph with my <a href="/projects/batteries#60v_battery">60v battery</a>.
-</p>
-
-<br>
-
-<h2 class="mainTextTitle">Upgrades v3.2</h2>
-<p class="mainText">
-    For v3.2, I upgraded to a QS205 50H V3 3.5t motor on a 29in mtx rim. For the controller, I used a VECTOR 200 from Golden Motor because I was able to borrow one from my solar car team.
-<br>
-<br>
-    This increased the top speed to around 55mph but only improved the acceleration a bit.
-</p>
+    <h2 class="mainTextTitle">Upgrades v3.2</h2>
+    <p class="mainText">
+        For v3.2, I upgraded to a QS205 50H V3 3.5t motor on a 29in mtx rim. For the controller, I used a VECTOR 200
+        from Golden Motor because I was able to borrow one from my solar car team.
+        <br>
+        <br>
+        This increased the top speed to around 55mph but only improved the acceleration a bit.
+    </p>
 
 
-<h2 class="mainTextTitle">Future Plans</h2>
-<p class="mainText">
-    I'm going to try to tune the controller to increase the acceleration and top speed. I'm also going to 
-</p>
+    <h2 class="mainTextTitle">Future Plans</h2>
+    <p class="mainText">
+        I'm going replace the controller with one that is designed for a hub motor as the VECTOR 200 was designed for a
+        different type of motor. I'm also going to install a motorcycle style seat and create a external battery mount
+        on it to mount my upgraded originally 60v and now 72v battery.
+    </p>
 </div>
 {% endblock %}
