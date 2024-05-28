@@ -50,6 +50,10 @@ def solar_car_v2():
 def seminar():
     return render_template("seminar.html", home="/")
 
+@app.route('/seminar')
+def seminar_redirect():
+    return redirect("/projects/seminar")
+
 @app.route('/projects/battery_business')
 def battery_business():
     return render_template("battery_business.html", home="/")
