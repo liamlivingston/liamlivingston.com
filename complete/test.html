@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="/static/seminar.css" rel="stylesheet" />
+  <link href="/static/modal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/#top" onclick="closeNav()" style="padding-top:18px">Home</a>
+    <a href="/#about" onclick="closeNav()" style="white-space: nowrap">About Me</a>
+    <a href="/projects" onclick="closeNav()">Projects</a>
+  </div>
+
+  <span
+    style="font-size:25px;cursor:pointer;position:fixed;z-index:100;padding-top:10px;width:150px;background:#2e2d2d;color:#fff;border-radius: 0 0 25px 0;font: 400 25px/1.8 Lato, sans-serif;"
+    onclick="openNav()" id="menu">&nbsp;&#9776 Contents</span>
+
+
+
+  <div id="main">
+    <div class="bgimg" , id="bgimg-0">
+      <div class="caption">
+        <span class="border">Implementing the Sendai Framework</span>
+      </div>
+      <div class="caption1">
+        <span class="border">Liam Livingston - Period 7</span>
+      </div>
+    </div>
+
+    <div id="intro" class="text">
+      <div class="split-container">
+        <div class="box-center">
+          <p>
+            July 2023 was the hottest month recorded in the past 120,000 years (Moustafa et al., 2023). The escalation
+            of global warming will rapidly increase risks, such as Extreme Weather Events (EWEs), to settlements in
+            high-vulnerability areas, with coastal-specific climate hazards projected to put roughly a billion people at
+            risk (IPPC 2022). Worsening global warming causes more frequent and severe EWEs, which affect low- and
+            middle-income countries, coastal and low-lying areas, and the urban poor disproportionately (Hallegatte et
+            al. 2017). Survivors of typhoons, floods, and other EWEs have shown a wide range of psychological symptoms,
+            including anxiety, depression, and PTSD, with displaced victims reporting the symptoms to a greater extent
+            compared to non-displaced victims.
+          </p>
+        </div>
+        <div>
+          <img id="Img01" src="/static/july_2023_png.avif" alt="36v battery"
+            style="width:80%;padding: 0 10%;position: relative;top: 50%;left: 50%;transform: translate(-50%, -50%);"
+            onclick="modalOpen('01', false)">
+          <div id="Modal01" class="modal">
+            <span class="close" onclick="modalClose('01')">&times;</span>
+            <img class="modal-content" id="img01">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bgimg" , id="bgimg-1">
+      <div class="caption">
+        <span class="border">Extreme Weather Events</span>
+      </div>
+    </div>
+
+    <div class="text">
+      <div class="split-container">
+        <div class="box-center">
+          <p>
+            This is the level of current emissions and predicted levels of global warming based on future CO2 emissions
+            by Shared Socioeconomic Pathways (SSP). If we stay on the current path of increasing emissions, we could be
+            somewhere in the range of 3°C of global warming. We need to be in the range of the green line to meet 1.5°C
+            goals. The lead study author of the Global Carbon Budget, Pierre Friedlingstein of the Global Systems
+            Institute at the University of Exeter, said that “it now looks inevitable we will overshoot the 1.5°C target
+            of the Paris Agreement”. 1.5°C of global warming above pre-industrial levels is an international benchmark
+            that was agreed upon with the Paris Agreement of 2015 at the COP21, which was the 21st Conference of the
+            Parties to the United Nations Framework Convention on Climate Change (UNFCCC), in order to limit the effects
+            of global warming (IPCC 2018). Exceeding the 1.5°C target will further exacerbate EWEs, which will lead to
+            even more significant risks for places such as Metro Manila in the Philippines.
+          </p>
+        </div>
+        <div>
+          <div id="chart-container">
+            <canvas id="chart"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bgimg" , id="bgimg-2">
+      <div class="caption">
+        <span class="border">Other Countries</span>
+      </div>
+    </div>
+
+    <div id="research" style="height: auto;" class="text">
+      <h3>Research</h3>
+      <br>
+      <br>
+      <div>
+        <iframe
+          src="https://ourworldindata.org/explorers/natural-disasters?facet=none&hideControls=true&Disaster+Type=All+disasters&Impact=Total+affected&Timespan=Annual&Per+capita=false&country=JPN~PHL&tab=chart"
+          loading="lazy" style="width: 100%; height: 600px; border: 0px none;"
+          allow="web-share; clipboard-write"></iframe>
+      </div>
+      <div>
+        <p>
+          Wealthier countries in East Asia, such as Japan, are better equipped to face EWEs than Metro Manila in the
+          Philippines. On average, in the 2010s in the Philippines, 9,831 people were affected by disasters per 100,000
+          people, which is an astronomical number compared to Japan’s 272 per 100,000 people, according to the Emergency
+          Events Database (EM-DAT), a joint initiative between the Centre for Research on the Epidemiology of Disasters
+          (CRED) and the World Health Organization. The spike in 2013 was caused by Super Typhoon Haiyan, which affected
+          25 million people, over a quarter of the population of the Philippines at the time.
+        </p>
+      </div>
+      <div>
+        <iframe width="560" height="315" style="padding:0 calc(50vw - 280px - 80px)"
+          src="https://www.youtube.com/embed/MK7ezCJCIrI?si=eYwts9b3hniBSUea" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p>
+        This video explains how the Sendai Framework would solve this issue.
+      </p>
+
+      <iframe src="https://docs.google.com/document/d/1Mbm9Ljv_on2r6p-tQXuGV9kErwhSyzo548T06cIR1yc/preview"
+        style="width:600px; height:750px;" frameborder="0"></iframe>
+      <p>
+        My <a href="https://docs.google.com/document/d/1Mbm9Ljv_on2r6p-tQXuGV9kErwhSyzo548T06cIR1yc/preview"
+          target="_blank">
+          IWA</a> on the Implimentation of the Sendai Framework
+      </p>
+
+      <div>
+        <h3>
+          Reflection
+        </h3>
+        <p>
+          In AP Seminar, I extensively researched topics I had a passion for. I focused on sustainable technology and
+          climate change for all of my papers. Some other issues that I wrote about other than the Sendai Framework were
+          electric two-wheelers in South East Asia as a way to both reduce local air pollution and global climate change
+          and new Lithium-ion battery chemistries that don’t use cobalt in order to combat the overreliance on it, the
+          exploitation of people in cobalt-rich countries, and increase battery energy densities to combat climate
+          change.
+          <br><br>
+          In the future, I would like to manufacture my own Lithium-ion batteries and test different types of cathodes
+          to determine what applications suit each type. I would also like to design and install a rooftop solar and
+          energy storage project to cut costs and increase adoption rates, further electrifying our world and combating
+          the overreliance on fossil fuels and climate change.
+        </p>
+      </div>
+    </div>
+    <div class="footer-basic">
+      <footer>
+        <div class="social"><a href="/instagram" target="_blank"><i class="fa fa-instagram"
+              style="margin-top: 8px;"></i></a><a href="/youtube" target="_blank"><i class="fa fa-youtube"
+              style="margin-top: 8px;"></i></a><a href="/github" style="margin-top:8px;" target="_blank"><i
+              class="fa fa-github" style="margin-top: 8px;"></i></a></div>
+        <ul class="list-inline">
+          <li class="list-inline-item" style="color:white"><a
+              href="{% autoescape false %}{{home}}{% endautoescape %}#top">Home</a></li>
+          <li class="list-inline-item" style="color:white"><a
+              href="{% autoescape false %}{{home}}{% endautoescape %}#about">About me</a></li>
+          <li class="list-inline-item" style="color:white"><a
+              href="{{website_location}}projects{% autoescape false %}{{userid}}{% endautoescape %}">Projects</a></li>
+        </ul>
+        <p class="copyright">Liam Livingston © 2023</p>
+      </footer>
+    </div>
+
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+  <script type="text/javascript" src="/static/seminar.js"></script>
+  <script type="text/javascript" src="/static/modal.js"></script>
+
+</body>
+
+</html>

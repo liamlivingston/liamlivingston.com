@@ -1,0 +1,84 @@
+<div style="height:0;width:0" id="top">
+</div>
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="mainTextDiv">
+<h2 class="mainTextTitle">Overview</h2>
+
+<p class="mainText">
+    I joined PASV (now MSRC) in November 2022 (my sophomore year) as a founding member and was appointed Electrical and Solar Lead.
+    <br>
+    Due to being the only team member with electrical experiance, I ended up doing almost all of the electrical work.
+</p>
+<div style="display: grid;grid-template-columns: auto auto auto;">
+<div style="width: 48vw;">
+<img id="Img01" src="/static/solar_car_v1_aux_soldering.avif" alt="36v battery" style="height:75.2vw;max-height:600px;float:right;margin-right:1vw;" onclick="modalOpen('01', false)">
+<div id="Modal01" class="modal">
+    <span class="close" onclick="modalClose('01')">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+</div>
+
+<div style="width: 47vw; margin-left: 1vw;">
+<p style="display:inline;">
+    <h2 class="mainTextTitle">Aux System</h2>
+    <br>
+    <p class="mainText">
+        The Aux System in this car was relatively limited to the limited amound of time we had.
+        <br><br>
+        It was powered off of a LiTime 12v 50ah LiFePO4 battery.
+        <br><br>
+        It consisted of lights, fans, and a horn that were all required by the SCC.
+    </p>
+</p>
+</div>
+</div>
+
+<br>
+<br>
+
+<div style="display: grid;grid-template-columns: auto auto auto;">
+    <div style="width: 48vw;">
+    <img id="Img02" src="/static/solar_car_v1_main_system.avif" alt="36v battery" style="height:75.2vw;max-height:600px;float:right;margin-right:1vw;" onclick="modalOpen('02', false)">
+    <div id="Modal02" class="modal">
+        <span class="close" onclick="modalClose('02')">&times;</span>
+        <img class="modal-content" id="img02">
+    </div>
+    </div>
+    
+    <div style="width: 47vw; margin-left: 1vw;">
+    <p style="display:inline;">
+        <h2 class="mainTextTitle">Main System</h2>
+        <br>
+        <p class="mainText">
+            The Main System in this car was also relatively limited.
+            <br><br>
+            It was powered by 4 LiTime 12v 100ah LiFePO4 batteries wired in series that gave us a 48v (51.2v nominal) 100ah pack with a capacity of 5120Wh
+            <br><br>
+            There were 12 100w Renogy solar pannels wired in a 6s2p configuration that was connected to a MidNite Solar Classic 150 MPPT.
+            <br><br>
+            The motor on the car was a 3kW BLDC Motor from Golden Motor, powered by a Vector 200 Controller.
+        </p>
+    </p>
+    </div>
+</div>
+
+<p class="mainText">
+
+</p>
+
+<h2 class="mainTextTitle">Building process</h2>
+
+<p class="mainText">
+    We traveled to Dallas, Texas in July 2023 for the 2023 Cross Country Solar Car Challenge.
+    <br><br>
+    We went throught a 3-day scrutineering period where we passed 7 different inspections.
+    <br><br>
+    After passing the Electrical Station, I was done with scrutineering because other members were better suited for the other inspections.
+    <br><br>
+    I decided to help other teams who were struggling with the Electrical Station for which I was later awarded the Jeff Barrett Solar Car Spirit Award.
+</p>
+
+</div>
+{% endblock %}

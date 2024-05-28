@@ -1,0 +1,142 @@
+<div style="height:0;width:0" id="top">
+</div>
+{% extends 'base.html' %}
+{% block content %}
+<style>
+h2.projects_title {
+    color: black;
+    text-align: center;
+    width: 100vw;
+    padding-top: calc(5vh - 16px);
+    padding-bottom: calc(5vh - 16px);
+    font-size: 45px;
+}
+
+div.projects_title {
+    color: black;
+    text-align: center;
+    width: 100vw;
+    height: 10vh;
+    font-size: 45px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: calc(100vw);
+  height: calc(156vh);
+}
+
+.grid_item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  height: calc(39vh - 2px);
+  width: calc(100vw / 3 - 2px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+h2.grid_text {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-align: center;
+  margin-top: calc(39vh / 2 - 20px);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4px;
+  border-radius: 7.5px;
+}
+</style>
+<div class="projects_title">
+    <h2 class="projects_title">Projects</h2>    
+</div>
+<div class="grid-container">
+    <a href="/projects/ebike_v1">
+        <div class="grid_item" style="background-image: url('/static/ebike_v1.avif');">
+            <h2 class="grid_text">
+                Ebike v1
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/ebike_v2">
+        <div class="grid_item" style="background-image: url('/static/ebike_v2.avif');">
+            <h2 class="grid_text">
+                Ebike v2
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/ebike_v3">
+        <div class="grid_item" style="background-image: url('/static/ebike_v3.avif');">
+            <h2 class="grid_text">
+                Ebike v3
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/batteries">
+        <div class="grid_item" style="background-image: url('/static/batteries.avif');">
+            <h2 class="grid_text">
+                Batteries
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/kenya">
+        <div class="grid_item" style="background-image: url('/static/kenya.avif');">
+            <h2 class="grid_text">
+                Kenya
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/csp">
+        <div class="grid_item" style="background-image: url('/static/csp.avif');">
+            <h2 class="grid_text">
+                CSP
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/motor_rewinding">
+        <div class="grid_item" style="background-image: url('/static/rewinding.avif');">
+            <h2 class="grid_text">
+                Motor Rewinding
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/solar_car_v1">
+        <div class="grid_item" style="background-image: url('/static/solar_car_v1.avif');">
+            <h2 class="grid_text">
+                Solar Car v1
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/solar_car_v2">
+        <div class="grid_item" style="background-image: url('/static/solar_car_v2.png');">
+            <h2 class="grid_text">
+                Solar Car v2
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/seminar">
+        <div class="grid_item" style="background-image: url('/static/solar_car_v2.png');">
+            <h2 class="grid_text">
+                AP Seminar
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/battery_business">
+        <div class="grid_item" style="background-image: url('/static/solar_car_v2.png');">
+            <h2 class="grid_text">
+                Battery Business
+            </h2>
+        </div>
+    </a>
+    <a href="/projects/website">
+        <div class="grid_item" style="background-image: url('/static/solar_car_v2.png');">
+            <h2 class="grid_text">
+                This Website
+            </h2>
+        </div>
+    </a>
+</div>
+{% endblock %}
