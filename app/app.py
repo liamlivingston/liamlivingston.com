@@ -125,4 +125,4 @@ def test():
 
 if __name__ == "__main__":
     app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-    app.run(debug=True, host='0.0.0.0', port='80', ssl_context='adhoc')
+    app.run(debug=True, host='0.0.0.0', port='80')
