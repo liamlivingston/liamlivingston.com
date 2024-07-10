@@ -76,7 +76,7 @@ def website():
 def solar_car():
     data = request.form
     
-    pass
+    return 'a'
 
 def allowed_file(filename):
     return '.' in filename and \
