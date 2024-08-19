@@ -74,6 +74,7 @@ def website():
 
 @app.route('/solar_car', methods = ['POST'])
 def solar_car():
+    return 'a'
     data = request.form
     
     return 'a'
